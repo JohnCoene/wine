@@ -5603,15 +5603,18 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  font-family: "Abel";
 }
 .panel-body {
   padding: 15px;
+  font-family: "Abel";
 }
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  font-family: "Abel";
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -6932,3 +6935,48 @@ body {
   border-radius: 0 !important;
 }
 
+.carimg {
+  width: 100%;
+  margin: auto;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 200px !important;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
+
+.carousel-caption {
+  margin: auto;
+  margin-bottom: 100px;
+  font-family: "Abel";
+}
+
+* {
+  font-family:"Abel";
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: white;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}

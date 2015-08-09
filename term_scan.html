@@ -1,0 +1,3867 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Term Scan</title>
+
+<script src="libs/jquery-1.11.0/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="libs/styles.css">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66129510-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="libs/highlight/default.css"
+      type="text/css" />
+<script src="libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="custom-bootstrap-menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jabber Cruncher</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="about.html" target="_blank">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="inactive"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="OverviewAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Varieties <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ViarietiesAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Growers <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Descriptors <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<div id="header">
+<h1 class="title">Term Scan</h1>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="panel panel-primary">
+<div class="panel-heading">
+Descriptors
+</div>
+<div class="panel-body">
+The list of 168 wine tasting descriptors scanned and in turn used for the dashboards were mined from Wine Folly and Wikipedia.
+<li>
+<a href = "https://en.wikipedia.org/wiki/Wine_tasting_descriptors">Wikipedia</a>
+</li>
+<li>
+<a href="http://winefolly.com/tutorial/40-wine-descriptions/">WineFolly.com</a>
+</li>
+Descriptors are linked to perception are thus also used in to tweak the <strong>sentiment analysis</strong> (i.e.: bitter = negative)
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="panel panel-success">
+<div class="panel-heading">
+Varieties
+</div>
+<div class="panel-body">
+The list of grape varieties was taken from Wikipedia. Feel free to contact me if you want me to add some.
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<a href="https://en.wikipedia.org/wiki/List_of_grape_varieties" class = "btn btn-success">Wikipedia.com</a>
+</div>
+<div class="col-lg-6 col-md-6">
+<a href="http://jabber-cruncher.com/#contact" class = "btn btn-success">Suggest</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="panel panel-info">
+<div class="panel-heading">
+Origins
+</div>
+<div class="panel-body">
+The list of countries of origin was taken from Wikipedia and consists of the 45 most popular regions. <a href="https://en.wikipedia.org/wiki/History_of_wine" class = "btn btn-warning">Suggest</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class = "container">
+<div id="accordion" class="panel-group">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Descriptors </a>
+</h4>
+</div>
+<div id="collapseOne" class="panel-collapse collapse in">
+<div class="panel-body">
+<li>
+sweet
+</li>
+<li>
+acid
+</li>
+<li>
+dry
+</li>
+<li>
+aftertaste
+</li>
+<li>
+aroma
+</li>
+<li>
+baked
+</li>
+<li>
+balanced
+</li>
+<li>
+bitter
+</li>
+<li>
+buttery
+</li>
+<li>
+cat pee
+</li>
+<li>
+chocolaty
+</li>
+<li>
+crisp
+</li>
+<li>
+depth
+</li>
+<li>
+finesse
+</li>
+<li>
+flat
+</li>
+<li>
+grassy
+</li>
+<li>
+herbal
+</li>
+<li>
+hollow
+</li>
+<li>
+oaky
+</li>
+<li>
+nose
+</li>
+<li>
+powerful
+</li>
+<li>
+round
+</li>
+<li>
+smokey
+</li>
+<li>
+rough
+</li>
+<li>
+spicy
+</li>
+<li>
+toasty
+</li>
+<li>
+vinegary
+</li>
+<li>
+sour
+</li>
+<li>
+soft
+</li>
+<li>
+fruity
+</li>
+<li>
+astringent
+</li>
+<li>
+autolytic
+</li>
+<li>
+bouquet
+</li>
+<li>
+chewy
+</li>
+<li>
+closed
+</li>
+<li>
+coarse
+</li>
+<li>
+complex
+</li>
+<li>
+tobacco
+</li>
+<li>
+fresh
+</li>
+<li>
+acidic
+</li>
+<li>
+aftertaste
+</li>
+<li>
+alcoholic
+</li>
+<li>
+aroma
+</li>
+<li>
+astringent
+</li>
+<li>
+autolytic
+</li>
+<li>
+baked
+</li>
+<li>
+balanced
+</li>
+<li>
+big
+</li>
+<li>
+bitter
+</li>
+<li>
+body
+</li>
+<li>
+bouquet
+</li>
+<li>
+brilliance
+</li>
+<li>
+buttery
+</li>
+<li>
+cat pee
+</li>
+<li>
+chewy
+</li>
+<li>
+chocolaty
+</li>
+<li>
+closed
+</li>
+<li>
+cloying
+</li>
+<li>
+coarse
+</li>
+<li>
+complex
+</li>
+<li>
+concentrated
+</li>
+<li>
+connected
+</li>
+<li>
+corked
+</li>
+<li>
+crisp
+</li>
+<li>
+depth
+</li>
+<li>
+dirty
+</li>
+<li>
+dry
+</li>
+<li>
+earthy
+</li>
+<li>
+elegant
+</li>
+<li>
+expressive
+</li>
+<li>
+extracted
+</li>
+<li>
+fallen over
+</li>
+<li>
+fat
+</li>
+<li>
+finesse
+</li>
+<li>
+finish
+</li>
+<li>
+firm
+</li>
+<li>
+flabby
+</li>
+<li>
+flat
+</li>
+<li>
+foxy
+</li>
+<li>
+fresh
+</li>
+<li>
+fruit
+</li>
+<li>
+full
+</li>
+<li>
+grassy
+</li>
+<li>
+green
+</li>
+<li>
+hard
+</li>
+<li>
+heavy
+</li>
+<li>
+herbal
+</li>
+<li>
+herbaceous
+</li>
+<li>
+hollow
+</li>
+<li>
+hot
+</li>
+<li>
+jammy
+</li>
+<li>
+lean
+</li>
+<li>
+leathery
+</li>
+<li>
+legs
+</li>
+<li>
+musty
+</li>
+<li>
+nose
+</li>
+<li>
+oaky
+</li>
+<li>
+oxidized
+</li>
+<li>
+oxidative
+</li>
+<li>
+petrolly
+</li>
+<li>
+powerful
+</li>
+<li>
+raisiny
+</li>
+<li>
+reticent
+</li>
+<li>
+rich
+</li>
+<li>
+rough
+</li>
+<li>
+round
+</li>
+<li>
+smokey
+</li>
+<li>
+smooth
+</li>
+<li>
+soft
+</li>
+<li>
+sour
+</li>
+<li>
+spicy
+</li>
+<li>
+supple
+</li>
+<li>
+sweet
+</li>
+<li>
+tannic
+</li>
+<li>
+tar
+</li>
+<li>
+tart
+</li>
+<li>
+toasty
+</li>
+<li>
+transparency
+</li>
+<li>
+typicity
+</li>
+<li>
+vanillin
+</li>
+<li>
+vegetal
+</li>
+<li>
+vinegary
+</li>
+<li>
+acidic
+</li>
+<li>
+alcoholic
+</li>
+<li>
+big
+</li>
+<li>
+body
+</li>
+<li>
+brilliance
+</li>
+<li>
+cloying
+</li>
+<li>
+concentrated
+</li>
+<li>
+connected
+</li>
+<li>
+corked
+</li>
+<li>
+dirty
+</li>
+<li>
+earthy
+</li>
+<li>
+elegant
+</li>
+<li>
+expressive
+</li>
+<li>
+extracted
+</li>
+<li>
+fallen over
+</li>
+<li>
+fat
+</li>
+<li>
+finish
+</li>
+<li>
+firm
+</li>
+<li>
+flabby
+</li>
+<li>
+foxy
+</li>
+<li>
+fruit
+</li>
+<li>
+full
+</li>
+<li>
+green
+</li>
+<li>
+hard
+</li>
+<li>
+heavy
+</li>
+<li>
+herbaceous
+</li>
+<li>
+hot
+</li>
+<li>
+jammy
+</li>
+<li>
+lean
+</li>
+<li>
+leathery
+</li>
+<li>
+legs
+</li>
+<li>
+musty
+</li>
+<li>
+oxidized
+</li>
+<li>
+oxidative
+</li>
+<li>
+petrolly
+</li>
+<li>
+raisiny
+</li>
+<li>
+reticent
+</li>
+<li>
+rich
+</li>
+<li>
+smooth
+</li>
+<li>
+supple
+</li>
+<li>
+tannic
+</li>
+<li>
+tar
+</li>
+<li>
+tart
+</li>
+<li>
+transparency
+</li>
+<li>
+typicity
+</li>
+<li>
+vanillin
+</li>
+<li>
+vegetal
+</li>
+</div>
+</div>
+</div>
+<div class="panel panel-success">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Varieties </a>
+</h4>
+</div>
+<div id="collapseTwo" class="panel-collapse collapse">
+<div class="panel-body">
+<li>
+Abbuoto
+</li>
+<li>
+Aboto
+</li>
+<li>
+Cecubo
+</li>
+<li>
+Abouriou
+</li>
+<li>
+Beaujolais
+</li>
+<li>
+Early Burgunder
+</li>
+<li>
+Early Burgundy
+</li>
+<li>
+Gamay Beaujolais
+</li>
+<li>
+Gamay Du Rhône
+</li>
+<li>
+Gamay St-laurent
+</li>
+<li>
+Malbec Argente Negret De La Canourgue
+</li>
+<li>
+Noir Hatif
+</li>
+<li>
+Plant Abouriou
+</li>
+<li>
+Plant Précoce
+</li>
+<li>
+Précoce Naugé
+</li>
+<li>
+Précoce Noir
+</li>
+<li>
+Pressac De Bourgogne
+</li>
+<li>
+Abrusco
+</li>
+<li>
+Acitana
+</li>
+<li>
+Acolon
+</li>
+<li>
+Agiorgitiko/aghiorghitiko
+</li>
+<li>
+Aglianico
+</li>
+<li>
+Aglianicone
+</li>
+<li>
+Aladasturi
+</li>
+<li>
+Albaranzeuli Nero
+</li>
+<li>
+Albarossa
+</li>
+<li>
+Aleatico/agliano
+</li>
+<li>
+Alexandrouli
+</li>
+<li>
+Alfrocheiro Preto
+</li>
+<li>
+Alicante Bouschet
+</li>
+<li>
+Alicante Ganzin
+</li>
+<li>
+Alvarelhão
+</li>
+<li>
+Brancelho
+</li>
+<li>
+Ancellotta
+</li>
+<li>
+André
+</li>
+<li>
+Aragónez See Tempranillo
+</li>
+<li>
+Aramon
+</li>
+<li>
+Areni
+</li>
+<li>
+Arrouya Noir
+</li>
+<li>
+Aspiran
+</li>
+<li>
+Aubun
+</li>
+<li>
+Avanà
+</li>
+<li>
+Avarengo
+</li>
+<li>
+B?beasc? Neagr?
+</li>
+<li>
+Baga
+</li>
+<li>
+Barbarossa
+</li>
+<li>
+Barbaroux
+</li>
+<li>
+Barbera
+</li>
+<li>
+Barbera Del Sannio
+</li>
+<li>
+Barbera Sarda
+</li>
+<li>
+Barsaglina
+</li>
+<li>
+Bastardo/ Trousseau
+</li>
+<li>
+Bellone
+</li>
+<li>
+Béquignol Noir
+</li>
+<li>
+Black Muscat
+</li>
+<li>
+Blatina
+</li>
+<li>
+Blauburger
+</li>
+<li>
+Blauer Portugieser
+</li>
+<li>
+Blauer Portuguiser
+</li>
+<li>
+Oporto
+</li>
+<li>
+Kékoportó
+</li>
+<li>
+Portugais/ Kékoporto/ Portugieser
+</li>
+<li>
+Blaufränkisch
+</li>
+<li>
+Lemberger
+</li>
+<li>
+Franconia
+</li>
+<li>
+Kékfrankos
+</li>
+<li>
+Gamé
+</li>
+<li>
+Bobal, Provechon
+</li>
+<li>
+Bo?azkere
+</li>
+<li>
+Bombino Nero
+</li>
+<li>
+Bonamico
+</li>
+<li>
+Bonarda Piemontese
+</li>
+<li>
+Bonda
+</li>
+<li>
+Bondola
+</li>
+<li>
+Bouchalès See Grapput
+</li>
+<li>
+Bouteillan Noir
+</li>
+<li>
+Bovale
+</li>
+<li>
+Borgonja Crna
+</li>
+<li>
+Bracciola Nera
+</li>
+<li>
+Brachetto Or Braquet
+</li>
+<li>
+Brancellao
+</li>
+<li>
+Brugnola
+</li>
+<li>
+Brun Fourca
+</li>
+<li>
+Bubbierasco
+</li>
+<li>
+Cabernet Cubin
+</li>
+<li>
+Cabernet Franc
+</li>
+<li>
+Cabernet Mitos
+</li>
+<li>
+Cabernet Sauvignon
+</li>
+<li>
+Cabernet Severny
+</li>
+<li>
+Caddiu/caddiu Nieddu/ Niedda/ Perda /serra
+</li>
+<li>
+Cagnulari See Graciano
+</li>
+<li>
+Caiño Tinto
+</li>
+<li>
+Caladoc
+</li>
+<li>
+Calitor
+</li>
+<li>
+Callet
+</li>
+<li>
+Caloria
+</li>
+<li>
+Camaraou Noir
+</li>
+<li>
+Canaiolo
+</li>
+<li>
+Canari Noir
+</li>
+<li>
+Canina Nera
+</li>
+<li>
+Carcajolo Nero
+</li>
+<li>
+Carignan
+</li>
+<li>
+Carignane
+</li>
+<li>
+Cariñena
+</li>
+<li>
+Carignano /mazuelo
+</li>
+<li>
+Carménère
+</li>
+<li>
+Carmine
+</li>
+<li>
+Carnelian
+</li>
+<li>
+Castelão
+</li>
+<li>
+Periquita
+</li>
+<li>
+Castets
+</li>
+<li>
+Catanese Nero
+</li>
+<li>
+Centurian
+</li>
+<li>
+Cesanese
+</li>
+<li>
+César
+</li>
+<li>
+Cienna
+</li>
+<li>
+Ciliegiolo
+</li>
+<li>
+Cinsaut
+</li>
+<li>
+Cinsault/ Ottavianello
+</li>
+<li>
+Colombana Nera
+</li>
+<li>
+Colorino
+</li>
+<li>
+Complexa
+</li>
+<li>
+Cornalin See Rouge Du Pays
+</li>
+<li>
+Cornifesto
+</li>
+<li>
+Corvina
+</li>
+<li>
+Corvinone
+</li>
+<li>
+Counoise
+</li>
+<li>
+Croatina
+</li>
+<li>
+Darkenuša
+</li>
+<li>
+Dobri?i?
+</li>
+<li>
+Dolcetto
+</li>
+<li>
+Dornfelder
+</li>
+<li>
+Douce Noir/charbono/bonarda/turca
+</li>
+<li>
+Douce Noire Grise
+</li>
+<li>
+Dunkelfelder
+</li>
+<li>
+Duras
+</li>
+<li>
+Dureza
+</li>
+<li>
+Durif
+</li>
+<li>
+Petite Sirah
+</li>
+<li>
+Ederena
+</li>
+<li>
+Enfariné Noir
+</li>
+<li>
+Espadeiro
+</li>
+<li>
+Étraire
+</li>
+<li>
+Ferrón
+</li>
+<li>
+Feteasc? Neagr?
+</li>
+<li>
+Forcallat Tinta
+</li>
+<li>
+Fortana
+</li>
+<li>
+Frappato
+</li>
+<li>
+Freisa
+</li>
+<li>
+Frühroter Veltliner
+</li>
+<li>
+Fumin
+</li>
+<li>
+Gaglioppo
+</li>
+<li>
+Gamashara
+</li>
+<li>
+Gamay
+</li>
+<li>
+Gamay Noir
+</li>
+<li>
+Gamaret
+</li>
+<li>
+Garanoir
+</li>
+<li>
+Garnatxa
+</li>
+<li>
+Grenache
+</li>
+<li>
+Garnacha
+</li>
+<li>
+Cannonau /lladoner Pelut
+</li>
+<li>
+Lledoner Pelut
+</li>
+<li>
+Girò
+</li>
+<li>
+Gouget Noir
+</li>
+<li>
+Graciano/ Moristel/ Juan Ibáñez
+</li>
+<li>
+Miguel Del Arco
+</li>
+<li>
+Grand Noir De La Calmette
+</li>
+<li>
+Grisa Nera
+</li>
+<li>
+Greco Nero
+</li>
+<li>
+Grignolino
+</li>
+<li>
+Gropello
+</li>
+<li>
+Grolleau
+</li>
+<li>
+Groslot
+</li>
+<li>
+Gros Verdot
+</li>
+<li>
+Gueuche Noir
+</li>
+<li>
+Helfensteiner
+</li>
+<li>
+Heroldrebe
+</li>
+<li>
+Hondarribi Beltza
+</li>
+<li>
+Humagne Rouge
+</li>
+<li>
+Cornalin D’aoste
+</li>
+<li>
+Joubertin
+</li>
+<li>
+Jaubertin
+</li>
+<li>
+Juan Garcia
+</li>
+<li>
+Jurancon Noir
+</li>
+<li>
+Kadarka
+</li>
+<li>
+Kakhet
+</li>
+<li>
+Kalecik Karasi
+</li>
+<li>
+Kindzmarauli/ Saperavi
+</li>
+<li>
+Kotsifali
+</li>
+<li>
+Kratosija
+</li>
+<li>
+Lacrima Di Morro
+</li>
+<li>
+Lacrima Nera
+</li>
+<li>
+Lagrein
+</li>
+<li>
+Lambrusco
+</li>
+<li>
+Liatiko
+</li>
+<li>
+Limnio
+</li>
+<li>
+Listan Negro
+</li>
+<li>
+Madrasa/ Matrassa
+</li>
+<li>
+Magarach Bastardo/bastardo Magarach
+</li>
+<li>
+Magaratch Ruby
+</li>
+<li>
+Magarach Ruby
+</li>
+<li>
+Magliocco Canino|/maiolica
+</li>
+<li>
+Magliocco Dolce|/marsigliana Nera
+</li>
+<li>
+Magyarfrankos
+</li>
+<li>
+Malbec
+</li>
+<li>
+Auxerrois
+</li>
+<li>
+Malvasia Di Schierano/malvasia Nera
+</li>
+<li>
+Mammolo
+</li>
+<li>
+Mandelaria
+</li>
+<li>
+Mandelari
+</li>
+<li>
+Amorghiano
+</li>
+<li>
+Mandolari
+</li>
+<li>
+Manseng Noir
+</li>
+<li>
+Manto Negro
+</li>
+<li>
+Mara
+</li>
+<li>
+Maratheftiko
+</li>
+<li>
+Marselan
+</li>
+<li>
+Marsigliana
+</li>
+<li>
+Marzemino
+</li>
+<li>
+Mauzac Noir
+</li>
+<li>
+Mavro
+</li>
+<li>
+Mavrodafni/ Mavrodaphne
+</li>
+<li>
+Mavrud
+</li>
+<li>
+Mavroudi
+</li>
+<li>
+Mayorquin
+</li>
+<li>
+Meghrabujr
+</li>
+<li>
+Mencia/ Jaen
+</li>
+<li>
+Merenzao
+</li>
+<li>
+Merille
+</li>
+<li>
+Merlot
+</li>
+<li>
+Milgranet
+</li>
+<li>
+Millot /léon Millot
+</li>
+<li>
+Molinara
+</li>
+<li>
+Mondeuse
+</li>
+<li>
+Monica
+</li>
+<li>
+Montepulciano
+</li>
+<li>
+Montù
+</li>
+<li>
+Montuni
+</li>
+<li>
+Moreto
+</li>
+<li>
+Moristel
+</li>
+<li>
+Mornen Noir
+</li>
+<li>
+Morrastel Bouschet
+</li>
+<li>
+Mourisco Tinto
+</li>
+<li>
+Mourvèdre
+</li>
+<li>
+Monastrell
+</li>
+<li>
+Mataro/ Rossola Nera/garrut
+</li>
+<li>
+Mouyssaguès
+</li>
+<li>
+Mtevandidi
+</li>
+<li>
+Mujuretuli
+</li>
+<li>
+Muscardin
+</li>
+<li>
+Muscat Bouschet
+</li>
+<li>
+Muscat Hamburg
+</li>
+<li>
+Nebbiolo
+</li>
+<li>
+Negoska
+</li>
+<li>
+Negrara
+</li>
+<li>
+Négrette/ Pinot St. George
+</li>
+<li>
+Negroamaro
+</li>
+<li>
+Negru De Dragasani
+</li>
+<li>
+Nerkarat
+</li>
+<li>
+Nero Buono Di Cori
+</li>
+<li>
+Nero D’avola
+</li>
+<li>
+Nerello Mascalese/ Nerello Cappuccio
+</li>
+<li>
+Neretto Di Bairo
+</li>
+<li>
+Neyret
+</li>
+<li>
+Nielluccio
+</li>
+<li>
+Nincusa
+</li>
+<li>
+Nocera
+</li>
+<li>
+Notardomenico
+</li>
+<li>
+Oeillade Noire
+</li>
+<li>
+Ojaleshi
+</li>
+<li>
+Öküzgözü
+</li>
+<li>
+Oseleta
+</li>
+<li>
+Pais
+</li>
+<li>
+Pallagrello Nero
+</li>
+<li>
+Pamid
+</li>
+<li>
+Pascale Di Cagliari
+</li>
+<li>
+Pelaverga
+</li>
+<li>
+Peloursin
+</li>
+<li>
+Perdal
+</li>
+<li>
+Perricone/guarnaccia
+</li>
+<li>
+Persan
+</li>
+<li>
+Petit Bouschet
+</li>
+<li>
+Petit Rouge
+</li>
+<li>
+Petit Verdot
+</li>
+<li>
+Piccola Nera
+</li>
+<li>
+Piedirosso
+</li>
+<li>
+Pignerol
+</li>
+<li>
+Pignola Valtellinese
+</li>
+<li>
+Pignolo
+</li>
+<li>
+Pineau D’aunis
+</li>
+<li>
+Pinot Meunier
+</li>
+<li>
+Schwarzriesling
+</li>
+<li>
+Müllerebe
+</li>
+<li>
+Pinot Noir
+</li>
+<li>
+Spätburgunder
+</li>
+<li>
+Blauburgunder
+</li>
+<li>
+Pinot Nero
+</li>
+<li>
+Pinotage
+</li>
+<li>
+Piquepoul Noir
+</li>
+<li>
+Plassa
+</li>
+<li>
+Plavina
+</li>
+<li>
+Brajda Mala
+</li>
+<li>
+Brajdica
+</li>
+<li>
+Bratkovina
+</li>
+<li>
+Jurkovica
+</li>
+<li>
+Marasovka /modrulj
+</li>
+<li>
+Plavac Plavina /plavinac /plavina Mala
+</li>
+<li>
+Plavina Sitnah
+</li>
+<li>
+Plavina Velka
+</li>
+<li>
+Plavka
+</li>
+<li>
+Plavka Mala
+</li>
+<li>
+Velika Plavka
+</li>
+<li>
+Pollera Nera
+</li>
+<li>
+Portan
+</li>
+<li>
+Poulsard/ Plousard
+</li>
+<li>
+Prieto Picudo
+</li>
+<li>
+Prokupac
+</li>
+<li>
+Raboso
+</li>
+<li>
+Ramisco
+</li>
+<li>
+Reberger
+</li>
+<li>
+Refosco
+</li>
+<li>
+Refošk
+</li>
+<li>
+Rimava
+</li>
+<li>
+Roesler
+</li>
+<li>
+Rondinella
+</li>
+<li>
+Rossese
+</li>
+<li>
+Rossignola
+</li>
+<li>
+Rossolino Nero
+</li>
+<li>
+Rotberger
+</li>
+<li>
+Rouchet/ Ruché
+</li>
+<li>
+Roche
+</li>
+<li>
+Rubintos
+</li>
+<li>
+Ruby Cabernet
+</li>
+<li>
+Rufete
+</li>
+<li>
+Tinta Pinheira
+</li>
+<li>
+Tinta Carvalha
+</li>
+<li>
+Rufeta
+</li>
+<li>
+Sagrantino
+</li>
+<li>
+Sangiovese
+</li>
+<li>
+San Giuseppe Nero
+</li>
+<li>
+Saperavi
+</li>
+<li>
+Schiava
+</li>
+<li>
+Trollinger
+</li>
+<li>
+Schioppettino
+</li>
+<li>
+Schönburger
+</li>
+<li>
+Sciacarello
+</li>
+<li>
+Sciascinoso
+</li>
+<li>
+Olivella Nera
+</li>
+<li>
+Segalin
+</li>
+<li>
+Ségalin
+</li>
+<li>
+Servanin
+</li>
+<li>
+Sgaretta/sgavetta
+</li>
+<li>
+Shiraz
+</li>
+<li>
+Syrah
+</li>
+<li>
+Shiroka Melnishka Losa
+</li>
+<li>
+Sousão/souzão/sousón
+</li>
+<li>
+St. Laurent
+</li>
+<li>
+Svatovavrinecke
+</li>
+<li>
+Saint-macaire
+</li>
+<li>
+Sumoll
+</li>
+<li>
+Susumaiello
+</li>
+<li>
+Tannat
+</li>
+<li>
+Tarrango
+</li>
+<li>
+Tazzelenghe
+</li>
+<li>
+Tempranillo
+</li>
+<li>
+Tinta Roriz
+</li>
+<li>
+Ull De Llebre
+</li>
+<li>
+Cencibel
+</li>
+<li>
+Tinta Del Pais
+</li>
+<li>
+Termarina Rossa
+</li>
+<li>
+Teroldego
+</li>
+<li>
+Teroldego Rotaliano
+</li>
+<li>
+Terret Noir
+</li>
+<li>
+Thiniatiko
+</li>
+<li>
+Tibouren
+</li>
+<li>
+Tinta Amarela
+</li>
+<li>
+Tinta Barroca
+</li>
+<li>
+Tinta Caiada
+</li>
+<li>
+Tinta Carvalha
+</li>
+<li>
+Tinta Francisca
+</li>
+<li>
+Tinta Madeira
+</li>
+<li>
+Tinta Miuda
+</li>
+<li>
+Tinta Negra Mole
+</li>
+<li>
+Preto Martinho
+</li>
+<li>
+Tinto Cão
+</li>
+<li>
+Touriga Franca
+</li>
+<li>
+Touriga Francesa
+</li>
+<li>
+Touriga Nacional
+</li>
+<li>
+Azal Espanhol
+</li>
+<li>
+Preto De Mortágua
+</li>
+<li>
+Trepat
+</li>
+<li>
+Trevisana Nera
+</li>
+<li>
+Trincadeira/ Castelão
+</li>
+<li>
+Torneiro
+</li>
+<li>
+Usakhelauri
+</li>
+<li>
+Uva Di Troia
+</li>
+<li>
+Uva Della Marina.
+</li>
+<li>
+Uvalino
+</li>
+<li>
+Uva Rara
+</li>
+<li>
+Uva Tosca
+</li>
+<li>
+Vaccarese
+</li>
+<li>
+Vaccarèse/ Brun Argenté
+</li>
+<li>
+Valdiguié
+</li>
+<li>
+Brocol
+</li>
+<li>
+Napa Gamay
+</li>
+<li>
+Gamay 15
+</li>
+<li>
+Valentino Nero
+</li>
+<li>
+Vermentino Nero
+</li>
+<li>
+Vespolina
+</li>
+<li>
+Vien De Nus
+</li>
+<li>
+Volidza/volitsa
+</li>
+<li>
+Vranac
+</li>
+<li>
+Vuillermin
+</li>
+<li>
+Wildbacher/blauer Wildbacher
+</li>
+<li>
+Wrothham Pinot
+</li>
+<li>
+Xynomavro
+</li>
+<li>
+Žametovka
+</li>
+<li>
+Zinfandel
+</li>
+<li>
+Crljenak Kaštelanski
+</li>
+<li>
+Primitivo
+</li>
+<li>
+Zweigelt
+</li>
+<li>
+Zweigeltrebe
+</li>
+<li>
+Rotburger
+</li>
+<li>
+Addoraca
+</li>
+<li>
+Aidani
+</li>
+<li>
+Aidini
+</li>
+<li>
+Aedani
+</li>
+<li>
+Airén
+</li>
+<li>
+Alarije
+</li>
+<li>
+Alarijen
+</li>
+<li>
+Albalonga
+</li>
+<li>
+Albana
+</li>
+<li>
+Albanella
+</li>
+<li>
+Albanello Bianco
+</li>
+<li>
+Albaranzeuli Bianco
+</li>
+<li>
+Albarello
+</li>
+<li>
+Albariño
+</li>
+<li>
+Alvarinho
+</li>
+<li>
+Cainho Branco
+</li>
+<li>
+Albarola
+</li>
+<li>
+Alcañón
+</li>
+<li>
+Aligoté
+</li>
+<li>
+Alionza
+</li>
+<li>
+Altesse
+</li>
+<li>
+Roussette
+</li>
+<li>
+Amigne
+</li>
+<li>
+Ansonica
+</li>
+<li>
+Inzolia
+</li>
+<li>
+Antao Vaz
+</li>
+<li>
+Aragnan Blanc
+</li>
+<li>
+Arbane
+</li>
+<li>
+Arbois
+</li>
+<li>
+Arilla
+</li>
+<li>
+Arinto
+</li>
+<li>
+Arneis
+</li>
+<li>
+Arnsburger
+</li>
+<li>
+Arrufiac
+</li>
+<li>
+Arrufiat
+</li>
+<li>
+Ruffiac
+</li>
+<li>
+Arvesiniadu
+</li>
+<li>
+Arvine
+</li>
+<li>
+Asprinio Bianco
+</li>
+<li>
+Assario Branco
+</li>
+<li>
+Assyrtiko
+</li>
+<li>
+Assyrtico
+</li>
+<li>
+Athiri
+</li>
+<li>
+Aubin
+</li>
+<li>
+Aubin Vert
+</li>
+<li>
+Aurelius
+</li>
+<li>
+Auxerrois Blanc
+</li>
+<li>
+Avesso
+</li>
+<li>
+Azal Branco
+</li>
+<li>
+Barcelo
+</li>
+<li>
+Bacchus
+</li>
+<li>
+Baco Blanc
+</li>
+<li>
+Baiyu
+</li>
+<li>
+Rkatsiteli
+</li>
+<li>
+Balzac Blanc
+</li>
+<li>
+Banat Riesling
+</li>
+<li>
+Banat Rizling
+</li>
+<li>
+Baratuciat
+</li>
+<li>
+Barbera Bianca
+</li>
+<li>
+Bariadorgia
+</li>
+<li>
+Baroque
+</li>
+<li>
+Belina
+</li>
+<li>
+Benedino
+</li>
+<li>
+Besgano Bianco
+</li>
+<li>
+Bia Blanc
+</li>
+<li>
+Bianca
+</li>
+<li>
+Biancame
+</li>
+<li>
+Bianchello
+</li>
+<li>
+Bianchetta Trevigiana
+</li>
+<li>
+Bianchetti Genovese
+</li>
+<li>
+Bianco D’alessano
+</li>
+<li>
+Biancolella
+</li>
+<li>
+Biancu Gentile
+</li>
+<li>
+Biancone Di Portoferraio
+</li>
+<li>
+Bical
+</li>
+<li>
+Bigolona
+</li>
+<li>
+Blanc De Morgex
+</li>
+<li>
+Blatterle
+</li>
+<li>
+Bratislavské Biele
+</li>
+<li>
+Boais
+</li>
+<li>
+Bogdanuša
+</li>
+<li>
+Bombino Bianco
+</li>
+<li>
+Borba Blanca
+</li>
+<li>
+Borrado Das Moscas
+</li>
+<li>
+Bosco
+</li>
+<li>
+Bourboulenc
+</li>
+<li>
+Bouvier
+</li>
+<li>
+Breidecker
+</li>
+<li>
+Brustiano Bianco
+</li>
+<li>
+Bual
+</li>
+<li>
+Budai Zöld
+</li>
+<li>
+Bukettraube
+</li>
+<li>
+Buonamico
+</li>
+<li>
+Monbadon
+</li>
+<li>
+Caíño Blanco
+</li>
+<li>
+Camaralet
+</li>
+<li>
+Canari Blanc
+</li>
+<li>
+Caprettone
+</li>
+<li>
+Carica L’asino
+</li>
+<li>
+Carignan Blanc
+</li>
+<li>
+Cascarolo Bianco
+</li>
+<li>
+Catarratto
+</li>
+<li>
+Cayetana
+</li>
+<li>
+Calagraño
+</li>
+<li>
+Cerceal
+</li>
+<li>
+Cereza
+</li>
+<li>
+Chardonnay
+</li>
+<li>
+Chasan
+</li>
+<li>
+Chasselas
+</li>
+<li>
+Fendant
+</li>
+<li>
+Gutedel
+</li>
+<li>
+Chenel
+</li>
+<li>
+Chenin Blanc
+</li>
+<li>
+Pineau De La Loire
+</li>
+<li>
+Steen
+</li>
+<li>
+Clairette
+</li>
+<li>
+Claret De Gers
+</li>
+<li>
+Claret De Gascogne
+</li>
+<li>
+Claverie
+</li>
+<li>
+Cococciola
+</li>
+<li>
+Cocur
+</li>
+<li>
+Coda Di Pecora
+</li>
+<li>
+Coda Di Volpe
+</li>
+<li>
+Codega
+</li>
+<li>
+Roupeiro
+</li>
+<li>
+Colombard
+</li>
+<li>
+Completer
+</li>
+<li>
+Cortese
+</li>
+<li>
+Crato
+</li>
+<li>
+Crato Bianco
+</li>
+<li>
+Courbu
+</li>
+<li>
+Xuri Zerratua
+</li>
+<li>
+Bordelesa Zuri
+</li>
+<li>
+Criolla Grande
+</li>
+<li>
+Crouchen
+</li>
+<li>
+Clare Riesling
+</li>
+<li>
+Cape Riesling
+</li>
+<li>
+Cygne Blanc
+</li>
+<li>
+Cserszegi F?szeres
+</li>
+<li>
+Dattier
+</li>
+<li>
+Debina
+</li>
+<li>
+Diagalves
+</li>
+<li>
+Dimiat
+</li>
+<li>
+Dinka
+</li>
+<li>
+Dona Blanca
+</li>
+<li>
+Donzelinho Branco
+</li>
+<li>
+Doradillo
+</li>
+<li>
+Drupeggio
+</li>
+<li>
+Durella
+</li>
+<li>
+Ehrenfelser
+</li>
+<li>
+Elbling
+</li>
+<li>
+Emerald Riesling
+</li>
+<li>
+Emir Karasi
+</li>
+<li>
+Encruzado
+</li>
+<li>
+Erbaluce
+</li>
+<li>
+Esgana Cão
+</li>
+<li>
+Esgana
+</li>
+<li>
+Sercial
+</li>
+<li>
+Esquitxagos
+</li>
+<li>
+Ezerjó
+</li>
+<li>
+Faber
+</li>
+<li>
+Faberrebe
+</li>
+<li>
+Favorita
+</li>
+<li>
+Falanghina
+</li>
+<li>
+False Pedro
+</li>
+<li>
+Pedro Luis
+</li>
+<li>
+Cañocazo
+</li>
+<li>
+Farana
+</li>
+<li>
+Favorita
+</li>
+<li>
+Fernao Pires
+</li>
+<li>
+Fernão Pires
+</li>
+<li>
+Ferral
+</li>
+<li>
+Feteasc? Alb?
+</li>
+<li>
+Fetiaska
+</li>
+<li>
+Leànyka
+</li>
+<li>
+Feteasc? Regal?
+</li>
+<li>
+Fiano
+</li>
+<li>
+Fié
+</li>
+<li>
+Fiét
+</li>
+<li>
+Fié Gris
+</li>
+<li>
+Findling
+</li>
+<li>
+Fologosão
+</li>
+<li>
+Folle Blanche
+</li>
+<li>
+Gros Plant
+</li>
+<li>
+Piquepoult
+</li>
+<li>
+Forastera
+</li>
+<li>
+Forastera (spanish Grape)
+</li>
+<li>
+Francavida
+</li>
+<li>
+Francusa
+</li>
+<li>
+Freisamer
+</li>
+<li>
+Freiburger
+</li>
+<li>
+Friulano
+</li>
+<li>
+Tocai Friulano
+</li>
+<li>
+Fromenteau (disambiguation)
+</li>
+<li>
+Frontignan
+</li>
+<li>
+Furmint
+</li>
+<li>
+Mosler
+</li>
+<li>
+Sipon
+</li>
+<li>
+Galego Dourado
+</li>
+<li>
+Garganega
+</li>
+<li>
+Garnacha Blanca
+</li>
+<li>
+Grenache Blanc
+</li>
+<li>
+Garrido
+</li>
+<li>
+Gellewza
+</li>
+<li>
+Gewürztraminer
+</li>
+<li>
+Tramini
+</li>
+<li>
+Giró Blanc
+</li>
+<li>
+Gloria
+</li>
+<li>
+Godello
+</li>
+<li>
+Goldburger
+</li>
+<li>
+Goldriesling
+</li>
+<li>
+Gouais Blanc
+</li>
+<li>
+Gouveio
+</li>
+<li>
+Graisse
+</li>
+<li>
+Plant De Graisse
+</li>
+<li>
+Gras? De Cotnari
+</li>
+<li>
+Grecanico
+</li>
+<li>
+Grechetto
+</li>
+<li>
+Greco
+</li>
+<li>
+Greco Bianco
+</li>
+<li>
+Green Hungarian
+</li>
+<li>
+Grenache Blanc
+</li>
+<li>
+Garnacha Blanca
+</li>
+<li>
+Grenache Gris
+</li>
+<li>
+Grignolino
+</li>
+<li>
+Grillo
+</li>
+<li>
+Grasa
+</li>
+<li>
+Grk Bijeli
+</li>
+<li>
+Grolleau Gris
+</li>
+<li>
+Gros Manseng
+</li>
+<li>
+Izkiriota Handi
+</li>
+<li>
+Grüner Veltliner
+</li>
+<li>
+Guardavalle
+</li>
+<li>
+Guarnaccia Bianca
+</li>
+<li>
+Gutenborner
+</li>
+<li>
+Hárslevel?
+</li>
+<li>
+Hondarrabi Zuri
+</li>
+<li>
+Humagne Blanche
+</li>
+<li>
+Huxelrebe
+</li>
+<li>
+Weisser Gutedel
+</li>
+<li>
+Courtillier Musqué
+</li>
+<li>
+Incrocio Manzoni
+</li>
+<li>
+Inzolia
+</li>
+<li>
+Ansonica
+</li>
+<li>
+Irsai Oliver
+</li>
+<li>
+Irsay Oliver
+</li>
+<li>
+Irsai Olivér
+</li>
+<li>
+Italia
+</li>
+<li>
+Izsáki Sarfehér
+</li>
+<li>
+Izsáki
+</li>
+<li>
+Jacquère
+</li>
+<li>
+Jaén Blanca
+</li>
+<li>
+Jampal
+</li>
+<li>
+Juhfark
+</li>
+<li>
+Juwel
+</li>
+<li>
+Kanzler
+</li>
+<li>
+Keknyelu
+</li>
+<li>
+Kéknyel?
+</li>
+<li>
+Kerner
+</li>
+<li>
+Knipperle
+</li>
+<li>
+Klein Rauschling
+</li>
+<li>
+Koshu
+</li>
+<li>
+Kövérsz?l?
+</li>
+<li>
+Karija L’osü
+</li>
+<li>
+Krsta?
+</li>
+<li>
+Kujundžuša
+</li>
+<li>
+Ladikino
+</li>
+<li>
+Lagarino Bianco
+</li>
+<li>
+Lagorthi
+</li>
+<li>
+Lauzet
+</li>
+<li>
+Len De L’el
+</li>
+<li>
+Len De L’elh
+</li>
+<li>
+Loin-de-l’oeil
+</li>
+<li>
+Loureira
+</li>
+<li>
+Luglienga
+</li>
+<li>
+Lumassina
+</li>
+<li>
+Macabeo
+</li>
+<li>
+Macabeu
+</li>
+<li>
+Alcañón
+</li>
+<li>
+Viura
+</li>
+<li>
+Maceratino
+</li>
+<li>
+Madeleine Angevine
+</li>
+<li>
+Majarc? Alb?
+</li>
+<li>
+Malagousia
+</li>
+<li>
+Malagoussia
+</li>
+<li>
+Malvar
+</li>
+<li>
+Malvasia, Includes Several Sub-varieties
+</li>
+<li>
+Malvoisie
+</li>
+<li>
+Mantonico Bianco
+</li>
+<li>
+Manteudo
+</li>
+<li>
+Maria Gomes = Fernão Pires
+</li>
+<li>
+Marsanne
+</li>
+<li>
+Marzemina Bianca
+</li>
+<li>
+Mauzac
+</li>
+<li>
+Melon De Bourgogne
+</li>
+<li>
+Muscadet
+</li>
+<li>
+Merlot Blanc
+</li>
+<li>
+Merseguera
+</li>
+<li>
+Escanyavella
+</li>
+<li>
+Meslier St-françois
+</li>
+<li>
+Mezesfehér
+</li>
+<li>
+Minella Bianca
+</li>
+<li>
+Miousap
+</li>
+<li>
+Misket
+</li>
+<li>
+Molette
+</li>
+<li>
+Montonico Bianco
+</li>
+<li>
+Montu
+</li>
+<li>
+Morio-muskat
+</li>
+<li>
+Moscatel De Austria
+</li>
+<li>
+Moscatel Rosada
+</li>
+<li>
+Moscato Giallo
+</li>
+<li>
+Moschofilero
+</li>
+<li>
+Moscophilero
+</li>
+<li>
+Mtsvane
+</li>
+<li>
+Müller-thurgau
+</li>
+<li>
+Rivaner
+</li>
+<li>
+Muscadelle (tokay In Australia)
+</li>
+<li>
+Muscadet
+</li>
+<li>
+Melon De Bourgogne
+</li>
+<li>
+Muscat
+</li>
+<li>
+Moscato
+</li>
+<li>
+Muscat Of Alexandria
+</li>
+<li>
+Moscatell
+</li>
+<li>
+Moscatel De Málaga, De Setúbal
+</li>
+<li>
+Muscat Blanc À Petits Grains
+</li>
+<li>
+Muscat Frontignan
+</li>
+<li>
+Muskateller
+</li>
+<li>
+Moscatel Branco
+</li>
+<li>
+Muscat Ottonel
+</li>
+<li>
+Nasco
+</li>
+<li>
+Neherleschol
+</li>
+<li>
+Neuburger
+</li>
+<li>
+Nobling
+</li>
+<li>
+Nosiola
+</li>
+<li>
+Nuragus
+</li>
+<li>
+Ondenc
+</li>
+<li>
+Optima
+</li>
+<li>
+Oraniensteiner
+</li>
+<li>
+Orion
+</li>
+<li>
+Ortega
+</li>
+<li>
+Ortrugo
+</li>
+<li>
+Pagedebit
+</li>
+<li>
+Pallagrello Bianco
+</li>
+<li>
+Palomino
+</li>
+<li>
+Listan
+</li>
+<li>
+Perrum
+</li>
+<li>
+Pampanuto
+</li>
+<li>
+Pampanino
+</li>
+<li>
+Pardillo
+</li>
+<li>
+Pardina
+</li>
+<li>
+Parellada
+</li>
+<li>
+Pascal Blanc
+</li>
+<li>
+Passerina
+</li>
+<li>
+Pecorello
+</li>
+<li>
+Pecorino
+</li>
+<li>
+Pedro Giménez
+</li>
+<li>
+Pedro Ximénez/ Px
+</li>
+<li>
+Alamís
+</li>
+<li>
+Perle
+</li>
+<li>
+Petit Courbu
+</li>
+<li>
+Petit Manseng
+</li>
+<li>
+Izkiriota Ttipi
+</li>
+<li>
+Petit Meslier
+</li>
+<li>
+Petite Arvine
+</li>
+<li>
+Picardin
+</li>
+<li>
+Picolit
+</li>
+<li>
+Piccolit
+</li>
+<li>
+Piccolito
+</li>
+<li>
+Picpoul
+</li>
+<li>
+Pigato
+</li>
+<li>
+Pignerol
+</li>
+<li>
+Pignoletto
+</li>
+<li>
+Pinella
+</li>
+<li>
+Pinot Blanc
+</li>
+<li>
+Pinot Bianco
+</li>
+<li>
+Klevner
+</li>
+<li>
+Weissburgunder
+</li>
+<li>
+Pinot Gris
+</li>
+<li>
+Pinot Grigio
+</li>
+<li>
+Grauburgunder
+</li>
+<li>
+Pinot Jaune
+</li>
+<li>
+Szürkebarát
+</li>
+<li>
+Planta Fina
+</li>
+<li>
+Planta Nova
+</li>
+<li>
+Plavai
+</li>
+<li>
+Pošip
+</li>
+<li>
+Prié Blanc
+</li>
+<li>
+Prosecco
+</li>
+<li>
+Prunesta
+</li>
+<li>
+Rabigato
+</li>
+<li>
+Rabo De Ovelha
+</li>
+<li>
+Raisin Blanc
+</li>
+<li>
+Rauschling
+</li>
+<li>
+R?uschling
+</li>
+<li>
+Regner
+</li>
+<li>
+Reichensteiner
+</li>
+<li>
+Retagliado Bianco
+</li>
+<li>
+Rèze
+</li>
+<li>
+Ribolla
+</li>
+<li>
+Robola
+</li>
+<li>
+Riesling
+</li>
+<li>
+Johannisberg Riesling
+</li>
+<li>
+Rheinriesling
+</li>
+<li>
+Klingelberger
+</li>
+<li>
+Rieslaner
+</li>
+<li>
+Rkatsiteli
+</li>
+<li>
+Robola
+</li>
+<li>
+Roditis
+</li>
+<li>
+Rhoditis
+</li>
+<li>
+Rolle
+</li>
+<li>
+Rollo
+</li>
+<li>
+Romorantin
+</li>
+<li>
+Rossese Bianco
+</li>
+<li>
+Roter Veltliner
+</li>
+<li>
+Rotgipfler
+</li>
+<li>
+Roupeiro
+</li>
+<li>
+Codega
+</li>
+<li>
+Roussanne
+</li>
+<li>
+Rovello Bianco
+</li>
+<li>
+Sabro
+</li>
+<li>
+Sacy
+</li>
+<li>
+Ste Marie
+</li>
+<li>
+Saint-pierre Doré
+</li>
+<li>
+Sarfeher
+</li>
+<li>
+Sárfehér
+</li>
+<li>
+Sauvignon Blanc
+</li>
+<li>
+Sauvignon Gris
+</li>
+<li>
+Sauvignon Vert
+</li>
+<li>
+Sauvignonasse
+</li>
+<li>
+Savagnin
+</li>
+<li>
+Savagnin Blanc
+</li>
+<li>
+Savatiano
+</li>
+<li>
+Scheurebe
+</li>
+<li>
+Schönburger
+</li>
+<li>
+Sémillon
+</li>
+<li>
+Septiner
+</li>
+<li>
+Sercial
+</li>
+<li>
+Cerceal
+</li>
+<li>
+Esgana Cão
+</li>
+<li>
+Sereksia
+</li>
+<li>
+Sideritis
+</li>
+<li>
+Siegerrebe
+</li>
+<li>
+Silvaner
+</li>
+<li>
+Sylvaner
+</li>
+<li>
+Österreicher
+</li>
+<li>
+Smederevka
+</li>
+<li>
+Souvignier Gris
+</li>
+<li>
+Spagnol
+</li>
+<li>
+Spätrot
+</li>
+<li>
+Zierfandler
+</li>
+<li>
+Sultana
+</li>
+<li>
+Tamarêz
+</li>
+<li>
+Tamares
+</li>
+<li>
+Crato Branco
+</li>
+<li>
+Tamîioasa
+</li>
+<li>
+T?mâioas? Româneasc?
+</li>
+<li>
+Tamianka
+</li>
+<li>
+Taminga
+</li>
+<li>
+Tempranillo Blanco
+</li>
+<li>
+Téoulier
+</li>
+<li>
+Terrantez
+</li>
+<li>
+Terret Gris
+</li>
+<li>
+Timorasso
+</li>
+<li>
+Torrontés
+</li>
+<li>
+Torontel
+</li>
+<li>
+Tourbat
+</li>
+<li>
+Torbato
+</li>
+<li>
+Traminer
+</li>
+<li>
+Tramini
+</li>
+<li>
+Traminac
+</li>
+<li>
+Trbljan
+</li>
+<li>
+Trebbiano
+</li>
+<li>
+Ugni Blanc
+</li>
+<li>
+Treixadura
+</li>
+<li>
+Trajadura
+</li>
+<li>
+Tresallier
+</li>
+<li>
+Trousseau Gris
+</li>
+<li>
+Grey Riesling
+</li>
+<li>
+Tsaoussi
+</li>
+<li>
+Tsolikauri
+</li>
+<li>
+Verdea
+</li>
+<li>
+Verdeca
+</li>
+<li>
+Verdejo
+</li>
+<li>
+Verdelho
+</li>
+<li>
+Gouveio
+</li>
+<li>
+Verdello
+</li>
+<li>
+Verdello
+</li>
+<li>
+Verdesse
+</li>
+<li>
+Verdicchio
+</li>
+<li>
+Verdil
+</li>
+<li>
+Verdosilla
+</li>
+<li>
+Verdiso
+</li>
+<li>
+Verdia
+</li>
+<li>
+Verdoncho
+</li>
+<li>
+Verduzzo
+</li>
+<li>
+Verduzzo Trevigiano
+</li>
+<li>
+Vermentino
+</li>
+<li>
+Rolle
+</li>
+<li>
+Vernaccia
+</li>
+<li>
+Vernaccia Di Oristano
+</li>
+<li>
+Veroga
+</li>
+<li>
+Versoaln
+</li>
+<li>
+Vespaiola
+</li>
+<li>
+Vilana
+</li>
+<li>
+Vinhao
+</li>
+<li>
+Viognier
+</li>
+<li>
+Viosinho
+</li>
+<li>
+Vital (grape)
+</li>
+<li>
+Vitovska
+</li>
+<li>
+Viura
+</li>
+<li>
+Macabeo
+</li>
+<li>
+Macabeu /alcañón
+</li>
+<li>
+Voskehat
+</li>
+<li>
+Vugava
+</li>
+<li>
+Weldra
+</li>
+<li>
+Welschriesling
+</li>
+<li>
+Riesling Italico
+</li>
+<li>
+Olaszrizling
+</li>
+<li>
+Lazki Rizling
+</li>
+<li>
+Graševina
+</li>
+<li>
+Würzer
+</li>
+<li>
+Xarel·lo
+</li>
+<li>
+Xarello
+</li>
+<li>
+Xynisteri
+</li>
+<li>
+Zala Gyöngye
+</li>
+<li>
+Zalema
+</li>
+<li>
+Zefir
+</li>
+<li>
+Zenit
+</li>
+<li>
+Zéta
+</li>
+<li>
+Orémus
+</li>
+<li>
+Zeusz
+</li>
+<li>
+Zierfandler
+</li>
+<li>
+Žilavka
+</li>
+<li>
+Žlahtina
+</li>
+<li>
+Cabernet Franc
+</li>
+<li>
+Cabernet Sauvignon
+</li>
+<li>
+Grenache
+</li>
+<li>
+Merlot
+</li>
+<li>
+Pinot Noir
+</li>
+<li>
+Sangiovese
+</li>
+<li>
+Syrah
+</li>
+<li>
+Zinfandel
+</li>
+<li>
+Chardonnay
+</li>
+<li>
+Gewurztraminer
+</li>
+<li>
+Pinot Gris
+</li>
+<li>
+Riesling
+</li>
+<li>
+Sauvignon Blanc
+</li>
+<li>
+Semillon
+</li>
+<li>
+Shiraz
+</li>
+<li>
+Tempranillo
+</li>
+<li>
+Nebbiolo
+</li>
+<li>
+Malbec
+</li>
+<li>
+Pinot Grigio
+</li>
+<li>
+Chenin Blanc
+</li>
+<li>
+Moscato
+</li>
+<li>
+Viognier
+</li>
+<li>
+Cabernet Mitos
+</li>
+<li>
+Cabernet Severny
+</li>
+<li>
+Muscadet
+</li>
+<li>
+Ruby Cabernet
+</li>
+<li>
+Muscat Bouschet
+</li>
+<li>
+Muscardin
+</li>
+<li>
+Black Muscat
+</li>
+<li>
+Muscat Hamburg
+</li>
+</div>
+</div>
+</div>
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Origins </a>
+</h4>
+</div>
+<div id="collapseThree" class="panel-collapse collapse">
+<div class="panel-body">
+<li>
+Bordeaux
+</li>
+<li>
+Australia
+</li>
+<li>
+New Zealand
+</li>
+<li>
+Austria
+</li>
+<li>
+France
+</li>
+<li>
+Alsace
+</li>
+<li>
+Gironde
+</li>
+<li>
+Jura
+</li>
+<li>
+Languedoc
+</li>
+<li>
+Burgundy
+</li>
+<li>
+Languedoc-roussillon
+</li>
+<li>
+Loire
+</li>
+<li>
+Rhone
+</li>
+<li>
+Germany
+</li>
+<li>
+South Africa
+</li>
+<li>
+Italy
+</li>
+<li>
+Portugal
+</li>
+<li>
+Spain
+</li>
+<li>
+California
+</li>
+<li>
+Veneto
+</li>
+<li>
+Tuscany
+</li>
+<li>
+Sicily
+</li>
+<li>
+Sardina
+</li>
+<li>
+Piedmont
+</li>
+<li>
+Argentina
+</li>
+<li>
+China
+</li>
+<li>
+Shanghai
+</li>
+<li>
+Beijing
+</li>
+<li>
+Chile
+</li>
+<li>
+Russia
+</li>
+<li>
+Romania
+</li>
+</div>
+</div>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Meal times </a>
+</h4>
+</div>
+<div id="collapseThree" class="panel-collapse collapse">
+<div class="panel-body">
+<li>
+Evening
+</li>
+<li>
+Dinner
+</li>
+<li>
+Lunch
+</li>
+<li>
+Brunch
+</li>
+<li>
+Supper
+</li>
+<li>
+Noon
+</li>
+</div>
+</div>
+</div>
+</div>
+
+<div class ="navbar navbar-default navbar-fixed-bottom">
+	<div class ="container">
+		<p class = "navbar-text pull-left">Dashboard built by Jabber Cruncher</p>
+		<a href="http://jabber-cruncher.com/" class = "navbar-btn btn-primary btn pull-right">Go on Jabber Cruncher</a>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

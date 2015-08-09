@@ -1,0 +1,2791 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Varieties</title>
+
+<script src="libs/jquery-1.11.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/respond.min.js"></script>
+<script src="libs/htmlwidgets-0.5/htmlwidgets.js"></script>
+<link href="libs/datatables-1.10.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="libs/datatables-1.10.5/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.0.30/datatables.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="libs/styles.css">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66129510-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="libs/highlight/default.css"
+      type="text/css" />
+<script src="libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="custom-bootstrap-menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jabber Cruncher</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="about.html" target="_blank">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="inactive"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="OverviewAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Varieties <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ViarietiesAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Growers <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Descriptors <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<div id="header">
+<h1 class="title">Varieties</h1>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8">
+<div class="panel panel-info">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Popularity
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true" data-toggle="tooltip" title="Total number of tweets and engagement generated, color = wine color, scale = log(x + 1)" data-placement="bottom"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/dimple.v1.1.4.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/d3.v3.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 720px;
+      height: 410px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart270c5e51773c' class = 'rChart dimple'&gt;&lt;/div&gt;    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+  var opts = {
+ &quot;dom&quot;: &quot;chart270c5e51773c&quot;,
+&quot;width&quot;:    720,
+&quot;height&quot;:    410,
+&quot;xAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;showPercent&quot;: false,
+&quot;axisLabel&quot;: &quot;logEngagement Rate&quot; 
+},
+&quot;yAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;showPercent&quot;: false,
+&quot;axisLabel&quot;: &quot;log#Tweets&quot; 
+},
+&quot;zAxis&quot;: [],
+&quot;colorAxis&quot;: [],
+&quot;defaultColors&quot;: [
+ [ &quot;#D4A730&quot;, &quot;#E76953&quot; ] 
+],
+&quot;layers&quot;: [],
+&quot;legend&quot;: {
+ &quot;x&quot;:    200,
+&quot;y&quot;:     10,
+&quot;width&quot;:    500,
+&quot;height&quot;:     20,
+&quot;horizontalAlign&quot;: &quot;right&quot; 
+},
+&quot;x&quot;: &quot;Number.of.tweets&quot;,
+&quot;y&quot;: &quot;Engagement&quot;,
+&quot;groups&quot;: [ &quot;Variety&quot;, &quot;Color&quot; ],
+&quot;color&quot;: &quot;Color&quot;,
+&quot;type&quot;: &quot;bubble&quot;,
+&quot;id&quot;: &quot;chart270c5e51773c&quot; 
+},
+    data = [{&quot;Variety&quot;:&quot;Arinto&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:1.38629436111989,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Auxerrois&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Bacchus&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:1.38629436111989},{&quot;Variety&quot;:&quot;Cabernet Franc&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:5.08140436498446,&quot;Number.of.tweets&quot;:4.49980967033027},{&quot;Variety&quot;:&quot;Cabernet Sauvignon&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:6.46302945692067,&quot;Number.of.tweets&quot;:6.15485809401642},{&quot;Variety&quot;:&quot;Carmine&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Chardonnay&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:8.99342737041261,&quot;Number.of.tweets&quot;:7.98854298273769},{&quot;Variety&quot;:&quot;Chenin Blanc&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:1.79175946922806,&quot;Number.of.tweets&quot;:1.94591014905531},{&quot;Variety&quot;:&quot;Dolcetto&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.07944154167984,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Duras&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Favorita&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:1.09861228866811},{&quot;Variety&quot;:&quot;Gamay&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.63905732961526,&quot;Number.of.tweets&quot;:1.09861228866811},{&quot;Variety&quot;:&quot;Garganega&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0.693147180559945,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Gewurztraminer&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Godello&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0.693147180559945,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Grenache&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.484906649788,&quot;Number.of.tweets&quot;:2.07944154167984},{&quot;Variety&quot;:&quot;Lambrusco&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:1.6094379124341,&quot;Number.of.tweets&quot;:1.79175946922806},{&quot;Variety&quot;:&quot;Malbec&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:4.83628190695148,&quot;Number.of.tweets&quot;:4.38202663467388},{&quot;Variety&quot;:&quot;Marselan&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Merlot&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:9.06773940337716,&quot;Number.of.tweets&quot;:7.40488757561613},{&quot;Variety&quot;:&quot;Monastrell&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0.693147180559945,&quot;Number.of.tweets&quot;:1.38629436111989},{&quot;Variety&quot;:&quot;Moscato&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:2.94443897916644,&quot;Number.of.tweets&quot;:3.49650756146648},{&quot;Variety&quot;:&quot;Muscadet&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:1.09861228866811},{&quot;Variety&quot;:&quot;Nebbiolo&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.39789527279837,&quot;Number.of.tweets&quot;:2.39789527279837},{&quot;Variety&quot;:&quot;Petit Verdot&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Petite Sirah&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Pinot Bianco&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:2.99573227355399,&quot;Number.of.tweets&quot;:2.07944154167984},{&quot;Variety&quot;:&quot;Pinot Grigio&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:7.96485088744731,&quot;Number.of.tweets&quot;:6.60800062529609},{&quot;Variety&quot;:&quot;Pinot Meunier&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:1.09861228866811,&quot;Number.of.tweets&quot;:1.09861228866811},{&quot;Variety&quot;:&quot;Pinot Nero&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Pinot Noir&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:9.24946492666023,&quot;Number.of.tweets&quot;:7.13648320859025},{&quot;Variety&quot;:&quot;Pinotage&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.07944154167984,&quot;Number.of.tweets&quot;:1.38629436111989},{&quot;Variety&quot;:&quot;Primitivo&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0.693147180559945,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Prosecco&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:2.484906649788,&quot;Number.of.tweets&quot;:2.484906649788},{&quot;Variety&quot;:&quot;Riesling&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:7.35500192110526,&quot;Number.of.tweets&quot;:7.0343879299155},{&quot;Variety&quot;:&quot;Roussanne&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:0.693147180559945,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Ruby Cabernet&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:1.6094379124341,&quot;Number.of.tweets&quot;:1.6094379124341},{&quot;Variety&quot;:&quot;Sagrantino&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:0,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Sangiovese&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:2.39789527279837,&quot;Number.of.tweets&quot;:0.693147180559945},{&quot;Variety&quot;:&quot;Sauvignon Blanc&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:6.99942246750796,&quot;Number.of.tweets&quot;:6.60934924316738},{&quot;Variety&quot;:&quot;Sauvignon Gris&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:1.94591014905531,&quot;Number.of.tweets&quot;:1.6094379124341},{&quot;Variety&quot;:&quot;Shiraz&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:5.14749447681345,&quot;Number.of.tweets&quot;:4.70048036579242},{&quot;Variety&quot;:&quot;Tempranillo&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:1.94591014905531,&quot;Number.of.tweets&quot;:2.56494935746154},{&quot;Variety&quot;:&quot;Viognier&quot;,&quot;Color&quot;:&quot;white&quot;,&quot;Engagement&quot;:2.30258509299405,&quot;Number.of.tweets&quot;:2.63905732961526},{&quot;Variety&quot;:&quot;Zinfandel&quot;,&quot;Color&quot;:&quot;red&quot;,&quot;Engagement&quot;:3.98898404656427,&quot;Number.of.tweets&quot;:3.04452243772342}];
+  var svg = dimple.newSvg(&quot;#&quot; + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+&quot;Axis&quot;]){
+      axisopts = opts[position+&quot;Axis&quot;];
+    } else axisopts = layer[position+&quot;Axis&quot;];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === &quot;addPctAxis&quot;)) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length &gt; 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == &quot;function&quot;) {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n&lt;20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis(&quot;x&quot;, layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis(&quot;y&quot;, layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') &amp;&amp; layer.zAxis.type){
+      z = buildAxis(&quot;z&quot;, layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty(&quot;groups&quot;)) {
+      s.categoryFields = (typeof layer.groups === &quot;object&quot;) ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i&lt;2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min &lt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;)._max = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max &gt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length &gt; 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length &gt; 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  dimple  " id="iframe-chart270c5e51773c">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-success">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Popularity Table
+</div>
+<div class="col-lg-2 col-md-2">
+<span id="varTooltip" class="glyphicon glyphicon-list" aria-hidden="true" data-toggle="tooltip" title="data for chart to the left, real values" data-placement="bottom"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<p><div id="htmlwidget-2613" style="width:100%;height:auto;" class="datatables"></div>
+<script type="application/json" data-for="htmlwidget-2613">{"x":{"data":[["Pinot Noir","Merlot","Chardonnay","Pinot Grigio","Riesling","Sauvignon Blanc","Cabernet Sauvignon","Shiraz","Cabernet Franc","Malbec","Zinfandel","Pinot Bianco","Moscato","Gamay","Grenache","Prosecco","Nebbiolo","Sangiovese","Viognier","Dolcetto","Pinotage","Sauvignon Gris","Tempranillo","Chenin Blanc","Lambrusco","Ruby Cabernet","Arinto","Pinot Meunier","Garganega","Godello","Monastrell","Primitivo","Roussanne","Auxerrois","Bacchus","Carmine","Duras","Favorita","Gewurztraminer","Marselan","Muscadet","Petit Verdot","Petite Sirah","Pinot Nero","Sagrantino"],[10398,8670,8049,2877,1563,1095,640,171,160,125,53,19,18,13,11,11,10,10,9,7,7,6,6,5,4,4,3,2,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],[1256,1643,2946,740,1134,741,470,109,89,79,20,7,32,2,7,11,10,1,13,1,3,4,12,6,5,4,1,2,1,1,3,1,1,1,3,1,1,2,1,1,2,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variety</th>\n      <th>Engagement</th>\n      <th>Number.of.tweets</th>\n    </tr>\n  </thead>\n</table>","options":{"pageLength":3,"columnDefs":[{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false},"callback":"function(table) {\nreturn table;\n}","filter":"bottom","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"10398\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"1\" data-max=\"2946\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n</tr>"},"evals":["callback"]}</script></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Time of day
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="glyphicon glyphicon-time" aria-hidden="true" data-toggle="tooltip" title="Number of mentions for top 12 varieties by time of day"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel='stylesheet' href='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/css/nv.d3.css'&gt;
+    &lt;link rel='stylesheet' href='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/css/rNVD3.css'&gt;
+    
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/jquery-1.8.2.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/d3.v3.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/nv.d3.min-new.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/fisheye.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1092px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart270c4d85122f' class = 'rChart nvd3'&gt;&lt;/div&gt;    
+    &lt;script type='text/javascript'&gt;
+ $(document).ready(function(){
+      drawchart270c4d85122f()
+    });
+    function drawchart270c4d85122f(){  
+      var opts = {
+ &quot;dom&quot;: &quot;chart270c4d85122f&quot;,
+&quot;width&quot;:   1092,
+&quot;height&quot;:    400,
+&quot;x&quot;: &quot;time&quot;,
+&quot;y&quot;: &quot;freq&quot;,
+&quot;group&quot;: &quot;varieties&quot;,
+&quot;type&quot;: &quot;stackedAreaChart&quot;,
+&quot;id&quot;: &quot;chart270c4d85122f&quot; 
+},
+        data = [
+ {
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.03589688964636 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.01224968044312 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.008414997869621 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.007349808265871 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.008201959948871 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.004047720494248 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.006071580741372 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.008201959948871 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.007882403067746 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.007030251384746 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.008734554750746 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.01097145291862 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.01342138900724 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.01267575628462 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.01299531316574 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.01938645078824 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.01821474222412 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.01491265445249 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.01672347677887 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.01736259054112 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.01725607158074 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.02077119727311 
+},
+{
+ &quot;varieties&quot;: &quot;Chardonnay&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.01757562846187 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.006923732424372 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.005645504899872 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.004580315296123 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.005858542820622 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.005006391137622 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.002449936088624 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.01086493395824 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.005538985939497 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.008308478909246 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.007775884107371 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.005858542820622 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.007136770345121 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.005645504899872 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.007562846186621 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.01065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.008841073711121 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.008201959948871 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.01022582019599 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.006923732424372 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.01193012356199 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.01150404772049 
+},
+{
+ &quot;varieties&quot;: &quot;Merlot&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.00905411163187 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.004899872177248 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.003408606731998 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.003089049850873 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.002662974009374 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.002449936088624 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.002876011930124 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.002449936088624 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.003834682573498 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.004047720494248 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.008521516829996 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.006604175543247 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.005965061780997 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.006497656582872 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.007030251384746 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.007030251384746 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.007562846186621 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.008308478909246 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.01065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.01043885811674 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.008947592671496 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Noir&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.007030251384746 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.003728163613123 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.004686834256498 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.002769492969749 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.001491265445249 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.002769492969749 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.002662974009374 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.002343417128249 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.003941201533873 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.003834682573498 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.004580315296123 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.005219429058372 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.006923732424372 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.005538985939497 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.006604175543247 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.007988922028121 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.007988922028121 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.008201959948871 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.005112910097997 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.005112910097997 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.005112910097997 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.006604175543247 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.008095440988496 
+},
+{
+ &quot;varieties&quot;: &quot;Riesling&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.006284618662122 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.001917341286749 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.002236898167874 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.002236898167874 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.001597784405624 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.001810822326374 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.001810822326374 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.002556455048999 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.003302087771623 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.005112910097997 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.006710694503622 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.003302087771623 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.004686834256498 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.003941201533873 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.003834682573498 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.004686834256498 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.004899872177248 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.003834682573498 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.004047720494248 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.004154239454623 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.003408606731998 
+},
+{
+ &quot;varieties&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.002662974009374 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.003515125692373 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.001171708564124 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.001491265445249 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.001278227524499 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.001917341286749 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.001278227524499 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.002556455048999 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.003089049850873 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.001384746484874 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.002556455048999 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.003941201533873 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.002449936088624 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.005752023860247 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.005538985939497 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.005858542820622 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.005432466979122 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.005112910097997 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.006497656582872 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.006604175543247 
+},
+{
+ &quot;varieties&quot;: &quot;Pinot Grigio&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.005006391137622 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.001917341286749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.0006391137622497 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.001278227524499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.002236898167874 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.001278227524499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0009586706433745 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.002662974009374 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.001810822326374 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.002556455048999 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.002769492969749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.002236898167874 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.002769492969749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.002876011930124 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.003834682573498 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.002449936088624 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.002023860247124 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.003408606731998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.0009586706433745 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.0006391137622497 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.0008521516829996 
+},
+{
+ &quot;varieties&quot;: &quot;Shiraz&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.0008521516829996 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.0006391137622497 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.0006391137622497 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Cabernet Franc&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.002662974009374 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.0007456327226246 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.0006391137622497 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.0005325948018747 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Malbec&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.0004260758414998 
+},
+{
+ &quot;varieties&quot;: &quot;Moscato&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.0003195568811248 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              0,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              1,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              2,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              3,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              4,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              5,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              6,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              7,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              8,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:              9,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             10,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             11,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             12,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             13,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             14,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             15,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             16,
+&quot;freq&quot;: 0.0002130379207499 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             17,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             18,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             19,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             20,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             21,
+&quot;freq&quot;:              0 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             22,
+&quot;freq&quot;: 0.0001065189603749 
+},
+{
+ &quot;varieties&quot;: &quot;Zinfandel&quot;,
+&quot;time&quot;:             23,
+&quot;freq&quot;: 0.0006391137622497 
+} 
+]
+  
+      if(!(opts.type===&quot;pieChart&quot; || opts.type===&quot;sparklinePlus&quot; || opts.type===&quot;bulletChart&quot;)) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != &quot;bulletChart&quot;){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        chart.xAxis
+  .axisLabel(&quot;Hour of day&quot;)
+
+        
+        
+        chart.yAxis
+  .axisLabel(&quot;Percent of mentions&quot;)
+  .tickFormat(
+      d3.format('%')
+    )
+      
+       d3.select(&quot;#&quot; + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  nvd3  " id="iframe-chart270c4d85122f">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-danger">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Overall Sentiment
+</div>
+<div class="col-lg-2 col-md-2">
+<span id="varTooltip" class="glyphicon glyphicon-dashboard" aria-hidden="true" data-toggle="tooltip" title="Sentiment of tweets mentioning wine varieties"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<!-- PieChart generated in R 3.1.3 by googleVis 0.5.9 package -->
+<!-- Sun Aug 09 20:07:06 2015 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataPieChartID270c66a727bf () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Negative",
+2160 
+],
+[
+ "Neutral",
+11050 
+],
+[
+ "Positive",
+8853 
+] 
+];
+data.addColumn('string','sentiment');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartPieChartID270c66a727bf() {
+var data = gvisDataPieChartID270c66a727bf();
+var options = {};
+options["allowHtml"] = true;
+options["colors"] = ['#E76953','#3FBBEE', '#38DD9B'];
+options["height"] =    400;
+options["width"] =    340;
+
+    var chart = new google.visualization.PieChart(
+    document.getElementById('PieChartID270c66a727bf')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartPieChartID270c66a727bf);
+})();
+function displayChartPieChartID270c66a727bf() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID270c66a727bf"></script>
+<!-- divChart -->
+<div id="PieChartID270c66a727bf" style="width: 340; height: 400;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-md-8">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Mealtimes
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="glyphicon glyphicon-object-align-right" aria-hidden="true" data-toggle="tooltip" title="Wine color by mealtimes" data-placement="top"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/dimple.v1.1.4.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/d3.v3.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 718px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart270c35e92014' class = 'rChart dimple'&gt;&lt;/div&gt;    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+  var opts = {
+ &quot;dom&quot;: &quot;chart270c35e92014&quot;,
+&quot;width&quot;:    718,
+&quot;height&quot;:    400,
+&quot;xAxis&quot;: {
+ &quot;type&quot;: &quot;addPctAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;yAxis&quot;: {
+ &quot;type&quot;: &quot;addCategoryAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;zAxis&quot;: [],
+&quot;colorAxis&quot;: [],
+&quot;defaultColors&quot;: [
+ [ &quot;#D4A730&quot;, &quot;#E76953&quot;, &quot;#09C5E2&quot; ] 
+],
+&quot;layers&quot;: [],
+&quot;legend&quot;: {
+ &quot;x&quot;:    200,
+&quot;y&quot;:     10,
+&quot;width&quot;:    400,
+&quot;height&quot;:     20,
+&quot;horizontalAlign&quot;: &quot;right&quot; 
+},
+&quot;x&quot;: &quot;percent.of.mentions&quot;,
+&quot;y&quot;: &quot;meal&quot;,
+&quot;groups&quot;: &quot;color&quot;,
+&quot;type&quot;: &quot;bar&quot;,
+&quot;id&quot;: &quot;chart270c35e92014&quot; 
+},
+    data = [{&quot;meal&quot;:&quot;brunch&quot;,&quot;color&quot;:&quot;blended&quot;,&quot;#Mentions&quot;:0,&quot;percent.of.mentions&quot;:0},{&quot;meal&quot;:&quot;brunch&quot;,&quot;color&quot;:&quot;red&quot;,&quot;#Mentions&quot;:0,&quot;percent.of.mentions&quot;:0},{&quot;meal&quot;:&quot;brunch&quot;,&quot;color&quot;:&quot;white&quot;,&quot;#Mentions&quot;:3,&quot;percent.of.mentions&quot;:100},{&quot;meal&quot;:&quot;dinner&quot;,&quot;color&quot;:&quot;blended&quot;,&quot;#Mentions&quot;:0,&quot;percent.of.mentions&quot;:0},{&quot;meal&quot;:&quot;dinner&quot;,&quot;color&quot;:&quot;red&quot;,&quot;#Mentions&quot;:74,&quot;percent.of.mentions&quot;:48.0519480519481},{&quot;meal&quot;:&quot;dinner&quot;,&quot;color&quot;:&quot;white&quot;,&quot;#Mentions&quot;:80,&quot;percent.of.mentions&quot;:51.9480519480519},{&quot;meal&quot;:&quot;lunch&quot;,&quot;color&quot;:&quot;blended&quot;,&quot;#Mentions&quot;:2,&quot;percent.of.mentions&quot;:4.34782608695652},{&quot;meal&quot;:&quot;lunch&quot;,&quot;color&quot;:&quot;red&quot;,&quot;#Mentions&quot;:18,&quot;percent.of.mentions&quot;:39.1304347826087},{&quot;meal&quot;:&quot;lunch&quot;,&quot;color&quot;:&quot;white&quot;,&quot;#Mentions&quot;:26,&quot;percent.of.mentions&quot;:56.5217391304348}];
+  var svg = dimple.newSvg(&quot;#&quot; + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+&quot;Axis&quot;]){
+      axisopts = opts[position+&quot;Axis&quot;];
+    } else axisopts = layer[position+&quot;Axis&quot;];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === &quot;addPctAxis&quot;)) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length &gt; 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == &quot;function&quot;) {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n&lt;20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis(&quot;x&quot;, layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis(&quot;y&quot;, layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') &amp;&amp; layer.zAxis.type){
+      z = buildAxis(&quot;z&quot;, layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty(&quot;groups&quot;)) {
+      s.categoryFields = (typeof layer.groups === &quot;object&quot;) ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i&lt;2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min &lt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;)._max = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max &gt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length &gt; 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length &gt; 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  dimple  " id="iframe-chart270c35e92014">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Sentiment
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="glyphicon glyphicon-stats" aria-hidden="true" data-toggle="tooltip" title="Sentiment for 15 most mentioned varieties" data-placement="top"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel='stylesheet' href='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/css/nv.d3.css'&gt;
+    &lt;link rel='stylesheet' href='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/css/rNVD3.css'&gt;
+    
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/jquery-1.8.2.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/d3.v3.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/nv.d3.min-new.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/nvd3/js/fisheye.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1092px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart270c249854ab' class = 'rChart nvd3'&gt;&lt;/div&gt;    
+    &lt;script type='text/javascript'&gt;
+ $(document).ready(function(){
+      drawchart270c249854ab()
+    });
+    function drawchart270c249854ab(){  
+      var opts = {
+ &quot;dom&quot;: &quot;chart270c249854ab&quot;,
+&quot;width&quot;:   1092,
+&quot;height&quot;:    400,
+&quot;x&quot;: &quot;origin&quot;,
+&quot;y&quot;: &quot;percent&quot;,
+&quot;group&quot;: &quot;sentiment&quot;,
+&quot;type&quot;: &quot;multiBarChart&quot;,
+&quot;id&quot;: &quot;chart270c249854ab&quot; 
+},
+        data = [
+ {
+ &quot;origin&quot;: &quot;Chardonnay&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:            277,
+&quot;volumeTot&quot;:           2946,
+&quot;percent&quot;: 0.09402579769179 
+},
+{
+ &quot;origin&quot;: &quot;Chardonnay&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:           1494,
+&quot;volumeTot&quot;:           2946,
+&quot;percent&quot;: 0.5071283095723 
+},
+{
+ &quot;origin&quot;: &quot;Chardonnay&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:           1175,
+&quot;volumeTot&quot;:           2946,
+&quot;percent&quot;: 0.3988458927359 
+},
+{
+ &quot;origin&quot;: &quot;Merlot&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:            158,
+&quot;volumeTot&quot;:           1643,
+&quot;percent&quot;: 0.09616555082167 
+},
+{
+ &quot;origin&quot;: &quot;Merlot&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            754,
+&quot;volumeTot&quot;:           1643,
+&quot;percent&quot;: 0.4589166159464 
+},
+{
+ &quot;origin&quot;: &quot;Merlot&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            731,
+&quot;volumeTot&quot;:           1643,
+&quot;percent&quot;: 0.4449178332319 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Noir&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:            106,
+&quot;volumeTot&quot;:           1256,
+&quot;percent&quot;: 0.0843949044586 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Noir&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            615,
+&quot;volumeTot&quot;:           1256,
+&quot;percent&quot;: 0.4896496815287 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Noir&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            535,
+&quot;volumeTot&quot;:           1256,
+&quot;percent&quot;: 0.4259554140127 
+},
+{
+ &quot;origin&quot;: &quot;Riesling&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             85,
+&quot;volumeTot&quot;:           1134,
+&quot;percent&quot;: 0.07495590828924 
+},
+{
+ &quot;origin&quot;: &quot;Riesling&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            583,
+&quot;volumeTot&quot;:           1134,
+&quot;percent&quot;: 0.5141093474427 
+},
+{
+ &quot;origin&quot;: &quot;Riesling&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            466,
+&quot;volumeTot&quot;:           1134,
+&quot;percent&quot;: 0.4109347442681 
+},
+{
+ &quot;origin&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             42,
+&quot;volumeTot&quot;:            741,
+&quot;percent&quot;: 0.05668016194332 
+},
+{
+ &quot;origin&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            382,
+&quot;volumeTot&quot;:            741,
+&quot;percent&quot;: 0.5155195681511 
+},
+{
+ &quot;origin&quot;: &quot;Sauvignon Blanc&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            317,
+&quot;volumeTot&quot;:            741,
+&quot;percent&quot;: 0.4278002699055 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Grigio&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             75,
+&quot;volumeTot&quot;:            740,
+&quot;percent&quot;: 0.1013513513514 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Grigio&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            358,
+&quot;volumeTot&quot;:            740,
+&quot;percent&quot;: 0.4837837837838 
+},
+{
+ &quot;origin&quot;: &quot;Pinot Grigio&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            307,
+&quot;volumeTot&quot;:            740,
+&quot;percent&quot;: 0.4148648648649 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             23,
+&quot;volumeTot&quot;:            470,
+&quot;percent&quot;: 0.04893617021277 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            239,
+&quot;volumeTot&quot;:            470,
+&quot;percent&quot;: 0.5085106382979 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Sauvignon&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            208,
+&quot;volumeTot&quot;:            470,
+&quot;percent&quot;: 0.4425531914894 
+},
+{
+ &quot;origin&quot;: &quot;Shiraz&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             14,
+&quot;volumeTot&quot;:            109,
+&quot;percent&quot;: 0.1284403669725 
+},
+{
+ &quot;origin&quot;: &quot;Shiraz&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             48,
+&quot;volumeTot&quot;:            109,
+&quot;percent&quot;: 0.4403669724771 
+},
+{
+ &quot;origin&quot;: &quot;Shiraz&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             47,
+&quot;volumeTot&quot;:            109,
+&quot;percent&quot;: 0.4311926605505 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Franc&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.04494382022472 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Franc&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             30,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.3370786516854 
+},
+{
+ &quot;origin&quot;: &quot;Cabernet Franc&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             55,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.6179775280899 
+},
+{
+ &quot;origin&quot;: &quot;Malbec&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:             79,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Malbec&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             57,
+&quot;volumeTot&quot;:             79,
+&quot;percent&quot;: 0.7215189873418 
+},
+{
+ &quot;origin&quot;: &quot;Malbec&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             22,
+&quot;volumeTot&quot;:             79,
+&quot;percent&quot;: 0.2784810126582 
+},
+{
+ &quot;origin&quot;: &quot;Moscato&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             32,
+&quot;percent&quot;:          0.125 
+},
+{
+ &quot;origin&quot;: &quot;Moscato&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             22,
+&quot;volumeTot&quot;:             32,
+&quot;percent&quot;:         0.6875 
+},
+{
+ &quot;origin&quot;: &quot;Moscato&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              6,
+&quot;volumeTot&quot;:             32,
+&quot;percent&quot;:         0.1875 
+},
+{
+ &quot;origin&quot;: &quot;Zinfandel&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              1,
+&quot;volumeTot&quot;:             20,
+&quot;percent&quot;:           0.05 
+},
+{
+ &quot;origin&quot;: &quot;Zinfandel&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              8,
+&quot;volumeTot&quot;:             20,
+&quot;percent&quot;:            0.4 
+},
+{
+ &quot;origin&quot;: &quot;Zinfandel&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             11,
+&quot;volumeTot&quot;:             20,
+&quot;percent&quot;:           0.55 
+},
+{
+ &quot;origin&quot;: &quot;Semillon&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              1,
+&quot;volumeTot&quot;:             16,
+&quot;percent&quot;:         0.0625 
+},
+{
+ &quot;origin&quot;: &quot;Semillon&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              5,
+&quot;volumeTot&quot;:             16,
+&quot;percent&quot;:         0.3125 
+},
+{
+ &quot;origin&quot;: &quot;Semillon&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             10,
+&quot;volumeTot&quot;:             16,
+&quot;percent&quot;:          0.625 
+},
+{
+ &quot;origin&quot;: &quot;Viognier&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:             13,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Viognier&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              6,
+&quot;volumeTot&quot;:             13,
+&quot;percent&quot;: 0.4615384615385 
+},
+{
+ &quot;origin&quot;: &quot;Viognier&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              7,
+&quot;volumeTot&quot;:             13,
+&quot;percent&quot;: 0.5384615384615 
+},
+{
+ &quot;origin&quot;: &quot;Tempranillo&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              2,
+&quot;volumeTot&quot;:             12,
+&quot;percent&quot;: 0.1666666666667 
+},
+{
+ &quot;origin&quot;: &quot;Tempranillo&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              6,
+&quot;volumeTot&quot;:             12,
+&quot;percent&quot;:            0.5 
+},
+{
+ &quot;origin&quot;: &quot;Tempranillo&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             12,
+&quot;percent&quot;: 0.3333333333333 
+} 
+]
+  
+      if(!(opts.type===&quot;pieChart&quot; || opts.type===&quot;sparklinePlus&quot; || opts.type===&quot;bulletChart&quot;)) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != &quot;bulletChart&quot;){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .reduceXTicks(false)
+  .color([ &quot;#E76953&quot;, &quot;#3FBBEE&quot;, &quot;#38DD9B&quot; ])
+          
+        chart.xAxis
+  .staggerLabels(true)
+
+        
+        
+        chart.yAxis
+  .axisLabel(&quot;Percent of mentions&quot;)
+  .tickFormat(
+      d3.format('%')
+    )
+      
+       d3.select(&quot;#&quot; + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  nvd3  " id="iframe-chart270c249854ab">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+
+<div class ="navbar navbar-default navbar-fixed-bottom">
+	<div class ="container">
+		<p class = "navbar-text pull-left">Dashboard built by Jabber Cruncher</p>
+		<a href="http://jabber-cruncher.com/" class = "navbar-btn btn-primary btn pull-right">Go on Jabber Cruncher</a>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
