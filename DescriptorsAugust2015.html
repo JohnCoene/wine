@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Descriptors</title>
+
+<script src="libs/jquery-1.11.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/respond.min.js"></script>
+<script src="libs/htmlwidgets-0.5/htmlwidgets.js"></script>
+<script src="libs/datatables-binding-0.1.32/datatables.js"></script>
+<script src="libs/datatables-1.10.7/jquery.dataTables.min.js"></script>
+<link href="libs/datatables-bootstrap-1.10.7/dataTables.bootstrap.css" rel="stylesheet" />
+<link href="libs/datatables-bootstrap-1.10.7/dataTables.extra.css" rel="stylesheet" />
+<script src="libs/datatables-bootstrap-1.10.7/dataTables.bootstrap.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="libs/styles.css">
+<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.4.0/css/font-awesome.min.css">
+<link href="libs/social-sharing.css" rel="stylesheet">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66129510-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="libs/highlight/default.css"
+      type="text/css" />
+<script src="libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="custom-bootstrap-menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jabber Cruncher</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://jabber-cruncher.com/" target="_blank">Visit site</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="inactive"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="OverviewAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Varieties <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="VarietiesAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Growers <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Descriptors <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="DescriptorsAugust2015.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Historic <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Historic.html">August</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<div id="header">
+<h1 class="title">Descriptors</h1>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Negative
+</div>
+<div class="col-lg-2 col-md-2">
+<a class="glyphicon glyphicon-minus-sign pull-right" data-toggle="tooltip" title="Most used negative descriptors" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-primary center-block" type="button">
+green <span class="badge"> 31 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-primary center-block" type="button">
+hard <span class="badge"> 24 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-primary center-block" type="button">
+sour <span class="badge"> 13 </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-success">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Positive
+</div>
+<div class="col-lg-2 col-md-2">
+<a class="glyphicon glyphicon-plus-sign pull-right" data-toggle="tooltip" title="Most used positive descriptors" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-success center-block" type="button">
+full <span class="badge"> 644 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-success center-block" type="button">
+hot <span class="badge"> 102 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-success center-block" type="button">
+big <span class="badge"> 97 </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Top Descriptors
+</div>
+<div class="col-lg-2 col-md-2">
+<a class="glyphicon glyphicon-sort-by-order pull-right" data-toggle="tooltip" title="Top 3 most used descriptors" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body" style="color: #3FBBEE;">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-info center-block" type="button">
+full <span class="badge"> 666 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-info center-block" type="button">
+dry <span class="badge"> 115 </span>
+</button>
+</div>
+<div class="col-lg-4 col-md-4">
+<button class="btn btn-info center-block" type="button">
+hot <span class="badge"> 114 </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Descriptors popularity
+</div>
+<div class="col-lg-2 col-md-2">
+<a class="glyphicon glyphicon-cutlery pull-right" data-toggle="tooltip" title="Total number of mentions during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;script src='http://d3js.org/d3.v3.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://dimplejs.org/dist/dimple.v1.1.4.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 700px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart23b844e5671' class = 'rChart dimple'&gt;&lt;/div&gt;    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+  var opts = {
+ &quot;dom&quot;: &quot;chart23b844e5671&quot;,
+&quot;width&quot;:    700,
+&quot;height&quot;:    400,
+&quot;xAxis&quot;: {
+ &quot;type&quot;: &quot;addCategoryAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;yAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;zAxis&quot;: [],
+&quot;colorAxis&quot;: [],
+&quot;defaultColors&quot;: [
+ [ &quot;#3FBBEE&quot;, &quot;#3FBBEE&quot; ] 
+],
+&quot;layers&quot;: [],
+&quot;legend&quot;: [],
+&quot;x&quot;: &quot;descriptors&quot;,
+&quot;y&quot;: &quot;freq&quot;,
+&quot;type&quot;: &quot;bar&quot;,
+&quot;id&quot;: &quot;chart23b844e5671&quot; 
+},
+    data = [{&quot;descriptors&quot;:&quot;full&quot;,&quot;freq&quot;:666},{&quot;descriptors&quot;:&quot;dry&quot;,&quot;freq&quot;:115},{&quot;descriptors&quot;:&quot;hot&quot;,&quot;freq&quot;:114},{&quot;descriptors&quot;:&quot;big&quot;,&quot;freq&quot;:105},{&quot;descriptors&quot;:&quot;fruit&quot;,&quot;freq&quot;:91},{&quot;descriptors&quot;:&quot;sweet&quot;,&quot;freq&quot;:87},{&quot;descriptors&quot;:&quot;fresh&quot;,&quot;freq&quot;:72},{&quot;descriptors&quot;:&quot;smooth&quot;,&quot;freq&quot;:65},{&quot;descriptors&quot;:&quot;green&quot;,&quot;freq&quot;:60},{&quot;descriptors&quot;:&quot;hard&quot;,&quot;freq&quot;:53},{&quot;descriptors&quot;:&quot;crisp&quot;,&quot;freq&quot;:49},{&quot;descriptors&quot;:&quot;rich&quot;,&quot;freq&quot;:46},{&quot;descriptors&quot;:&quot;body&quot;,&quot;freq&quot;:44},{&quot;descriptors&quot;:&quot;finish&quot;,&quot;freq&quot;:43},{&quot;descriptors&quot;:&quot;round&quot;,&quot;freq&quot;:37},{&quot;descriptors&quot;:&quot;fruity&quot;,&quot;freq&quot;:28},{&quot;descriptors&quot;:&quot;nose&quot;,&quot;freq&quot;:20},{&quot;descriptors&quot;:&quot;spicy&quot;,&quot;freq&quot;:20},{&quot;descriptors&quot;:&quot;balanced&quot;,&quot;freq&quot;:19},{&quot;descriptors&quot;:&quot;soft&quot;,&quot;freq&quot;:18},{&quot;descriptors&quot;:&quot;sour&quot;,&quot;freq&quot;:18},{&quot;descriptors&quot;:&quot;tart&quot;,&quot;freq&quot;:15},{&quot;descriptors&quot;:&quot;dirty&quot;,&quot;freq&quot;:14},{&quot;descriptors&quot;:&quot;fat&quot;,&quot;freq&quot;:14},{&quot;descriptors&quot;:&quot;baked&quot;,&quot;freq&quot;:13},{&quot;descriptors&quot;:&quot;complex&quot;,&quot;freq&quot;:13},{&quot;descriptors&quot;:&quot;elegant&quot;,&quot;freq&quot;:13},{&quot;descriptors&quot;:&quot;earthy&quot;,&quot;freq&quot;:11},{&quot;descriptors&quot;:&quot;oaky&quot;,&quot;freq&quot;:10},{&quot;descriptors&quot;:&quot;tannic&quot;,&quot;freq&quot;:10},{&quot;descriptors&quot;:&quot;alcoholic&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;aroma&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;bitter&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;buttery&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;heavy&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;legs&quot;,&quot;freq&quot;:9},{&quot;descriptors&quot;:&quot;brilliance&quot;,&quot;freq&quot;:6},{&quot;descriptors&quot;:&quot;flat&quot;,&quot;freq&quot;:6},{&quot;descriptors&quot;:&quot;rough&quot;,&quot;freq&quot;:6},{&quot;descriptors&quot;:&quot;closed&quot;,&quot;freq&quot;:5},{&quot;descriptors&quot;:&quot;depth&quot;,&quot;freq&quot;:5},{&quot;descriptors&quot;:&quot;expressive&quot;,&quot;freq&quot;:4},{&quot;descriptors&quot;:&quot;firm&quot;,&quot;freq&quot;:4},{&quot;descriptors&quot;:&quot;powerful&quot;,&quot;freq&quot;:4},{&quot;descriptors&quot;:&quot;smokey&quot;,&quot;freq&quot;:4},{&quot;descriptors&quot;:&quot;acid&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;connected&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;corked&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;grassy&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;hollow&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;jammy&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;lean&quot;,&quot;freq&quot;:3},{&quot;descriptors&quot;:&quot;acidic&quot;,&quot;freq&quot;:2},{&quot;descriptors&quot;:&quot;leathery&quot;,&quot;freq&quot;:2},{&quot;descriptors&quot;:&quot;vegetal&quot;,&quot;freq&quot;:2},{&quot;descriptors&quot;:&quot;bouquet&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;finesse&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;herbaceous&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;herbal&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;supple&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;tar&quot;,&quot;freq&quot;:1},{&quot;descriptors&quot;:&quot;tobacco&quot;,&quot;freq&quot;:1}];
+  var svg = dimple.newSvg(&quot;#&quot; + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+&quot;Axis&quot;]){
+      axisopts = opts[position+&quot;Axis&quot;];
+    } else axisopts = layer[position+&quot;Axis&quot;];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === &quot;addPctAxis&quot;)) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length &gt; 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == &quot;function&quot;) {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n&lt;20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis(&quot;x&quot;, layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis(&quot;y&quot;, layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') &amp;&amp; layer.zAxis.type){
+      z = buildAxis(&quot;z&quot;, layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty(&quot;groups&quot;)) {
+      s.categoryFields = (typeof layer.groups === &quot;object&quot;) ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i&lt;2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min &lt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;)._max = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max &gt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length &gt; 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length &gt; 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  dimple  " id="iframe-chart23b844e5671">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="panel panel-info">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Descriptors Popularity Table
+</div>
+<div class="col-lg-1 col-md-1">
+<a class="glyphicon glyphicon-cutlery pull-right" data-toggle="tooltip" title="Total number of mentions during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<div id="htmlwidget-5646" style="width:100%;height:auto;" class="datatables"></div>
+<script type="application/json" data-for="htmlwidget-5646">{"x":{"style":"bootstrap","filter":"bottom","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"1\" data-max=\"666\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n</tr>","class":"table table-striped table-hover","data":[["Full","Dry","Hot","Big","Fruit","Sweet","Fresh","Smooth","Green","Hard","Crisp","Rich","Body","Finish","Round","Fruity","Nose","Spicy","Balanced","Soft","Sour","Tart","Dirty","Fat","Baked","Complex","Elegant","Earthy","Oaky","Tannic","Alcoholic","Aroma","Bitter","Buttery","Heavy","Legs","Brilliance","Flat","Rough","Closed","Depth","Expressive","Firm","Powerful","Smokey","Acid","Connected","Corked","Grassy","Hollow","Jammy","Lean","Acidic","Leathery","Vegetal","Bouquet","Finesse","Herbaceous","Herbal","Supple","Tar","Tobacco"],[666,115,114,105,91,87,72,65,60,53,49,46,44,43,37,28,20,20,19,18,18,15,14,14,13,13,13,11,10,10,9,9,9,9,9,9,6,6,6,5,5,4,4,4,4,3,3,3,3,3,3,3,2,2,2,1,1,1,1,1,1,1]],"container":"<table>\n  <thead>\n    <tr>\n      <th>descriptors</th>\n      <th>freq</th>\n    </tr>\n  </thead>\n</table>","options":{"pageLength":5,"dom":"tip","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-info">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-10 col-md-10">
+Associations
+</div>
+<div class="col-lg-2 col-md-2">
+<a class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" title="Sophistication is the average number of words in tweets while the size of the bubble represents the % of mentions" id="varTooltip" data-placement = "top" style = "color: #FFF; padding: 5px;"></a> <a class="glyphicon glyphicon-cutlery pull-right" data-toggle="tooltip" title="Descriptors used to describe the five most mentioned grape varieties" id="varTooltip" data-placement = "top" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/dimple.v1.1.4.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='C:/Program Files (x86)/R-2.12.1/library/rCharts/libraries/dimple/js/d3.v3.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1100px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart23b879d21851' class = 'rChart dimple'&gt;&lt;/div&gt;    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+  var opts = {
+ &quot;dom&quot;: &quot;chart23b879d21851&quot;,
+&quot;width&quot;:   1100,
+&quot;height&quot;:    400,
+&quot;xAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;yAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;showPercent&quot;: false 
+},
+&quot;zAxis&quot;: {
+ &quot;type&quot;: &quot;addMeasureAxis&quot;,
+&quot;outputFormat&quot;: &quot;.0%&quot; 
+},
+&quot;colorAxis&quot;: [],
+&quot;defaultColors&quot;: [],
+&quot;layers&quot;: [],
+&quot;legend&quot;: {
+ &quot;x&quot;:    220,
+&quot;y&quot;:      1,
+&quot;width&quot;:    750,
+&quot;height&quot;:     50,
+&quot;horizontalAlign&quot;: &quot;right&quot; 
+},
+&quot;x&quot;: &quot;Sentiment.Score&quot;,
+&quot;y&quot;: &quot;Sophistication&quot;,
+&quot;z&quot;: &quot;Total.Mentions&quot;,
+&quot;groups&quot;: &quot;Descriptor&quot;,
+&quot;type&quot;: &quot;bubble&quot;,
+&quot;storyboard&quot;: &quot;Varieties&quot;,
+&quot;id&quot;: &quot;chart23b879d21851&quot; 
+},
+    data = [{&quot;Descriptor&quot;:&quot;Full&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.562992125984252,&quot;Sentiment.Score&quot;:1.00699300699301,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Powerful&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0078740157480315,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Rich&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0236220472440945,&quot;Sentiment.Score&quot;:2.16666666666667,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Fresh&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Hard&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:-2,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Finish&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0236220472440945,&quot;Sentiment.Score&quot;:0.5,&quot;Sophistication&quot;:8,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Green&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.015748031496063,&quot;Sentiment.Score&quot;:-0.25,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Big&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0433070866141732,&quot;Sentiment.Score&quot;:1.36363636363636,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Smooth&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0433070866141732,&quot;Sentiment.Score&quot;:2.18181818181818,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Spicy&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Sour&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Sweet&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.031496062992126,&quot;Sentiment.Score&quot;:1.625,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Soft&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Nose&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.015748031496063,&quot;Sentiment.Score&quot;:0.75,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Flat&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Tart&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Balanced&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0118110236220472,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Dry&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0196850393700787,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Body&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0393700787401575,&quot;Sentiment.Score&quot;:1.6,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Fruit&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0196850393700787,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Elegant&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0078740157480315,&quot;Sentiment.Score&quot;:1.5,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Hot&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0196850393700787,&quot;Sentiment.Score&quot;:1.4,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Complex&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Crisp&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Hollow&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Round&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0118110236220472,&quot;Sentiment.Score&quot;:0.666666666666667,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Closed&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Brilliance&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Buttery&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:4,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Rough&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Legs&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0078740157480315,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Baked&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0118110236220472,&quot;Sentiment.Score&quot;:-1.33333333333333,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Dirty&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Oaky&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Fruity&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0354330708661417,&quot;Sentiment.Score&quot;:0.666666666666667,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Aroma&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Earthy&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Tannic&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Alcoholic&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.0078740157480315,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Acid&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Fat&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Smokey&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Depth&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Firm&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Vegetal&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Lean&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Corked&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Leathery&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Heavy&quot;,&quot;Varieties&quot;:&quot;Merlot&quot;,&quot;Total.Mentions&quot;:0.00393700787401575,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:254},{&quot;Descriptor&quot;:&quot;Full&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0640569395017794,&quot;Sentiment.Score&quot;:1.61111111111111,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Powerful&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00355871886120996,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Rich&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0320284697508897,&quot;Sentiment.Score&quot;:1.77777777777778,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Fresh&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0782918149466192,&quot;Sentiment.Score&quot;:1.95454545454545,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Hard&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0320284697508897,&quot;Sentiment.Score&quot;:-0.555555555555556,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Finish&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0249110320284698,&quot;Sentiment.Score&quot;:1.14285714285714,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Green&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0427046263345196,&quot;Sentiment.Score&quot;:0.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Big&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.099644128113879,&quot;Sentiment.Score&quot;:1.35714285714286,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Smooth&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0640569395017794,&quot;Sentiment.Score&quot;:1.27777777777778,&quot;Sophistication&quot;:8,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Spicy&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0177935943060498,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Sour&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0177935943060498,&quot;Sentiment.Score&quot;:-0.8,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Sweet&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0604982206405694,&quot;Sentiment.Score&quot;:1.64705882352941,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Soft&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:16,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Nose&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:0.75,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Flat&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:-0.5,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Tart&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Balanced&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0213523131672598,&quot;Sentiment.Score&quot;:2.33333333333333,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Dry&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:1.25,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Body&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:1.75,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Fruit&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0391459074733096,&quot;Sentiment.Score&quot;:2.45454545454545,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Elegant&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0106761565836299,&quot;Sentiment.Score&quot;:1.66666666666667,&quot;Sophistication&quot;:8,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Hot&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0782918149466192,&quot;Sentiment.Score&quot;:1.27272727272727,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Complex&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0213523131672598,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Crisp&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0640569395017794,&quot;Sentiment.Score&quot;:2.22222222222222,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Hollow&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Round&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0177935943060498,&quot;Sentiment.Score&quot;:0.6,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Closed&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00355871886120996,&quot;Sentiment.Score&quot;:-2,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Brilliance&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0213523131672598,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:6,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Buttery&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:9,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Rough&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0106761565836299,&quot;Sentiment.Score&quot;:-0.666666666666667,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Legs&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:0.5,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Baked&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0142348754448399,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Dirty&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:1.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Oaky&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.0213523131672598,&quot;Sentiment.Score&quot;:0.333333333333333,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Fruity&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:0.5,&quot;Sophistication&quot;:5,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Aroma&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Earthy&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Tannic&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Alcoholic&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Acid&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00355871886120996,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Fat&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Smokey&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Depth&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00355871886120996,&quot;Sentiment.Score&quot;:5,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Firm&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00355871886120996,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:7,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Vegetal&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0.00711743772241993,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Lean&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Corked&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Leathery&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Heavy&quot;,&quot;Varieties&quot;:&quot;Chardonnay&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:281},{&quot;Descriptor&quot;:&quot;Full&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0606060606060606,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Powerful&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Rich&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0909090909090909,&quot;Sentiment.Score&quot;:1.77777777777778,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Fresh&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.141414141414141,&quot;Sentiment.Score&quot;:2.14285714285714,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Hard&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0303030303030303,&quot;Sentiment.Score&quot;:-0.333333333333333,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Finish&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Green&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0303030303030303,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Big&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0303030303030303,&quot;Sentiment.Score&quot;:2.66666666666667,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Smooth&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0707070707070707,&quot;Sentiment.Score&quot;:1.57142857142857,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Spicy&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Sour&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Sweet&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.101010101010101,&quot;Sentiment.Score&quot;:0.8,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Soft&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Nose&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Flat&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:-0.5,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Tart&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Balanced&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Dry&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0808080808080808,&quot;Sentiment.Score&quot;:0.375,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Body&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Fruit&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:4,&quot;Sophistication&quot;:16,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Elegant&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Hot&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0808080808080808,&quot;Sentiment.Score&quot;:1.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Complex&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Crisp&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0909090909090909,&quot;Sentiment.Score&quot;:1.88888888888889,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Hollow&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Round&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Closed&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Brilliance&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Buttery&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:8,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Rough&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Legs&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Baked&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Dirty&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Oaky&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Fruity&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:4,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Aroma&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Earthy&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Tannic&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0202020202020202,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Alcoholic&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Acid&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Fat&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:-2,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Smokey&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0.0101010101010101,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Depth&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Firm&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Vegetal&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Lean&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Corked&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Leathery&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Heavy&quot;,&quot;Varieties&quot;:&quot;Pinot Grigio&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:99},{&quot;Descriptor&quot;:&quot;Full&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.00719424460431655,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:7,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Powerful&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Rich&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0143884892086331,&quot;Sentiment.Score&quot;:1.5,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Fresh&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:1.66666666666667,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Hard&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0431654676258993,&quot;Sentiment.Score&quot;:0.833333333333333,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Finish&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0503597122302158,&quot;Sentiment.Score&quot;:0.285714285714286,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Green&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0143884892086331,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Big&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:1.33333333333333,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Smooth&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Spicy&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0431654676258993,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Sour&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:-0.666666666666667,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Sweet&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.129496402877698,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Soft&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Nose&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Flat&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Tart&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Balanced&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0287769784172662,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Dry&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.345323741007194,&quot;Sentiment.Score&quot;:0.625,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Body&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:3.33333333333333,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Fruit&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0647482014388489,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Elegant&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Hot&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0575539568345324,&quot;Sentiment.Score&quot;:1.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Complex&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Crisp&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:1.66666666666667,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Hollow&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Round&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.00719424460431655,&quot;Sentiment.Score&quot;:4,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Closed&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Brilliance&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Buttery&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Rough&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Legs&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Baked&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0143884892086331,&quot;Sentiment.Score&quot;:-3,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Dirty&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.00719424460431655,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Oaky&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.00719424460431655,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Fruity&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0215827338129496,&quot;Sentiment.Score&quot;:1.33333333333333,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Aroma&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Earthy&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Tannic&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Alcoholic&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Acid&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Fat&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Smokey&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0143884892086331,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:16,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Depth&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Firm&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.0143884892086331,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Vegetal&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Lean&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0.00719424460431655,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Corked&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Leathery&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Heavy&quot;,&quot;Varieties&quot;:&quot;Riesling&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:139},{&quot;Descriptor&quot;:&quot;Full&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0645161290322581,&quot;Sentiment.Score&quot;:0.666666666666667,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Powerful&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Rich&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.021505376344086,&quot;Sentiment.Score&quot;:2.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Fresh&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.043010752688172,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Hard&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0752688172043011,&quot;Sentiment.Score&quot;:-0.285714285714286,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Finish&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.032258064516129,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Green&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.032258064516129,&quot;Sentiment.Score&quot;:-1.33333333333333,&quot;Sophistication&quot;:10,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Big&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0645161290322581,&quot;Sentiment.Score&quot;:1.66666666666667,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Smooth&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0645161290322581,&quot;Sentiment.Score&quot;:2.5,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Spicy&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.021505376344086,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Sour&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.032258064516129,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Sweet&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0645161290322581,&quot;Sentiment.Score&quot;:0.666666666666667,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Soft&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.032258064516129,&quot;Sentiment.Score&quot;:1.66666666666667,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Nose&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Flat&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Tart&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Balanced&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Dry&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:2,&quot;Sophistication&quot;:15,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Body&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0537634408602151,&quot;Sentiment.Score&quot;:3,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Fruit&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.139784946236559,&quot;Sentiment.Score&quot;:2.53846153846154,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Elegant&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.021505376344086,&quot;Sentiment.Score&quot;:3.5,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Hot&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0645161290322581,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:12,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Complex&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Crisp&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:4,&quot;Sophistication&quot;:16,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Hollow&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Round&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Closed&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Brilliance&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Buttery&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.021505376344086,&quot;Sentiment.Score&quot;:1,&quot;Sophistication&quot;:9,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Rough&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Legs&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Baked&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Dirty&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Oaky&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Fruity&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:11,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Aroma&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Earthy&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.0537634408602151,&quot;Sentiment.Score&quot;:1.6,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Tannic&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Alcoholic&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Acid&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Fat&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:-2,&quot;Sophistication&quot;:13,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Smokey&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Depth&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Firm&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Vegetal&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Lean&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Corked&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:-2,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Leathery&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0.010752688172043,&quot;Sentiment.Score&quot;:-1,&quot;Sophistication&quot;:14,&quot;sumFreq&quot;:93},{&quot;Descriptor&quot;:&quot;Heavy&quot;,&quot;Varieties&quot;:&quot;Pinot Noir&quot;,&quot;Total.Mentions&quot;:0,&quot;Sentiment.Score&quot;:0,&quot;Sophistication&quot;:0,&quot;sumFreq&quot;:93}];
+  var svg = dimple.newSvg(&quot;#&quot; + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+&quot;Axis&quot;]){
+      axisopts = opts[position+&quot;Axis&quot;];
+    } else axisopts = layer[position+&quot;Axis&quot;];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === &quot;addPctAxis&quot;)) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length &gt; 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == &quot;function&quot;) {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n&lt;20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis(&quot;x&quot;, layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis(&quot;y&quot;, layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') &amp;&amp; layer.zAxis.type){
+      z = buildAxis(&quot;z&quot;, layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    if(layer.hasOwnProperty(&quot;groups&quot;)) {
+      s.categoryFields = (typeof layer.groups === &quot;object&quot;) ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = eval(layer.lineWeight);
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = eval(layer.barGap);
+      }    
+    };
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i&lt;2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min &lt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;)._max = myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max &gt; s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max ? myChart.series[0]._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max : s._axisBounds(i==0?&quot;x&quot;:&quot;y&quot;).max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length &gt; 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length &gt; 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  dimple  " id="iframe-chart23b879d21851">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Associations Table
+</div>
+<div class="col-lg-1 col-md-1">
+<a class="glyphicon glyphicon-th-list pull-right" data-toggle="tooltip" title="Data from the above plot" id="varTooltip" data-placement = "top" style = "color: #FFF;"></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<div id="htmlwidget-1721" style="width:100%;height:auto;" class="datatables"></div>
+<script type="application/json" data-for="htmlwidget-1721">{"x":{"style":"bootstrap","filter":"bottom","filterHTML":"<tr>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\">\n        <option value=\"Acid\">Acid</option>\n        <option value=\"Alcoholic\">Alcoholic</option>\n        <option value=\"Aroma\">Aroma</option>\n        <option value=\"Baked\">Baked</option>\n        <option value=\"Balanced\">Balanced</option>\n        <option value=\"Big\">Big</option>\n        <option value=\"Body\">Body</option>\n        <option value=\"Brilliance\">Brilliance</option>\n        <option value=\"Buttery\">Buttery</option>\n        <option value=\"Closed\">Closed</option>\n        <option value=\"Complex\">Complex</option>\n        <option value=\"Corked\">Corked</option>\n        <option value=\"Crisp\">Crisp</option>\n        <option value=\"Depth\">Depth</option>\n        <option value=\"Dirty\">Dirty</option>\n        <option value=\"Dry\">Dry</option>\n        <option value=\"Earthy\">Earthy</option>\n        <option value=\"Elegant\">Elegant</option>\n        <option value=\"Fat\">Fat</option>\n        <option value=\"Finish\">Finish</option>\n        <option value=\"Firm\">Firm</option>\n        <option value=\"Flat\">Flat</option>\n        <option value=\"Fresh\">Fresh</option>\n        <option value=\"Fruit\">Fruit</option>\n        <option value=\"Fruity\">Fruity</option>\n        <option value=\"Full\">Full</option>\n        <option value=\"Green\">Green</option>\n        <option value=\"Hard\">Hard</option>\n        <option value=\"Heavy\">Heavy</option>\n        <option value=\"Hollow\">Hollow</option>\n        <option value=\"Hot\">Hot</option>\n        <option value=\"Lean\">Lean</option>\n        <option value=\"Leathery\">Leathery</option>\n        <option value=\"Legs\">Legs</option>\n        <option value=\"Nose\">Nose</option>\n        <option value=\"Oaky\">Oaky</option>\n        <option value=\"Powerful\">Powerful</option>\n        <option value=\"Rich\">Rich</option>\n        <option value=\"Rough\">Rough</option>\n        <option value=\"Round\">Round</option>\n        <option value=\"Smokey\">Smokey</option>\n        <option value=\"Smooth\">Smooth</option>\n        <option value=\"Soft\">Soft</option>\n        <option value=\"Sour\">Sour</option>\n        <option value=\"Spicy\">Spicy</option>\n        <option value=\"Sweet\">Sweet</option>\n        <option value=\"Tannic\">Tannic</option>\n        <option value=\"Tart\">Tart</option>\n        <option value=\"Vegetal\">Vegetal</option>\n      </select>\n    </div>\n  </td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\">\n        <option value=\"Chardonnay\">Chardonnay</option>\n        <option value=\"Merlot\">Merlot</option>\n        <option value=\"Pinot Grigio\">Pinot Grigio</option>\n        <option value=\"Pinot Noir\">Pinot Noir</option>\n        <option value=\"Riesling\">Riesling</option>\n      </select>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"0.562992125984252\" data-scale=\"9\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"-3\" data-max=\"5\" data-scale=\"2\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"></span>\n    </div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"16\"></div>\n      <span style=\"float: left;\"></span>\n      <span style=\"float: right;\"></span>\n    </div>\n  </td>\n</tr>","data":[["Full","Powerful","Rich","Fresh","Hard","Finish","Green","Big","Smooth","Spicy","Sour","Sweet","Soft","Nose","Flat","Tart","Balanced","Dry","Body","Fruit","Elegant","Hot","Complex","Crisp","Hollow","Round","Closed","Brilliance","Buttery","Rough","Legs","Baked","Dirty","Oaky","Fruity","Aroma","Earthy","Tannic","Alcoholic","Acid","Fat","Smokey","Depth","Firm","Vegetal","Lean","Corked","Leathery","Heavy","Full","Powerful","Rich","Fresh","Hard","Finish","Green","Big","Smooth","Spicy","Sour","Sweet","Soft","Nose","Flat","Tart","Balanced","Dry","Body","Fruit","Elegant","Hot","Complex","Crisp","Hollow","Round","Closed","Brilliance","Buttery","Rough","Legs","Baked","Dirty","Oaky","Fruity","Aroma","Earthy","Tannic","Alcoholic","Acid","Fat","Smokey","Depth","Firm","Vegetal","Lean","Corked","Leathery","Heavy","Full","Powerful","Rich","Fresh","Hard","Finish","Green","Big","Smooth","Spicy","Sour","Sweet","Soft","Nose","Flat","Tart","Balanced","Dry","Body","Fruit","Elegant","Hot","Complex","Crisp","Hollow","Round","Closed","Brilliance","Buttery","Rough","Legs","Baked","Dirty","Oaky","Fruity","Aroma","Earthy","Tannic","Alcoholic","Acid","Fat","Smokey","Depth","Firm","Vegetal","Lean","Corked","Leathery","Heavy","Full","Powerful","Rich","Fresh","Hard","Finish","Green","Big","Smooth","Spicy","Sour","Sweet","Soft","Nose","Flat","Tart","Balanced","Dry","Body","Fruit","Elegant","Hot","Complex","Crisp","Hollow","Round","Closed","Brilliance","Buttery","Rough","Legs","Baked","Dirty","Oaky","Fruity","Aroma","Earthy","Tannic","Alcoholic","Acid","Fat","Smokey","Depth","Firm","Vegetal","Lean","Corked","Leathery","Heavy","Full","Powerful","Rich","Fresh","Hard","Finish","Green","Big","Smooth","Spicy","Sour","Sweet","Soft","Nose","Flat","Tart","Balanced","Dry","Body","Fruit","Elegant","Hot","Complex","Crisp","Hollow","Round","Closed","Brilliance","Buttery","Rough","Legs","Baked","Dirty","Oaky","Fruity","Aroma","Earthy","Tannic","Alcoholic","Acid","Fat","Smokey","Depth","Firm","Vegetal","Lean","Corked","Leathery","Heavy"],["Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Merlot","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Chardonnay","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Pinot Grigio","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Riesling","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir","Pinot Noir"],[0.562992125984252,0.0078740157480315,0.0236220472440945,0.00393700787401575,0.00393700787401575,0.0236220472440945,0.015748031496063,0.0433070866141732,0.0433070866141732,0,0,0.031496062992126,0.00393700787401575,0.015748031496063,0,0,0.0118110236220472,0.0196850393700787,0.0393700787401575,0.0196850393700787,0.0078740157480315,0.0196850393700787,0.00393700787401575,0,0,0.0118110236220472,0.00393700787401575,0,0.00393700787401575,0,0.0078740157480315,0.0118110236220472,0.00393700787401575,0.00393700787401575,0.0354330708661417,0,0,0.00393700787401575,0.0078740157480315,0,0,0,0,0,0,0,0,0,0.00393700787401575,0.0640569395017794,0.00355871886120996,0.0320284697508897,0.0782918149466192,0.0320284697508897,0.0249110320284698,0.0427046263345196,0.099644128113879,0.0640569395017794,0.0177935943060498,0.0177935943060498,0.0604982206405694,0.00711743772241993,0.0142348754448399,0.00711743772241993,0.00711743772241993,0.0213523131672598,0.0142348754448399,0.0142348754448399,0.0391459074733096,0.0106761565836299,0.0782918149466192,0.0213523131672598,0.0640569395017794,0.00711743772241993,0.0177935943060498,0.00355871886120996,0.0213523131672598,0.0142348754448399,0.0106761565836299,0.0142348754448399,0.0142348754448399,0.00711743772241993,0.0213523131672598,0.00711743772241993,0,0,0,0,0.00355871886120996,0.00711743772241993,0,0.00355871886120996,0.00355871886120996,0.00711743772241993,0,0,0,0,0.0606060606060606,0,0.0909090909090909,0.141414141414141,0.0303030303030303,0.0202020202020202,0.0303030303030303,0.0303030303030303,0.0707070707070707,0.0101010101010101,0,0.101010101010101,0,0,0.0202020202020202,0,0,0.0808080808080808,0.0101010101010101,0.0101010101010101,0,0.0808080808080808,0,0.0909090909090909,0,0,0,0,0.0202020202020202,0,0.0101010101010101,0,0.0101010101010101,0,0.0202020202020202,0.0202020202020202,0,0.0202020202020202,0,0,0.0101010101010101,0.0101010101010101,0,0,0,0,0,0,0,0.00719424460431655,0,0.0143884892086331,0.0215827338129496,0.0431654676258993,0.0503597122302158,0.0143884892086331,0.0215827338129496,0,0.0431654676258993,0.0215827338129496,0.129496402877698,0,0,0,0,0.0287769784172662,0.345323741007194,0.0215827338129496,0.0647482014388489,0,0.0575539568345324,0,0.0215827338129496,0,0.00719424460431655,0,0,0,0,0,0.0143884892086331,0.00719424460431655,0.00719424460431655,0.0215827338129496,0,0,0,0,0,0,0.0143884892086331,0,0.0143884892086331,0,0.00719424460431655,0,0,0,0.0645161290322581,0,0.021505376344086,0.043010752688172,0.0752688172043011,0.032258064516129,0.032258064516129,0.0645161290322581,0.0645161290322581,0.021505376344086,0.032258064516129,0.0645161290322581,0.032258064516129,0.010752688172043,0,0,0.010752688172043,0.010752688172043,0.0537634408602151,0.139784946236559,0.021505376344086,0.0645161290322581,0.010752688172043,0.010752688172043,0,0,0,0,0.021505376344086,0,0,0,0,0,0.010752688172043,0,0.0537634408602151,0,0,0,0.010752688172043,0,0,0,0,0,0.010752688172043,0.010752688172043,0],[1.01,2,2.17,1,-2,0.5,-0.25,1.36,2.18,0,0,1.62,1,0.75,0,0,2,1,1.6,3,1.5,1.4,0,0,0,0.67,0,0,4,0,0,-1.33,-1,0,0.67,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1.61,2,1.78,1.95,-0.56,1.14,0.5,1.36,1.28,0,-0.8,1.65,1,0.75,-0.5,0,2.33,1.25,1.75,2.45,1.67,1.27,2,2.22,0,0.6,-2,1,1,-0.67,0.5,0,1.5,0.33,0.5,0,0,0,0,0,0,0,5,-1,0,0,0,0,0,3,0,1.78,2.14,-0.33,3,0,2.67,1.57,0,0,0.8,0,0,-0.5,0,0,0.38,2,4,0,1.5,0,1.89,0,0,0,0,1,0,0,0,-1,0,4,1,0,2,0,0,-2,2,0,0,0,0,0,0,0,2,0,1.5,1.67,0.83,0.29,0,1.33,0,1,-0.67,2,0,0,0,0,2,0.62,3.33,3,0,1.5,0,1.67,0,4,0,0,0,0,0,-3,-1,1,1.33,0,0,0,0,0,0,2,0,1,0,1,0,0,0,0.67,0,2.5,2,-0.29,1,-1.33,1.67,2.5,1,-1,0.67,1.67,2,0,0,3,2,3,2.54,3.5,1,1,4,0,0,0,0,1,0,0,0,0,0,0,0,1.6,0,0,0,-2,0,0,0,0,0,-2,-1,0],[13,10,13,11,11,8,15,10,13,0,0,11,14,15,0,0,12,10,14,13,12,11,14,0,0,11,15,0,15,0,12,15,12,14,10,0,0,11,10,0,0,0,0,0,0,0,0,0,12,11,10,12,12,11,12,14,11,8,13,13,12,16,14,10,12,11,13,11,12,8,11,12,11,13,11,11,6,9,13,10,13,14,12,5,0,0,0,0,13,12,0,13,7,10,0,0,0,0,13,0,13,12,11,12,13,14,11,11,0,12,0,0,10,0,0,14,15,16,0,14,0,11,0,0,0,0,8,0,11,0,13,0,14,13,0,14,0,0,11,10,0,0,0,0,0,0,0,7,0,13,14,12,12,12,10,0,12,12,12,0,0,0,0,12,10,15,13,0,14,0,11,0,15,0,0,0,0,0,13,12,13,10,0,0,0,0,0,0,16,0,10,0,11,0,0,0,13,0,14,12,13,12,10,12,14,14,13,13,12,12,0,0,13,15,14,13,12,12,13,16,0,0,0,0,9,0,0,0,0,0,11,0,13,0,0,0,13,0,0,0,0,0,14,14,0]],"container":"<table class=\"table table-striped table-hover\">\n  <thead>\n    <tr>\n      <th>Descriptors</th>\n      <th>Varieties</th>\n      <th># of Mentions</th>\n      <th>Sentiment score</th>\n      <th># of words</th>\n    </tr>\n  </thead>\n</table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatPercentage(this, row, data, 2, 2);\n}"}},"evals":["options.rowCallback"]}</script>
+</div>
+</div>
+</div>
+
+<div class ="navbar navbar-default navbar-fixed-bottom">
+	<div class ="container">
+		<p class = "navbar-text pull-left">by Jabber Cruncher</p>
+		<a type = "button" href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank" class="navbar-btn btn btn-googleplus pull-right"><i class="fa fa-google-plus"></i></a>
+		<a type = "button" href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="navbar-btn btn btn-twitter pull-right"><i class="fa fa-twitter"></i></a>
+		<a type = "button" href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="navbar-btn btn btn-facebook pull-right"><i class="fa fa-facebook"></i></a>
+		<a type = "button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=" title="Share on LinkedIn" target="_blank" class="navbar-btn btn btn-linkedin pull-right"><i class="fa fa-linkedin"></i></a>
+		<a type = "button" href="http://www.stumbleupon.com/submit?url=" title="Share on StumbleUpon" target="_blank" class="navbar-btn btn btn-stumbleupon pull-right"><i class="fa fa-stumbleupon"></i></a>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
