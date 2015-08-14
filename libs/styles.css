@@ -85,6 +85,10 @@
 	text-shadow: 2px 2px #ffffff;
 }
 
+#header {
+  height: 52px;
+}
+
 #custom-bootstrap-menu {
   font-family: "Abel";
 }
@@ -94,7 +98,7 @@
 }
 #custom-bootstrap-menu.navbar-default {
     font-size: 14px;
-    background-color: rgba(231, 105, 83, 1);
+    background-color: #E76953;
     border-width: 1px;
     border-radius: 4px;
 }
@@ -1204,7 +1208,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Abel";
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -6986,4 +6990,14 @@ iframe {
 
 body {
   margin-bottom: 80px;
+}
+
+.container-fluid.main-container{
+  padding: 0;
+  margin: 0;
+  padding-top: 0;
+}
+
+#network {
+  background: #000;
 }
