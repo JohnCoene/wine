@@ -191,63 +191,87 @@ img {
 
 <div class="container">
 <div class="row">
-<div class="col-lg-6">
+<div class="col-lg-3">
 <div class="panel panel-primary">
 <div class="panel-heading">
 Descriptors
 </div>
-<div class="panel-body">
+<div class="panel-body" style="background: #E76953; color: #FFF;">
 The list of 168 wine tasting descriptors scanned and in turn used for the dashboards were mined from Wine Folly and Wikipedia.
 <li>
-<a href = "https://en.wikipedia.org/wiki/Wine_tasting_descriptors">Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Wine_tasting_descriptors" style = "color: #FFF; text-decoration: underline;">wikipedia.com</a>
 </li>
 <li>
-<a href="http://winefolly.com/tutorial/40-wine-descriptions/">WineFolly.com</a>
+<a href="http://winefolly.com/tutorial/40-wine-descriptions/" style = "color: #FFF; text-decoration: underline;">winefolly.com</a>
 </li>
-Descriptors are linked to perception are thus also used in to tweak the <strong>sentiment analysis</strong> (i.e.: bitter = negative)
+Descriptors are linked to perception are thus also used in to tweak the sentiment analysis (i.e.: bitter = negative)
 </div>
 </div>
 </div>
 <div class="col-lg-3">
 <div class="panel panel-success">
 <div class="panel-heading">
-Varieties
+Descriptors
 </div>
-<div class="panel-body">
-The list of grape varieties was taken from Wikipedia. Feel free to contact me if you want me to add some.
-<div class="row">
-<div class="col-lg-6 col-md-6">
-<a href="https://en.wikipedia.org/wiki/List_of_grape_varieties" class = "btn btn-success">Wikipedia.com</a>
-</div>
-<div class="col-lg-6 col-md-6">
-<a href="http://jabber-cruncher.com/#contact" class = "btn btn-success">Suggest</a>
+<div class="panel-body" style="background: #38DD9B; color: #FFF;">
+The list of 987 grape varieties was taken from Wikipedia.
+<li>
+<a href="https://en.wikipedia.org/wiki/List_of_grape_varieties" style = "color: #FFF; text-decoration: underline;">wikipedia.com</a>
+</li>
 </div>
 </div>
+</div>
+<div class="col-lg-3">
+<div class="panel panel-warning">
+<div class="panel-heading">
+Origins
+</div>
+<div class="panel-body" style="background: #3FBBEE; color: #FFF;">
+The list of countries of origin was taken from Wikipedia and consists of the 45 most popular regions
 </div>
 </div>
 </div>
 <div class="col-lg-3">
 <div class="panel panel-info">
 <div class="panel-heading">
-Origins
+Meal times
 </div>
-<div class="panel-body">
-The list of countries of origin was taken from Wikipedia and consists of the 45 most popular regions. <a href="https://en.wikipedia.org/wiki/History_of_wine" class = "btn btn-warning">Suggest</a>
+<div class="panel-body" style="background: #D4A730; color: #FFF;">
+Tweets are also scanned for 3 mealtimes
+<li>
+Brunch
+</li>
+<li>
+Lunch
+</li>
+<li>
+Dinner
+</li>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class = "container">
-<div id="accordion" class="panel-group">
-<div class="panel panel-primary">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Descriptors </a>
-</h4>
-</div>
-<div id="collapseOne" class="panel-collapse collapse in">
-<div class="panel-body">
+<div class="container">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active">
+<a href="#descriptors" aria-controls="home" role="tab" data-toggle="tab">Descriptors</a>
+</li>
+<li role="presentation">
+<a href="#varieties" aria-controls="profile" role="tab" data-toggle="tab">Varieties</a>
+</li>
+<li role="presentation">
+<a href="#origins" aria-controls="messages" role="tab" data-toggle="tab">Origins</a>
+</li>
+<li role="presentation">
+<a href="#mealtimes" aria-controls="settings" role="tab" data-toggle="tab">Meal times</a>
+</li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div id="descriptors" class="tab-pane active" role="tabpanel">
+<ol>
 <li>
 sweet
 </li>
@@ -492,7 +516,7 @@ fresh
 fruit
 </li>
 <li>
-full
+<span style="text-decoration: line-through;">full</span> (removed due to inaccuracies)
 </li>
 <li>
 grassy
@@ -755,17 +779,10 @@ vanillin
 <li>
 vegetal
 </li>
+</ol>
 </div>
-</div>
-</div>
-<div class="panel panel-success">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Varieties </a>
-</h4>
-</div>
-<div id="collapseTwo" class="panel-collapse collapse">
-<div class="panel-body">
+<div id="varieties" class="tab-pane" role="tabpanel">
+<ol>
 <li>
 Abbuoto
 </li>
@@ -3727,17 +3744,10 @@ Black Muscat
 <li>
 Muscat Hamburg
 </li>
+</ol>
 </div>
-</div>
-</div>
-<div class="panel panel-warning">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Origins </a>
-</h4>
-</div>
-<div id="collapseThree" class="panel-collapse collapse">
-<div class="panel-body">
+<div id="origins" class="tab-pane" role="tabpanel">
+<ol>
 <li>
 Bordeaux
 </li>
@@ -3831,17 +3841,10 @@ Russia
 <li>
 Romania
 </li>
+</ol>
 </div>
-</div>
-</div>
-<div class="panel panel-info">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> Meal times </a>
-</h4>
-</div>
-<div id="collapseFour" class="panel-collapse collapse">
-<div class="panel-body">
+<div id="mealtimes" class="tab-pane" role="tabpanel">
+<ol>
 <li>
 Evening
 </li>
@@ -3860,7 +3863,7 @@ Supper
 <li>
 Noon
 </li>
-</div>
+</ol>
 </div>
 </div>
 </div>

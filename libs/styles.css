@@ -6969,20 +6969,6 @@ h1.title {
   font-family:"Abel";
 }
 
-.panel-heading .accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: white;         /* adjust as needed */
-    font-family: "Abel";
-}
-.panel-heading .accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
-    font-family: "Abel";
-}
-
 iframe {
   max-width: 100%;
   max-height: 100%;
