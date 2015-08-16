@@ -6990,10 +6990,27 @@ iframe {
 
 body {
   margin-bottom: 80px;
+  margin-top: 20px;
 }
 
 .container-fluid.main-container{
   padding: 0;
   margin: 0;
   padding-top: 0;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.sentmarg {
+  border-style: solid;
+  border-color: #FFF;
+  border-width: 5px;
+  border-top-width: 0;
+
+}
+
+#header > h1 {
+  color: #FFF;
 }
