@@ -7000,3 +7000,7 @@ body {
 #header > h1 {
   color: #FFF;
 }
+
+.nopanel {
+  margin-bottom: 20px;
+}
