@@ -1,0 +1,3572 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Overview</title>
+
+<script src="libs/jquery-2.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.1/shim/respond.min.js"></script>
+<script src="libs/htmlwidgets-0.5/htmlwidgets.js"></script>
+<script src="libs/jquery-sparkline-2.1.2/jquery.sparkline.min.js"></script>
+<script src="libs/sparkline-binding-1.0/sparkline.js"></script>
+<link href="libs/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-0.7.3/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-1.0.0.9999/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.0.27/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-1.0.0.9999/leaflet-providers-plugin.js"></script>
+<link href="libs/leaflet-markercluster-0.4.0/MarkerCluster.css" rel="stylesheet" />
+<link href="libs/leaflet-markercluster-0.4.0/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="libs/leaflet-markercluster-0.4.0/leaflet.markercluster.js"></script>
+<script src="libs/datatables-binding-0.1.32/datatables.js"></script>
+<script src="libs/datatables-1.10.7/jquery.dataTables.min.js"></script>
+<link href="libs/datatables-bootstrap-1.10.7/dataTables.bootstrap.css" rel="stylesheet" />
+<link href="libs/datatables-bootstrap-1.10.7/dataTables.extra.css" rel="stylesheet" />
+<script src="libs/datatables-bootstrap-1.10.7/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="libs/styles.css">
+<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.4.0/css/font-awesome.min.css">
+<link href="libs/social-sharing.css" rel="stylesheet">
+<link href="libs/landing-page.css" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+
+<style type="text/css">
+body {
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66129510-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">
+/* some padding for disqus */
+#disqus_thread {
+  margin-top: 45px;
+}
+</style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="libs/highlight/default.css"
+      type="text/css" />
+<script src="libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="custom-bootstrap-menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jabber Cruncher</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://jabber-cruncher.com/" target="_blank">Visit site</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="OverviewAugust2015.html">August</a></li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a href="OverviewSeptember2015.html">September</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Varieties <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="VarietiesAugust2015.html">August</a></li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a href="VarietiesSeptember2015.html">September</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Descriptors <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="DescriptorsAugust2015.html">August</a></li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a href="DescriptorsSeptember2015.html">September</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Networks <b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="NetworksAugust2015.html">August</a></li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a href="NetworksSeptember2015.html">September</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="inactive"><a href="Historic.html">Historic</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'winedashboard';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+<div id="header">
+<h1 class="title">Overview</h1>
+</div>
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-warning">
+<div class="panel-heading">
+Total number of mentions <a class="fa fa-comment fa-lg pull-right" data-toggle="tooltip" title="Total number of mentions during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+<div class="panel-body" style="background: #3FBBEE; ">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<span class="pull-left" style="color: #FFF;"> <strong> 19960 </strong> </span>
+</div>
+<div class="col-lg-9 col-md-9">
+<div class="pull-right">
+<span id="htmlwidget-299" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-299">{"x":{"values":[3162,1027,1908,3737,3471,1986,4093,576],"options":{"type":"line","lineColor":"#FFF","fillColor":"#FFF","spotColor":"#FFF","minSpotColor":"#FFF","maxSpotColor":"#FFF","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-success">
+<div class="panel-heading">
+Most popular grape variety <a class="fa fa-tint fa-lg pull-right" data-toggle="tooltip" title="Most Mentioned grape variety during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+<div class="panel-body" style="background: #38DD9B;">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<span class="pull-left" style="color: #FFF;"> <strong>Merlot</strong> </span>
+</div>
+<div class="col-lg-8 col-md-8">
+<p><span id="htmlwidget-897" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-897">{"x":{"values":[165,218,384,480,365,290,311,10],"options":{"type":"bar","barColor":"#FFF","barWidth":"4","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-info">
+<div class="panel-heading">
+Most popular wine grower <a class="fa fa-glass fa-lg pull-right" data-toggle="tooltip" title="Most Mentioned grower during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+<div class="panel-body" style="background: #D4A730;">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<span class="pull-left" style="color: #FFF;"> <strong>Mondavi</strong> </span>
+</div>
+<div class="col-lg-4 col-md-4">
+<p><span id="htmlwidget-4782" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-4782">{"x":{"values":[3,2,2,2,1,1,6],"options":{"type":"bar","barColor":"#FFF","barWidth":"3","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script></p>
+</div>
+<div class="col-lg-4 col-md-4">
+<p><span class="pull-right" style="color: #FFF;"> 17 </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-primary">
+<div class="panel-heading">
+Overall sentiment <a class="fa fa-smile-o fa-lg pull-right" data-toggle="tooltip" title="Median sentiment during the selected month" id="varTooltip" data-placement = "bottom" style = "color: #FFF;"></a>
+</div>
+<div class="panel-body" style="background: #E76953;">
+<div class="row">
+<div class="col-lg-8 col-md-8">
+<p><span class="pull-left" style="color: #FFF"> <strong> Positive </strong> </span></p>
+</div>
+<div class="col-lg-4 col-md-4">
+<div class="pull-right">
+<span id="htmlwidget-3656" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3656">{"x":{"values":[-0.08,0.12,0.11,0.01,-0.06,0.02,-0.07,-0.06],"options":{"type":"tristate","posBarColor":"#FFF","negBarColor":"#FFF","zeroBarColor":"#FFF","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="nopanel">
+<div id="htmlwidget-2113" style="width:1140px;height:400px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-2113">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addProviderTiles","args":["MapQuestOpen.OSM",null,"Terrain",{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,"Street",{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[21.27956751,21.27956751,19.67493499,19.67493499,39.2236,44.72779547,43.210297,43.210297,43.21821962,43.21821962,45.12065195,45.29458961,45.41107431,45.41107431,45.41107431,49.2694,49.2694,45.27072827,49.2637,49.2637,45.3320465,38.7063599,38.52136441,38.52136441,38.7182388,38.7182388,38.67981648,38.52463547,38.52463547,38.6111,38.6111,38.60391256,38.42855839,38.42855839,38.68299646,38.47873806,38.47873806,38.47472543,38.47472543,38.467131,38.467131,38.4752617,38.4752617,38.4417,45.5153198,45.5153198,45.5191116,45.5191116,49.10235428,45.485,45.5049515,45.3362,45.3362,45.3362,38.42798435,38.42798435,38.38950691,38.38950691,38.38950691,38.5396614,38.5473595,38.51088585,37.8535881,37.8535881,38.49137885,38.49137885,38.17416329,38.17416329,38.1745222,38.17406325,38.17410952,38.17410952,38.484828,38.484828,38.48164354,38.25985909,38.25985909,38.47161441,38.47041216,38.25531645,37.773656,37.8058815,37.8058815,38.51280318,38.51280318,37.8015547,37.8015547,37.65505269,38.44108312,38.44108312,37.784951,37.784951,37.78606368,37.78606368,38.47441101,38.47441101,38.441287,37.79425941,38.47911861,38.47911861,38.433148,38.433148,38.42427114,38.2856598,38.2856598,38.3616104,38.3616104,37.87801918,38.40223185,38.3048,37.7989082,37.7989082,37.7989082,37.79410064,37.79410064,38.34974811,38.23552073,38.23552073,38.2989987,38.2989987,38.17971364,38.215258,37.4863281,37.4863281,47.67614998,37.59931823,37.59931823,37.8991051,37.8991051,37.9446716,37.290184,37.290184,37.22665054,37.21370739,37.21370739,36.620694,36.61667941,36.61667941,36.8707886,36.8707886,37.1165001,37.01275166,37.01275166,37.08417352,37.08417352,45.7097015,38.78102536,38.78102536,38.78102536,38.68024439,38.68024439,35.5964,35.5964,35.57783791,34.6413918,34.67474,34.67474,34.8543892,34.6658854,38.95976961,38.95976961,34.44972222,34.44972222,49.1261368,49.1261368,49.59044097,49.1227881,49.1227881,49.5235904,49.5235904,49.33709833,34.151951,45.6697311,34.0554161,34.0554161,34.1469688,34.1469688,34.1469688,33.98603647,33.98603647,34.083438,34.07340393,34.6587,33.6929,33.6929,33.80753706,33.80753706,33.80646083,33.6899567,47.654679,47.654679,34.0375862,32.57105618,33.21654978,33.21654978,33.52192032,33.52192032,33.5423683,43.6006,43.6006,51.32765976,51.32765976,36.2112,36.1090889,36.1090889,36.1318588,36.1318588,34.921469,34.921469,36.19751475,36.19751475,33.363,33.363,33.22112,32.15274288,32.2618408,32.2618408,35.8446884,30.38951482,30.2644982,30.2644982,30.2644982,30.26430297,30.26430297,35.59071745,32.65021414,32.65021414,32.83634284,32.83634284,32.83634284,32.7488289,32.7488289,32.7808,32.7808,32.9736,32.9736,29.1762982,29.1762982,41.2395592,41.2395592,29.6872101,29.6872101,29.7854156,29.7854156,46.65581723,46.65581723,33.4208183,33.4208183,34.4971,34.7569618,34.7569618,34.7569618,38.593987,38.593987,38.5939102,30.0205307,30.0205307,32.312027,32.312027,30.43217482,38.6793404,38.6793404,42.30676892,42.30676892,42.20341031,42.20341031,42.20341031,41.92833333,41.92833333,41.9264984,41.9597,41.9597,42.01402818,42.01402818,41.9952187,41.9952187,41.99526068,41.99526068,41.89613566,41.89613566,41.8986816,41.8986816,20.50520271,20.50520271,40.429081,40.429081,36.1367111,41.7899857,41.7899857,40.2671941,38.2588081,38.2588081,41.11831713,45.41370559,45.41370559,33.67467834,33.7819147,33.7819147,33.84029369,33.741272,33.766626,34.070797,34.070797,39.65520468,39.65520468,34.0000305,34.61535,34.61535,40.09856712,35.53408114,35.53408114,34.6849,34.6849,27.7697296,26.53962764,36.06891425,36.06891425,41.06767879,30.2540302,30.2540302,30.2534294,30.2534294,30.2534294,28.5684204,35.222589,35.222589,35.4811,35.4811,25.8666401,25.8666401,25.7506409,25.7506409,25.7498398,25.7498398,25.7649775,25.7996101,25.7996101,26.45447293,32.9091,40.45012524,40.45012524,40.45257473,40.3509675,40.3509675,43.16794589,43.64337248,43.64337248,43.2,43.2,43.25,43.25,43.25,33.7600115,33.7600115,35.9002228,35.79199,35.79199,42.90800291,42.90800291,35.7782,35.7782,39.0953,38.6714,38.95978806,37.612,37.612,43.95328204,43.95328204,37.5336189,37.5336189,38.85787131,38.85787131,44.0086403,36.70083333,36.70083333,38.885563,38.9196,38.9196,-12.1326189,-12.1326189,38.7838554,42.73100024,42.73100024,42.43606358,39.2993088,39.2993088,37.51740866,42.54343275,42.54343275,42.54343275,42.479412,42.479412,39.15134911,39.15134911,42.92317837,42.92317837,43.2,43.2,45.2832113,39.806991,39.806991,45.42534314,45.42534314,38.2107162,38.2107162,39.98056965,39.98056965,40.4121483,39.9563524,38.3915,38.3915,40.3506528,40.3506528,40.8935,40.8935,40.7660782,40.7660782,40.81205509,40.9238205,40.3516884,40.7261391,40.7261391,40.22159116,40.22159116,40.73273314,40.73273314,40.73322625,40.73322625,40.73560452,40.73560452,40.7468,40.7468,40.7481041,40.74185681,40.7620392,40.7620392,40.7275,40.7275,40.75391862,40.7641716,40.7641716,40.76892437,40.6936989,40.6936989,40.57506003,40.57506003,40.74829025,40.67039355,40.67039355,42.8127289,42.8127289,40.73818019,40.73818019,40.7678,40.7678,40.74201747,40.74201747,45.46922779,45.46922779,41.04084881,41.04084881,40.8853,41.2558708,41.2558708,40.9467812,40.9467812,41.8237267,42.40062107,42.40062107,41.3902283,43.6589813,43.6589813,43.6572,41.6722564,41.6722564,12.45,12.45,-33.16771747,10.45178526,-34.4732526,-34.4732526,-19.9363115,-19.9363115,64.1471,64.1471,38.72076962,38.72076962,51.87771734,51.87771734,55.8662,53.4204997,53.4204997,53.63385585,53.63385585,53.5784499,53.5784499,51.48381415,51.48381415,45.19096264,45.19096264,45.22018083,44.83045948,44.83045948,45.57535602,45.57535602,44.76389255,44.76389255,44.76389255,44.7281172,44.7281172,44.85584623,44.85584623,44.844188,44.844188,44.844188,44.84178387,44.83073296,44.83073296,44.8403551,44.8403551,44.84178665,44.84178665,44.8386,44.8386,44.8386,44.8386,44.8386,44.8386,44.8386,44.8386,44.8386,44.8386,44.83998676,44.83998676,44.83762,44.84948,44.84948,44.84948,44.84948,44.84948,44.84948,44.84948,44.84948,44.8374,44.8374,44.8374,44.8374,44.83804027,44.84402037,44.84402037,44.83146522,44.83146522,44.8403234,44.8403234,44.8497853,44.8497853,44.8415,44.8415,44.8415,44.83844603,44.839322,44.8417,44.838611,44.8454927,44.8454927,44.84555169,44.84555169,44.84555169,44.84555169,44.84555169,44.84555169,44.88487265,44.88487265,44.8548203,44.8548203,44.8548203,44.8548203,44.8344,44.8344,44.8415184,44.8415184,44.8647614,44.8647614,44.8647614,44.86480836,44.86480836,44.86095631,44.86095631,50.8184222,51.370776,53.7807504,53.7807504,44.5636044,44.89946982,44.89946982,51.52966548,51.52966548,51.499937,51.50251773,44.89549185,44.89549185,51.57630905,51.57630905,51.5119095,51.5119095,51.5200539,51.5200539,44.80321752,51.56567509,38.87621714,38.87621714,48.8649902,48.8649902,47.7167,47.7167,49.08139443,52.14286009,52.14286009,48.1666298,9.06848072,9.06848072,9.06848072,39.1193876,45.46704293,42.92378583,55.68247048,55.68247048,38.19851138,38.19851138,40.8272645,40.8272645,48.47741732,47.85244902,47.87006265,47.87006265,50.06172144,50.06172144,-34.060503,35.49506564,35.49506564,36.3833,36.3833,-33.9846687,-29.3503,-26.27774812,-26.27774812,-25.85696,36.53782625,36.53782625,36.53782625,36.53782625,36.53782625,36.53782625,33.6963121,33.6963121,33.71328704,33.71328704,33.51808213,33.51808213,19.0615845,12.96756771,12.96756771,12.96756771,13.72880847,13.72880847,13.72066671,13.72066671,13.67000515,13.67000515,2.73995013,2.73995013,1.24948,1.24948,1.24948,-7.57154,22.281462,22.281462,-33.79809368,-31.9488087,-34.93746523,-34.93746523,-5.13727,-5.13727,14.54200838,14.54200838,14.5487483,14.65284357,14.65284357,-34.9053709,-38.3881493,-38.3881493,-38.3881493,-37.0167,-37.0167,-38.54045319,-37.8432846,-37.8432846,-37.86789345,-37.81421615,-37.7599983,-37.7599983,-37.65995961,-37.65995961,-37.73652841,-37.73652841,-42.8118405,-42.8872032,-42.8872032,-35.39363564,-35.39363564,-34.7450842,-34.7450842,-33.8779602,-33.85898835,-33.85898835,-33.82970502,-33.82970502,-33.8833,-41.25288908,-41.25288908],[-157.83040168,-157.83040168,-155.07960574,-155.07960574,-123.768,-123.34394918,-123.342604,-123.342604,-123.34213946,-123.34213946,-123.18468331,-123.17737778,-123.17311949,-123.17311949,-123.17311949,-123.103,-123.103,-123.07018724,-123.07,-123.07,-122.9674225,-122.9042053,-122.89727148,-122.89727148,-122.8914642,-122.8914642,-122.88723218,-122.88322421,-122.88322421,-122.871,-122.871,-122.8625997,-122.85158939,-122.85158939,-122.84198643,-122.80222141,-122.80222141,-122.797634,-122.797634,-122.77448612,-122.77448612,-122.7354736,-122.7354736,-122.712,-122.6655273,-122.6655273,-122.6512909,-122.6512909,-122.64505578,-122.64,-122.6345062,-122.629,-122.629,-122.629,-122.54784084,-122.54784084,-122.53017075,-122.53017075,-122.53017075,-122.5096664,-122.4894485,-122.48101837,-122.4786072,-122.4786072,-122.45435258,-122.45435258,-122.45028609,-122.45028609,-122.45022448,-122.45019246,-122.45019204,-122.45019204,-122.447397,-122.447397,-122.44510661,-122.44040418,-122.44040418,-122.43549685,-122.42939404,-122.42166618,-122.421447,-122.4159393,-122.4159393,-122.41145406,-122.41145406,-122.40960343,-122.40960343,-122.4095251,-122.40940769,-122.40940769,-122.404839,-122.404839,-122.40464,-122.40464,-122.40290677,-122.40290677,-122.399988,-122.39469918,-122.39442649,-122.39442649,-122.34748587,-122.34748587,-122.34447089,-122.3230896,-122.3230896,-122.3060913,-122.3060913,-122.30225332,-122.30185891,-122.299,-122.2796402,-122.2796402,-122.2796402,-122.27706563,-122.27706563,-122.26609469,-122.26192262,-122.26192262,-122.25444215,-122.25444215,-122.25411411,-122.237596,-122.2342606,-122.2342606,-122.2071363,-122.06903639,-122.06903639,-122.0622559,-122.0622559,-122.0610123,-121.9912033,-121.9912033,-121.98222116,-121.98084396,-121.98084396,-121.91660832,-121.89968605,-121.89968605,-121.8200836,-121.8200836,-121.6863207,-121.64220255,-121.64220255,-121.56606697,-121.56606697,-121.5122528,-121.28635525,-121.28635525,-121.28635525,-121.27205117,-121.27205117,-120.695,-120.695,-120.58601206,-120.4357986,-120.38564,-120.38564,-120.2555695,-120.11492215,-119.94179899,-119.94179899,-119.71638889,-119.71638889,-119.5919418,-119.5919418,-119.5859265,-119.58054558,-119.58054558,-119.55889674,-119.55889674,-119.54929751,-118.803649,-118.7899017,-118.442009,-118.442009,-118.426857,-118.426857,-118.426857,-118.39493397,-118.39493397,-118.367425,-118.35967205,-118.146,-118,-118,-117.91998757,-117.91998757,-117.91990528,-117.882637,-117.4130451,-117.4130451,-117.1739044,-117.13259691,-117.1223737,-117.1223737,-117.10893001,-117.10893001,-117.03435773,-116.234,-116.234,-116.18234123,-116.18234123,-115.25,-115.1732941,-115.1732941,-115.1572571,-115.1572571,-112.518224,-112.518224,-112.05260197,-112.05260197,-111.841,-111.841,-111.725473,-110.97787602,-106.9803391,-106.9803391,-98.4125595,-97.74178966,-97.74145117,-97.74145117,-97.74145117,-97.7414453,-97.7414453,-97.61317338,-97.44721257,-97.44721257,-96.82834132,-96.82834132,-96.82834132,-96.8269882,-96.8269882,-96.7814,-96.7814,-96.4663,-96.4663,-96.2791425,-96.2791425,-96.0130997,-96.0130997,-95.3967133,-95.3967133,-95.387886,-95.387886,-94.19700822,-94.19700822,-94.0450897,-94.0450897,-93.0554,-92.406311,-92.406311,-92.406311,-90.545198,-90.545198,-90.3609009,-90.2476425,-90.2476425,-90.1743698,-90.1743698,-90.11288467,-90.0166092,-90.0166092,-87.9828639,-87.9828639,-87.93200833,-87.93200833,-87.93200833,-87.70666667,-87.70666667,-87.6977997,-87.6828,-87.6828,-87.66382512,-87.66382512,-87.65487309,-87.65487309,-87.65477736,-87.65477736,-87.62470126,-87.62470126,-87.623909,-87.623909,-86.9570036,-86.9570036,-86.9195328,-86.9195328,-86.8004227,-86.753479,-86.753479,-86.1349019,-85.6373901,-85.6373901,-85.15482021,-84.90404175,-84.90404175,-84.56746534,-84.38296516,-84.38296516,-84.38154862,-84.3583145,-84.28786,-84.276756,-84.276756,-84.25344253,-84.25344253,-84.0767975,-83.70323,-83.70323,-83.08655262,-82.89454513,-82.89454513,-82.8148,-82.8148,-82.6368027,-81.99890437,-81.87115478,-81.87115478,-81.63772494,-81.5304184,-81.5304184,-81.529953,-81.529953,-81.529953,-81.3464127,-80.810183,-80.810183,-80.5959,-80.5959,-80.2665787,-80.2665787,-80.2600632,-80.2600632,-80.2590485,-80.2590485,-80.25298832,-80.1993027,-80.1993027,-80.18840545,-80.1191,-79.98770896,-79.98770896,-79.98162649,-79.9136731,-79.9136731,-79.39378534,-79.36599355,-79.36599355,-79.2667,-79.2667,-79.0667,-79.0667,-79.0667,-78.8099472,-78.8099472,-78.7929916,-78.77431,-78.77431,-78.76274586,-78.76274586,-78.6385,-78.6385,-78.1735,-77.9958,-77.7465818,-77.4797,-77.4797,-77.44417191,-77.44417191,-77.428154,-77.428154,-77.37737125,-77.37737125,-77.1394958,-77.10658333,-77.10658333,-77.09769385,-77.0713,-77.0713,-77.0279083,-77.0279083,-77.0152054,-76.97254263,-76.97254263,-76.90652847,-76.8974533,-76.8974533,-76.88558359,-76.87471666,-76.87471666,-76.87471666,-76.870706,-76.870706,-76.72474016,-76.72474016,-76.54445999,-76.54445999,-75.9,-75.9,-75.8668756,-75.748081,-75.748081,-75.69485202,-75.69485202,-75.6893997,-75.6893997,-75.29917158,-75.29917158,-75.2422766,-75.2079282,-75.0697,-75.0697,-74.66257852,-74.66257852,-74.5873,-74.5873,-74.2486834,-74.2486834,-74.21510152,-74.0840988,-74.065773,-74.0021286,-74.0021286,-73.99918127,-73.99918127,-73.99763509,-73.99763509,-73.99097866,-73.99097866,-73.99060588,-73.99060588,-73.99,-73.99,-73.9892044,-73.98796988,-73.986084,-73.986084,-73.98583333,-73.98583333,-73.98373145,-73.9760895,-73.9760895,-73.97530669,-73.9655838,-73.9655838,-73.96218267,-73.96218267,-73.95689905,-73.95685919,-73.95685919,-73.9414444,-73.9414444,-73.90226325,-73.90226325,-73.8922,-73.8922,-73.64019207,-73.64019207,-73.61854784,-73.61854784,-73.54284422,-73.54284422,-73.3767,-72.9531708,-72.9531708,-72.2797165,-72.2797165,-71.4266739,-71.06358701,-71.06358701,-70.5121002,-70.2564163,-70.2564163,-70.2547,-70.1991616,-70.1991616,-69.95,-69.95,-68.90490986,-61.4306102,-57.85197585,-57.85197585,-43.93900087,-43.93900087,-21.9329,-21.9329,-9.16057177,-9.16057177,-8.47516182,-8.47516182,-4.2562,-2.85341999,-2.85341999,-2.09545162,-2.09545162,-1.06930685,-1.06930685,-0.77412305,-0.77412305,-0.75499188,-0.75499188,-0.74616202,-0.7015296,-0.7015296,-0.67887509,-0.67887509,-0.66054048,-0.66054048,-0.66054048,-0.5990014,-0.5990014,-0.58757366,-0.58757366,-0.585795,-0.585795,-0.585795,-0.58308678,-0.58010251,-0.58010251,-0.57961262,-0.57961262,-0.57899796,-0.57899796,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.5783,-0.57747272,-0.57747272,-0.576556,-0.57653,-0.57653,-0.57653,-0.57653,-0.57653,-0.57653,-0.57653,-0.57653,-0.576144,-0.576144,-0.576144,-0.576144,-0.57484813,-0.57396546,-0.57396546,-0.57300568,-0.57300568,-0.57136397,-0.57136397,-0.57041676,-0.57041676,-0.57,-0.57,-0.57,-0.56942798,-0.56918085,-0.5691,-0.568333,-0.56679929,-0.56679929,-0.56675939,-0.56675939,-0.56675939,-0.56675939,-0.56675939,-0.56675939,-0.56539357,-0.56539357,-0.56511,-0.56511,-0.56511,-0.56511,-0.5649,-0.5649,-0.5620416,-0.5620416,-0.55928,-0.55928,-0.55928,-0.55766151,-0.55766151,-0.5520314,-0.5520314,-0.42770246,-0.363413,-0.2548736,-0.2548736,-0.2256814,-0.17528884,-0.17528884,-0.17203264,-0.17203264,-0.1613095,-0.16024285,-0.15529257,-0.15529257,-0.14384152,-0.14384152,-0.1183538,-0.1183538,-0.0749909,-0.0749909,0.07289288,0.50473247,1.36801243,1.36801243,2.3721399,2.3721399,3.66667,3.66667,3.7617802,6.38197069,6.38197069,7.2973299,7.49222778,7.49222778,7.49222778,9.5061097,11.00176955,11.97624832,12.58024135,12.58024135,13.31866651,13.31866651,14.48823408,14.48823408,15.67621978,16.83963369,16.97393282,16.97393282,19.93825345,19.93825345,23.379647,23.58011929,23.58011929,25.4333,25.4333,25.6619396,27.6713,27.88854085,27.88854085,28.18523,31.99844637,31.99844637,31.99844637,31.99844637,31.99844637,31.99844637,35.5676288,35.5676288,35.76765917,35.76765917,36.27277191,36.27277191,72.8995403,77.60179799,77.60179799,77.60179799,100.53787823,100.53787823,100.56889057,100.56889057,100.61119573,100.61119573,101.7210274,101.7210274,103.8243713,103.8243713,103.8243713,110.8204,114.192323,114.192323,115.06664715,115.8592834,117.30237937,117.30237937,119.4081,119.4081,120.98242912,120.98242912,121.02618292,121.03409601,121.03409601,138.8885014,142.239975,142.239975,142.239975,143.15,143.15,143.97535158,144.8839569,144.8839569,144.89373786,144.97300331,145.0005798,145.0005798,145.46905978,145.46905978,145.51737851,145.51737851,147.26134442,147.3334351,147.3334351,149.04701309,149.04701309,149.7293076,149.7293076,151.2080536,151.21310136,151.21310136,151.22071597,151.22071597,151.225,174.8055258,174.8055258],1,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"#007735","weight":5,"opacity":0.5,"fill":true,"fillColor":"#007735","fillOpacity":0.2,"dashArray":null},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true},null,["username: bbiechman - tweets: 1","username: WineSolutions1 - tweets: 1","username: chaseweideman - tweets: 1","username: HelenBuehler - tweets: 1","username: jnelson712 - tweets: 1","username: AirlieWinery - tweets: 1","username: celiaxo_ - tweets: 1","username: mcant23790 - tweets: 1","username: marcs797 - tweets: 1","username: Megan_Chasteen - tweets: 1","username: frenchoak - tweets: 1","username: KWCellars - tweets: 1","username: JensenSwizzle - tweets: 2","username: Katelicte - tweets: 1","username: Tritonblog - tweets: 1","username: ArminHammer604 - tweets: 1","username: iamevilcupcake - tweets: 1","username: jessicashiner - tweets: 1","username: enoblogs - tweets: 1","username: foodandbier - tweets: 1","username: BlackTieTours - tweets: 1","username: alexisdavis91 - tweets: 1","username: BabcockWinery - tweets: 1","username: matthuntsberger - tweets: 1","username: jordanwinery - tweets: 1","username: sobermeup0 - tweets: 1","username: SonomaWCW - tweets: 1","username: ArthurBovino - tweets: 1","username: WFMShortPump - tweets: 1","username: DavisTheBrewer - tweets: 1","username: TomsKitchenDeli - tweets: 1","username: RameyWineCellar - tweets: 1","username: EmeritusWines - tweets: 1","username: papiliga - tweets: 1","username: jordanwinery - tweets: 1","username: SCMntwineries - tweets: 1","username: SonomaWCW - tweets: 1","username: ArthurBovino - tweets: 1","username: GlengarryWine - tweets: 1","username: ArthurBovino - tweets: 1","username: BillZacharkiw - tweets: 1","username: LATINOcellar - tweets: 1","username: SiduriWines - tweets: 1","username: Cathheretoday - tweets: 1","username: MarkReinoso - tweets: 1","username: TamoBoston - tweets: 1","username: andrewmackenzie - tweets: 1","username: MythonPonty - tweets: 1","username: LangleyLiquor - tweets: 1","username: njwhite85 - tweets: 1","username: american_local - tweets: 1","username: JimSueMaddocks - tweets: 1","username: teddyarrowhead - tweets: 2","username: WineBusProf - tweets: 1","username: notthatjt - tweets: 1","username: SonomaWCW - tweets: 1","username: garyvanderwalt - tweets: 1","username: LoxtonCellars - tweets: 2","username: pjthompson29 - tweets: 1","username: elmolinowinery - tweets: 1","username: karlynnk - tweets: 1","username: estone25 - tweets: 1","username: matthuntsberger - tweets: 1","username: snootful - tweets: 1","username: karlynnk - tweets: 1","username: KimWelly - tweets: 1","username: jesseafox - tweets: 1","username: napps126 - tweets: 1","username: ArthurBovino - tweets: 1","username: ArthurBovino - tweets: 1","username: lulucopeland - tweets: 1","username: TraveleatloveMM - tweets: 1","username: cathycorison - tweets: 1","username: WECAHN - tweets: 1","username: takenWINE - tweets: 1","username: ChaninWine - tweets: 1","username: Eastbay_Paul - tweets: 1","username: audreycnn - tweets: 1","username: ThatBenjGuy - tweets: 1","username: CoplanVineyards - tweets: 1","username: CharlesAlexnder - tweets: 1","username: cheapwinefinder - tweets: 1","username: Chef_Cyndi - tweets: 1","username: MTGA_Wines - tweets: 1","username: TheWineStalker - tweets: 1","username: Mercia_Voorkop - tweets: 1","username: terroirista - tweets: 1","username: bittersbottles - tweets: 1","username: drinkwinewithme - tweets: 1","username: stillwell_chris - tweets: 1","username: HillcrestFarm - tweets: 1","username: patgiblin - tweets: 1","username: townsandtravel - tweets: 1","username: VitaeVino - tweets: 1","username: priantesecundi4 - tweets: 1","username: redstr718 - tweets: 1","username: vinodivasworld - tweets: 1","username: ebarragan707 - tweets: 1","username: indigoace40 - tweets: 1","username: LetB24 - tweets: 1","username: DiversifiedHtg - tweets: 1","username: MyNapaGuide - tweets: 1","username: alanasterling - tweets: 1","username: mkEmk - tweets: 1","username: Truchard - tweets: 1","username: goldenislesgift - tweets: 1","username: MonticelloNapa - tweets: 1","username: donkeyandgoat - tweets: 1","username: PartyPartyParty - tweets: 1","username: vinodivasworld - tweets: 1","username: florradikal - tweets: 1","username: SmokefaceJosh - tweets: 1","username: ulcellars - tweets: 1","username: HuttedManSam - tweets: 1","username: Nyoaka - tweets: 1","username: MeganBocchino - tweets: 1","username: extourshaftrep - tweets: 1","username: HamlinReeveui - tweets: 1","username: greatwesternarc - tweets: 1","username: Terahbajjalieh - tweets: 1","username: ESVino - tweets: 1","username: RebeckaHeinmert - tweets: 1","username: 1MandaBear - tweets: 2","username: LegendaryPorn - tweets: 1","username: amychansf - tweets: 1","username: DRB3000 - tweets: 1","username: ProfetiSara - tweets: 1","username: Ashno30 - tweets: 1","username: TheDTales - tweets: 1","username: LaylahM - tweets: 1","username: jacoder - tweets: 1","username: lashaunnutter - tweets: 1","username: grillgod - tweets: 1","username: papiliga - tweets: 1","username: SiMichele - tweets: 1","username: SommMunoz - tweets: 1","username: Kelleherwines - tweets: 1","username: kimstemler - tweets: 1","username: erikawas - tweets: 1","username: melophcbia - tweets: 1","username: EmmaLilyCabs - tweets: 1","username: LeftBendWinery - tweets: 1","username: pohutunz - tweets: 1","username: LeftBendWinery - tweets: 1","username: tpc_wine - tweets: 1","username: ThePines1852 - tweets: 1","username: cigarmanandy - tweets: 2","username: majesticflt - tweets: 1","username: oldvine71 - tweets: 1","username: JakeDeLaHoya - tweets: 1","username: RCWineStorage - tweets: 1","username: bmax45 - tweets: 1","username: pjusterdub - tweets: 1","username: almasolwinery - tweets: 1","username: ChaninWine - tweets: 1","username: drustemm - tweets: 1","username: tasteedenvalley - tweets: 1","username: cnagywines - tweets: 1","username: juliegallego - tweets: 1","username: BayZest - tweets: 1","username: lumbrarian - tweets: 1","username: libangrande - tweets: 1","username: Mac_Jones1 - tweets: 1","username: jasonacleghorn - tweets: 1","username: SamuraiMallCop - tweets: 1","username: CZuckermann - tweets: 1","username: CultWinesUK - tweets: 1","username: Sam_melier - tweets: 2","username: JessicaKaralash - tweets: 1","username: YelledAtCats - tweets: 1","username: haddadfrank - tweets: 1","username: rodolphepialat - tweets: 1","username: 40Taps - tweets: 1","username: kuuleis - tweets: 1","username: ZonnebloemZA - tweets: 1","username: FoodFanNYC - tweets: 1","username: jordan_237 - tweets: 1","username: matthewjkaner - tweets: 2","username: RiKKaYY - tweets: 1","username: rosewoodmarket - tweets: 1","username: Moe_the_Monster - tweets: 1","username: bmannyx - tweets: 1","username: matthew_g_rojas - tweets: 1","username: adelinasinohui - tweets: 1","username: jnelson712 - tweets: 1","username: invisiblesparks - tweets: 1","username: PiedmontArts - tweets: 1","username: justmaita - tweets: 1","username: RetroSpinKidd - tweets: 1","username: GyngerSnapz - tweets: 1","username: Map_Game - tweets: 1","username: ChevyBurnz - tweets: 1","username: rac199 - tweets: 1","username: bluemerlewinery - tweets: 1","username: redwinefan02 - tweets: 1","username: cesar8ramirez - tweets: 1","username: EBENLOpromo - tweets: 1","username: justaddwine1 - tweets: 1","username: Fiery01Red - tweets: 1","username: Inspector_W - tweets: 1","username: GutsyTraveler - tweets: 1","username: JasmineLoth - tweets: 1","username: rob422lv - tweets: 1","username: FloraSprings - tweets: 1","username: Sandypants101 - tweets: 1","username: nmn_pinot - tweets: 1","username: sharmaudit28 - tweets: 1","username: DesertViewRealt - tweets: 1","username: RevTomDotCom - tweets: 1","username: PennySadler - tweets: 1","username: swlambring - tweets: 1","username: andersr9 - tweets: 1","username: SofHCellars - tweets: 1","username: DesertViewRealt - tweets: 1","username: adelinasinohui - tweets: 1","username: forager_ - tweets: 1","username: luvcherripye - tweets: 1","username: Bstinson33 - tweets: 1","username: winederlusting - tweets: 1","username: grimalkinrn - tweets: 1","username: JustinLoop - tweets: 1","username: ScottGarcia81 - tweets: 1","username: AkinsE34 - tweets: 1","username: cono_sur - tweets: 1","username: orlowskijp - tweets: 1","username: QuEeNMeRaNdA - tweets: 1","username: Spiritedhandler - tweets: 1","username: lilp1101 - tweets: 3","username: slocumandsons - tweets: 1","username: WebTherapist - tweets: 1","username: Kaylalove_me - tweets: 1","username: oespinosa69 - tweets: 1","username: RedArmyHooligan - tweets: 1","username: TranquilMarket - tweets: 1","username: JustinJFoley - tweets: 1","username: PedutosPuffCoat - tweets: 1","username: JRPRAISETHELORD - tweets: 1","username: katbite - tweets: 1","username: dsaskew_aka_me - tweets: 1","username: Vino_Villa - tweets: 1","username: AnkitSid - tweets: 1","username: papiliga - tweets: 1","username: HisAndHerlihys - tweets: 1","username: sonomahouston - tweets: 1","username: emilykatehulme - tweets: 1","username: tlegs75 - tweets: 1","username: NexJql - tweets: 1","username: TrystTexarkana - tweets: 1","username: nilescovie - tweets: 1","username: digitalmonalisa - tweets: 1","username: grafassio - tweets: 1","username: RKCollections - tweets: 2","username: Candiccis - tweets: 1","username: Frrrance - tweets: 1","username: Top_Nanner - tweets: 1","username: _Kushtopher_ - tweets: 1","username: EqeWhoDat504 - tweets: 1","username: KatsWine - tweets: 1","username: rceX - tweets: 1","username: danielwisner - tweets: 1","username: SommDee - tweets: 1","username: vinotopia - tweets: 1","username: charleshetzel - tweets: 1","username: yuldori - tweets: 1","username: JJBoylan - tweets: 2","username: JoeyCasco - tweets: 1","username: MaesLize - tweets: 1","username: DonWolfi007 - tweets: 1","username: extourshaftrep - tweets: 1","username: fabiolicious - tweets: 1","username: borrachogrande - tweets: 1","username: tawnifreeland - tweets: 1","username: Nineteen77 - tweets: 1","username: que_vino - tweets: 1","username: GinaCaruso108 - tweets: 1","username: suburbangourmet - tweets: 1","username: Andrea_123 - tweets: 1","username: Suendenfall - tweets: 1","username: Bickidan - tweets: 1","username: directwine - tweets: 1","username: freshfishla - tweets: 1","username: marissamegan - tweets: 1","username: trillpromo - tweets: 1","username: winedirector - tweets: 1","username: chardonnay_01 - tweets: 1","username: DiscoverWine - tweets: 1","username: ericaleigh33 - tweets: 1","username: Promenyus - tweets: 1","username: thrashmuppet - tweets: 1","username: SommSteven - tweets: 1","username: DoffoWines - tweets: 1","username: NancyeWard - tweets: 1","username: krieves - tweets: 1","username: LFCDaytrippers - tweets: 1","username: PromoteMichigan - tweets: 1","username: bstillmassage - tweets: 1","username: LeeLee1958 - tweets: 1","username: SayItWitYaKickz - tweets: 1","username: JohnLiotta - tweets: 1","username: 3ParksWine - tweets: 1","username: decaturwinedude - tweets: 1","username: Fiery01Red - tweets: 1","username: juniorvon - tweets: 1","username: ofcman29 - tweets: 1","username: tealsampson - tweets: 1","username: rwnylen58 - tweets: 1","username: LilaRubioQuero - tweets: 1","username: lucasnorthh - tweets: 1","username: ItsMaarty - tweets: 1","username: andreawellsart - tweets: 1","username: Tanders77 - tweets: 1","username: ChJulien - tweets: 1","username: SheWill4_BWill - tweets: 1","username: EmillieDias - tweets: 1","username: ginabirch - tweets: 1","username: buggazing - tweets: 1","username: theenglishr - tweets: 1","username: RickCMJ - tweets: 1","username: 904happyhour - tweets: 1","username: SouthLdnWineSch - tweets: 1","username: gio_js - tweets: 1","username: KillBeaniie_ - tweets: 1","username: QuirkyLogic143 - tweets: 3","username: alexxsofly - tweets: 1","username: amlikethewind - tweets: 1","username: flyybetty - tweets: 1","username: Captain_Merlot - tweets: 1","username: thirstynomadco - tweets: 1","username: ellenykg - tweets: 1","username: WeAreKicksDaily - tweets: 1","username: ekow_ampong - tweets: 1","username: osmaravindel - tweets: 1","username: FredDiesel - tweets: 1","username: karlynnk - tweets: 1","username: MohEtiquette - tweets: 1","username: FizzFan - tweets: 1","username: topemploi_aqt - tweets: 1","username: GirlAbroad1 - tweets: 1","username: SuriouslyFoReal - tweets: 1","username: 116Eugene - tweets: 1","username: BarMarcoPGH - tweets: 1","username: BarMarcoPGH - tweets: 1","username: PattyO21 - tweets: 1","username: tmj_pit_art - tweets: 1","username: back10cellars - tweets: 1","username: feliciatsimpson - tweets: 1","username: tinalovespinot - tweets: 1","username: lizlovesHamOnt - tweets: 1","username: skygoddess95 - tweets: 1","username: bassetlowdown - tweets: 1","username: CaeciliaWinand - tweets: 3","username: guinazupablo - tweets: 1","username: tmj_SCM_intern - tweets: 1","username: USATradeTasting - tweets: 1","username: beckylukovic - tweets: 2","username: Lauren_Gibney - tweets: 1","username: shaerocker - tweets: 1","username: AnnEriiK - tweets: 1","username: mikeyparker5sos - tweets: 1","username: chris_stroh - tweets: 1","username: FirstCape_Wines - tweets: 1","username: few1275 - tweets: 1","username: valleygreengirl - tweets: 1","username: boxwoodwinery - tweets: 1","username: andybarker73 - tweets: 1","username: travisoliver - tweets: 1","username: cs2306 - tweets: 1","username: liscelino - tweets: 1","username: adriennechantel - tweets: 1","username: craftsbylynda - tweets: 1","username: FemaleExecMag - tweets: 1","username: YingUllmann - tweets: 1","username: spot6management - tweets: 1","username: LaurentTam - tweets: 1","username: Mr_elite07 - tweets: 1","username: jmajewski_ - tweets: 1","username: MTGA_Wines - tweets: 1","username: ZinDC18 - tweets: 1","username: Cejayef - tweets: 1","username: winedirector - tweets: 1","username: SadeKong - tweets: 1","username: antoinettamaria - tweets: 1","username: RaidisEstate - tweets: 1","username: epickstyle - tweets: 1","username: PinotEllicott - tweets: 1","username: Sonoma_Valley - tweets: 1","username: J_Sliv - tweets: 1","username: Pure_Intent_ - tweets: 1","username: SneakerGirl89 - tweets: 1","username: SSVNY - tweets: 2","username: beefpho - tweets: 1","username: epickstyle - tweets: 1","username: Justblue73 - tweets: 1","username: MissRSB - tweets: 1","username: Front9Images - tweets: 1","username: jvillarreal34 - tweets: 1","username: HeatherKHussey - tweets: 1","username: SarahMRosenthal - tweets: 1","username: WineRackCareers - tweets: 1","username: dine_here - tweets: 1","username: LetsEatGlasgow - tweets: 1","username: GlamaMama - tweets: 1","username: kwmwine - tweets: 1","username: Air23News - tweets: 1","username: mr_nnj - tweets: 1","username: CheftoTha - tweets: 1","username: pcrisanti - tweets: 1","username: BobOldisTowel - tweets: 1","username: tinseltine - tweets: 1","username: CGourdin - tweets: 1","username: mariancall - tweets: 1","username: PCorkscrew - tweets: 1","username: SG_WineVault - tweets: 1","username: hotrodsbeerguru - tweets: 1","username: NomadicRunner45 - tweets: 1","username: Fill_a_pinot - tweets: 1","username: HatCityK - tweets: 1","username: crash_here - tweets: 1","username: LoveMAC_ - tweets: 1","username: AllieCanCan - tweets: 1","username: cgsession - tweets: 1","username: JanEllis_writer - tweets: 1","username: edatingnews - tweets: 1","username: Jeremy_Noye - tweets: 1","username: lee_yahxo - tweets: 1","username: MissMarciaC - tweets: 1","username: GeraldineSheppr - tweets: 1","username: pinot - tweets: 1","username: ditut - tweets: 1","username: mrstinavalencia - tweets: 1","username: dani_mc001 - tweets: 1","username: jrsthethird - tweets: 1","username: pinot - tweets: 1","username: moralbeast - tweets: 1","username: Maraniak - tweets: 1","username: nectarsat - tweets: 1","username: carter_roland95 - tweets: 1","username: realestatewine - tweets: 1","username: pinot - tweets: 1","username: ayorinwale - tweets: 1","username: BSandersonWine - tweets: 1","username: pinot - tweets: 2","username: CorkscrewImbibe - tweets: 1","username: sbeckwral - tweets: 1","username: LenRodino - tweets: 1","username: SeniorChats - tweets: 1","username: Wally_Mayz - tweets: 1","username: pferrari_b - tweets: 1","username: UrbanKleopatra - tweets: 1","username: laurenbmull - tweets: 1","username: VinMangiacapra - tweets: 1","username: IntertwEAT - tweets: 1","username: wqueens7 - tweets: 1","username: Frigemover - tweets: 1","username: TweetForna - tweets: 1","username: Antoniodelima22 - tweets: 1","username: MamaRazzi32 - tweets: 1","username: alettlewis - tweets: 1","username: spike_stockdale - tweets: 1","username: _jamieproulx - tweets: 1","username: PinotStamford - tweets: 1","username: joeref - tweets: 1","username: mummysugar321 - tweets: 1","username: TRIPSUP - tweets: 1","username: little_BOTTLER - tweets: 1","username: WolfferWine - tweets: 1","username: DomestiKateBlog - tweets: 1","username: nayirikrikorian - tweets: 1","username: tpc_wine - tweets: 1","username: sheiladeca - tweets: 1","username: ellenkanner - tweets: 1","username: twowinecru - tweets: 1","username: ThankGodForHops - tweets: 1","username: cvilchez - tweets: 1","username: WineCellarRSA - tweets: 1","username: ElbertVriend - tweets: 1","username: MsThatoM - tweets: 1","username: carlitoshITA - tweets: 1","username: Jem1731 - tweets: 1","username: ambercooney - tweets: 1","username: PeterZachar - tweets: 1","username: primpssa - tweets: 1","username: SamuelOsulliva - tweets: 1","username: Andrifimbulvetr - tweets: 2","username: MyWineandCheese - tweets: 1","username: LisaMack324 - tweets: 1","username: MestrAndreh - tweets: 1","username: CuriousWines - tweets: 1","username: justaddwine1 - tweets: 1","username: Karencrafts - tweets: 1","username: HypocriLib - tweets: 1","username: yozzer1983 - tweets: 1","username: delfarrowhudds - tweets: 1","username: SoniaRayS - tweets: 1","username: davinciboutique - tweets: 1","username: TrishaL8 - tweets: 1","username: angelatalkswine - tweets: 1","username: H_Bevs - tweets: 1","username: Enotourism_I - tweets: 1","username: iordanidisgeorg - tweets: 2","username: marcopolo1701 - tweets: 1","username: FKocaduru - tweets: 1","username: nevbrook - tweets: 1","username: Jill_Colonna - tweets: 1","username: msbshoshani - tweets: 1","username: Ariipuente - tweets: 1","username: DimSumDIY - tweets: 2","username: llauctioneers - tweets: 1","username: jbfavarel - tweets: 1","username: nottinghilldeli - tweets: 1","username: iordanidisgeorg - tweets: 1","username: TasteGloucester - tweets: 1","username: NRHPH - tweets: 1","username: swagshows - tweets: 1","username: ThybaltCRD - tweets: 1","username: cllmeb - tweets: 1","username: intriguewines - tweets: 1","username: jbdu40 - tweets: 1","username: NRHPH - tweets: 1","username: SugarMamasKnox - tweets: 1","username: angakok - tweets: 1","username: Neetflux - tweets: 1","username: A_By_A_Blogs - tweets: 1","username: aberthonneau5 - tweets: 1","username: Bassoholic - tweets: 2","username: cuddlerey - tweets: 1","username: Haidaloup - tweets: 2","username: HolidayTaylor1 - tweets: 1","username: keithhasson1 - tweets: 1","username: tomvvardle - tweets: 1","username: Tyreekappa - tweets: 1","username: WineExpo - tweets: 1","username: sbwinetour - tweets: 1","username: yoedwards - tweets: 1","username: SteEricSter - tweets: 1","username: _BordeauxFR - tweets: 10","username: g0ld1gger - tweets: 1","username: GROD189 - tweets: 1","username: LeCafeResto - tweets: 1","username: napanook - tweets: 1","username: Paul_Ilett - tweets: 1","username: peterglassford - tweets: 1","username: washington_wine - tweets: 1","username: inquirerRED - tweets: 1","username: Map_Game - tweets: 4","username: ochs_klaus - tweets: 1","username: wetingradio - tweets: 1","username: PArmitageMattin - tweets: 1","username: clemlmc - tweets: 1","username: HellenicVan - tweets: 1","username: bubbajenjen - tweets: 1","username: ClarisseGVL - tweets: 1","username: flotoniutti - tweets: 1","username: thevinejourney - tweets: 1","username: _Pinot_Grigio - tweets: 1","username: LaetitiaPelch - tweets: 1","username: BoisleneAdelia - tweets: 1","username: Haidaloup - tweets: 1","username: vineexp - tweets: 1","username: flotoniutti - tweets: 1","username: flotoniutti - tweets: 1","username: PArmitageMattin - tweets: 1","username: HParnis - tweets: 1","username: brad_kilgore - tweets: 1","username: Haidaloup - tweets: 1","username: Austieb7 - tweets: 1","username: EDW_WSET - tweets: 1","username: Haidaloup - tweets: 1","username: JeremieLZ - tweets: 1","username: KPlankers - tweets: 1","username: schumapa - tweets: 1","username: Nais972_ - tweets: 1","username: salpaulsen - tweets: 1","username: _Wine_Time_ - tweets: 1","username: cherrybob_omb - tweets: 1","username: foreveridebmx - tweets: 1","username: hopegee - tweets: 1","username: Iam_aPotato - tweets: 1","username: thefaustact - tweets: 1","username: AskRobY - tweets: 1","username: Mlle_Saelle - tweets: 1","username: danreilly11 - tweets: 1","username: MathieuBillon - tweets: 2","username: megcswid - tweets: 1","username: guialanca - tweets: 1","username: Musy_Muuzaji - tweets: 1","username: angakok - tweets: 1","username: TheWinerist - tweets: 1","username: zombiekicker - tweets: 1","username: TGWSEsher - tweets: 1","username: SisterFidelma - tweets: 1","username: SurreyLiquor - tweets: 1","username: Narainda - tweets: 1","username: iordanidisgeorg - tweets: 1","username: lilsunshinec - tweets: 1","username: benaustinwine - tweets: 1","username: Fill_a_pinot - tweets: 1","username: LevinWines - tweets: 1","username: HanGoNZwine - tweets: 1","username: cjammet - tweets: 1","username: GetWinesDirect1 - tweets: 1","username: chloecapulet - tweets: 1","username: LeBron_Watch - tweets: 1","username: smelleh - tweets: 1","username: zonin1821 - tweets: 1","username: Plume_Labs - tweets: 1","username: RupertJTaylor - tweets: 1","username: KimWelly - tweets: 1","username: SaritaJ - tweets: 1","username: AReneeC - tweets: 1","username: ErayErdogan - tweets: 1","username: Bassoholic - tweets: 1","username: RadRadiance - tweets: 1","username: HrabrinaS - tweets: 1","username: WineTweeters - tweets: 1","username: RaphaBereche - tweets: 1","username: actual_vortex - tweets: 1","username: sh_Aljalahma - tweets: 1","username: Spiritedhandler - tweets: 1","username: 4eyedmonk - tweets: 2","username: tipdoris - tweets: 1","username: YelledAtCats - tweets: 1","username: CantineFraponti - tweets: 1","username: GioEderleVino - tweets: 1","username: cantinelupo - tweets: 1","username: AwesomeAnna76 - tweets: 1","username: Wineradical - tweets: 1","username: kuuleis - tweets: 1","username: wmbrownproject - tweets: 1","username: DopeShoesBoi - tweets: 1","username: livingfoodalf - tweets: 1","username: grandsommelier - tweets: 1","username: vinoroma - tweets: 1","username: 75xkenso - tweets: 1","username: FranzSchneider - tweets: 1","username: kale_uh - tweets: 1","username: winelinkitaly - tweets: 1","username: wanderer_wines - tweets: 1","username: agirlthateats - tweets: 1","username: ykarakasis - tweets: 1","username: keian080 - tweets: 1","username: SantoriniUnique - tweets: 1","username: Sashaohare - tweets: 1","username: Phillip_Marais - tweets: 1","username: ARCJewellery - tweets: 1","username: whatfemaleswant - tweets: 1","username: justmzeeAgain - tweets: 1","username: dansanteman - tweets: 1","username: gilseminlim - tweets: 1","username: Kerem__Yilmaz - tweets: 1","username: mustafahakantu1 - tweets: 1","username: senduyguu - tweets: 1","username: ssimmx - tweets: 1","username: Charliban - tweets: 1","username: teamdb - tweets: 1","username: Charliban - tweets: 1","username: LesterJez - tweets: 1","username: A7madAlfadel - tweets: 1","username: luvo01 - tweets: 1","username: LeCafeResto - tweets: 1","username: CooperParkins - tweets: 1","username: lakshmisharath - tweets: 2","username: Mamta__Singh - tweets: 1","username: ARANG - tweets: 1","username: epsilon550 - tweets: 1","username: imsunshine7 - tweets: 1","username: lukmaimbd - tweets: 1","username: alicia_redmanx - tweets: 1","username: ARANG - tweets: 1","username: cblwineco - tweets: 1","username: IzRijap - tweets: 1","username: Ashuhhleeee_ - tweets: 1","username: esypali - tweets: 1","username: gourmettravel - tweets: 2","username: skyloungamarelo - tweets: 1","username: SwanShot - tweets: 1","username: WineFestWinch - tweets: 1","username: hayshedhill - tweets: 1","username: cklam88 - tweets: 1","username: CetrellaHMB - tweets: 1","username: SinglefileWine - tweets: 1","username: firwannsah - tweets: 1","username: WestOrangeTAP - tweets: 1","username: floydban - tweets: 1","username: MaisonLiedberg - tweets: 1","username: ZiggyChavez - tweets: 1","username: ephermosura - tweets: 1","username: itairmaripoll - tweets: 1","username: TilbrookEstate - tweets: 1","username: CornerstoneOR - tweets: 1","username: merrijigkitchen - tweets: 2","username: TinaMiranda143 - tweets: 1","username: Michmoutt - tweets: 1","username: NiKkIGxxxx - tweets: 1","username: mitch_knight1 - tweets: 1","username: j_foreigner - tweets: 1","username: MeghanKenz - tweets: 1","username: greenbeenfood - tweets: 1","username: peimodern - tweets: 1","username: BmzM8KIeWm0wSIU - tweets: 1","username: Trumpybar - tweets: 1","username: hamishmelbs - tweets: 1","username: KashAngel3005 - tweets: 1","username: hamishmelbs - tweets: 1","username: TheseAreSoHot - tweets: 1","username: AndrewChadban - tweets: 1","username: AndrewChadban - tweets: 1","username: NCEF_NWWF - tweets: 1","username: gofondue - tweets: 1","username: thefoodmarshall - tweets: 1","username: LouisRoederer_ - tweets: 1","username: Superealism_Aus - tweets: 1","username: LambWines - tweets: 1","username: darrylezekiel - tweets: 1","username: mr_griller - tweets: 1","username: dartmoorkilling - tweets: 1","username: LyndeyMilan - tweets: 1","username: Kimbo_Ramplin - tweets: 1","username: Glady_Libs_LFC - tweets: 1","username: winenoter - tweets: 1"]]},{"method":"addLayersControl","args":[["Terrain","Street"],[],{"collapsed":false,"autoZIndex":true,"position":"topright"}]}],"limits":{"lat":[-42.8872032,64.1471],"lng":[-157.83040168,174.8055258]}},"evals":[]}</script>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8">
+<div class="panel panel-warning" style="height: 400px;">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Volume
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="fa fa-line-chart fa-lg pull-right" aria-hidden="true" data-toggle="tooltip" title="Number of Mentions per day"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel='stylesheet' href='http://cdn.oesmith.co.uk/morris-0.4.2.min.css'&gt;
+    
+    &lt;script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://cdn.oesmith.co.uk/morris-0.4.2.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 718px;
+      height: 350px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart146068362a21' class = 'rChart morris'&gt;&lt;/div&gt;    
+    &lt;script type='text/javascript'&gt;
+    var chartParams = {
+ &quot;element&quot;: &quot;chart146068362a21&quot;,
+&quot;width&quot;:            718,
+&quot;height&quot;:            350,
+&quot;xkey&quot;: &quot;date.char&quot;,
+&quot;ykeys&quot;: [
+ &quot;freq&quot; 
+],
+&quot;data&quot;: [
+ {
+ &quot;date.char&quot;: &quot;2015-09-01&quot;,
+&quot;freq&quot;:           3162,
+&quot;month&quot;:              1,
+&quot;index&quot;: 1 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-02&quot;,
+&quot;freq&quot;:           1027,
+&quot;month&quot;:              2,
+&quot;index&quot;: 2 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-03&quot;,
+&quot;freq&quot;:           1908,
+&quot;month&quot;:              3,
+&quot;index&quot;: 3 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-04&quot;,
+&quot;freq&quot;:           3737,
+&quot;month&quot;:              4,
+&quot;index&quot;: 4 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-05&quot;,
+&quot;freq&quot;:           3471,
+&quot;month&quot;:              5,
+&quot;index&quot;: 5 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-06&quot;,
+&quot;freq&quot;:           1986,
+&quot;month&quot;:              6,
+&quot;index&quot;: 6 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-07&quot;,
+&quot;freq&quot;:           4093,
+&quot;month&quot;:              7,
+&quot;index&quot;: 7 
+},
+{
+ &quot;date.char&quot;: &quot;2015-09-08&quot;,
+&quot;freq&quot;:            576,
+&quot;month&quot;:              8,
+&quot;index&quot;: 8 
+} 
+],
+&quot;labels&quot;: &quot;freq&quot;,
+&quot;lineColors&quot;: [ &quot;#3FBBEE&quot;, &quot;#3FBBEE&quot; ],
+&quot;pointSize&quot;:              0,
+&quot;hideHover&quot;: &quot;auto&quot;,
+&quot;id&quot;: &quot;chart146068362a21&quot; 
+},
+      chartType = &quot;Line&quot;
+    new Morris[chartType](chartParams)
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  morris  " id="iframe-chart146068362a21">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<div>
+<div class="row">
+<div class="col-lg-4 col-md-4 sentmarg" style="background: #E76953;">
+<div class="margin">
+<span id="htmlwidget-3794" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3794">{"x":{"values":[368,69,135,330,396,168,398,67],"options":{"type":"bar","barColor":"#FFF","barWidth":"2","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script>
+<p class="text-center" style="color: #FFF;">
+Negative
+</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 sentmarg" style="background: #3FBBEE;">
+<div class="margin">
+<span id="htmlwidget-3441" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3441">{"x":{"values":[1601,483,923,1872,1774,1020,2207,297],"options":{"type":"bar","barColor":"#FFF","barWidth":"2","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script>
+<p class="text-center" style="color: #FFF;">
+Neutral
+</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 sentmarg" style="background: #38DD9B;">
+<div class="margin">
+<span id="htmlwidget-2162" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-2162">{"x":{"values":[1193,475,850,1535,1301,798,1488,212],"options":{"type":"bar","barColor":"#FFF","barWidth":"2","height":20,"width":"105"},"width":"105","height":20},"evals":[]}</script>
+<p class="text-center" style="color: #FFF;">
+Positive
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<!-- PieChart generated in R 3.1.3 by googleVis 0.5.9 package -->
+<!-- Wed Sep 09 08:35:05 2015 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataPieChartID1460315f366f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Negative",
+1931 
+],
+[
+ "Neutral",
+10177 
+],
+[
+ "Positive",
+7852 
+] 
+];
+data.addColumn('string','sentiment');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartPieChartID1460315f366f() {
+var data = gvisDataPieChartID1460315f366f();
+var options = {};
+options["allowHtml"] = true;
+options["colors"] = ['#E76953','#3FBBEE', '#38DD9B'];
+options["height"] =    350;
+options["width"] =    340;
+options["legend"] = "none";
+options["pieHole"] =    0.4;
+
+    var chart = new google.visualization.PieChart(
+    document.getElementById('PieChartID1460315f366f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartPieChartID1460315f366f);
+})();
+function displayChartPieChartID1460315f366f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartPieChartID1460315f366f"></script>
+<!-- divChart -->
+<div id="PieChartID1460315f366f" style="width: 340; height: 350;">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<!-- GeoChart generated in R 3.1.3 by googleVis 0.5.9 package -->
+<!-- Wed Sep 09 08:35:05 2015 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID146029203052 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Aquitaine",
+111 
+],
+[
+ "Bourgogne",
+2 
+],
+[
+ "Champagne-Ardenne",
+1 
+],
+[
+ "Île-de-France",
+2 
+] 
+];
+data.addColumn('string','regions');
+data.addColumn('number','mentions');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID146029203052() {
+var data = gvisDataGeoChartID146029203052();
+var options = {};
+options["width"] =    360;
+options["height"] =    300;
+options["region"] = "FR";
+options["displayMode"] = "regions";
+options["resolution"] = "provinces";
+options["colors"] = ['#38DD9B', '#1FC482', '#05AA68', '#00914F', 
+                                       '#007735', '#005E1C'];
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID146029203052')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID146029203052);
+})();
+function displayChartGeoChartID146029203052() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID146029203052"></script>
+<!-- divChart -->
+<div id="GeoChartID146029203052" style="width: 360; height: 300;">
+
+</div>
+</div>
+<div class="col-lg-4 col-md-4">
+<p><div id="htmlwidget-2080" style="width:100%;height:auto;" class="datatables"></div>
+<script type="application/json" data-for="htmlwidget-2080">{"x":{"style":"bootstrap","filter":"none","class":"table table-striped table-hover","data":[["Aruba","Australia","Austria","Brazil","Canada","France","Greece","Hong Kong S.A.R.","Iceland","India","Ireland","Italy","Lebanon","Malaysia","Mexico","Netherlands","New Zealand","Nigeria","Peru","Philippines","Poland","South Africa","Spain","Syria","Thailand","United Kingdom","United States"],[0.003690036900369,0.044280442804428,0.003690036900369,0.003690036900369,0.0479704797047971,0.177121771217712,0.00738007380073801,0.003690036900369,0.003690036900369,0.00738007380073801,0.003690036900369,0.003690036900369,0.00738007380073801,0.003690036900369,0.003690036900369,0.003690036900369,0.003690036900369,0.00738007380073801,0.003690036900369,0.00738007380073801,0.003690036900369,0.003690036900369,0.003690036900369,0.003690036900369,0.011070110701107,0.033210332103321,0.590405904059041],[null,"<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/22px-Flag_of_Australia.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/22px-Flag_of_Austria.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/22px-Flag_of_Canada.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/22px-Flag_of_France.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/22px-Flag_of_Greece.svg.png\">",null,"<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/22px-Flag_of_Iceland.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/22px-Flag_of_India.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/22px-Flag_of_Ireland.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/22px-Flag_of_Italy.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/22px-Flag_of_Lebanon.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/22px-Flag_of_Malaysia.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/22px-Flag_of_Mexico.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/22px-Flag_of_the_Netherlands.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/22px-Flag_of_New_Zealand.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/22px-Flag_of_Nigeria.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/22px-Flag_of_Peru.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/22px-Flag_of_the_Philippines.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/22px-Flag_of_Poland.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/22px-Flag_of_South_Africa.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/22px-Flag_of_Spain.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/22px-Flag_of_Syria.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/22px-Flag_of_Thailand.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/22px-Flag_of_the_United_Kingdom.svg.png\">","<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png\">"]],"container":"<table>\n  <thead>\n    <tr>\n      <th>Countries</th>\n      <th>% of mentions</th>\n      <th>Flags</th>\n    </tr>\n  </thead>\n</table>","options":{"pageLength":5,"dom":"tip","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data) {\nDTWidget.formatPercentage(this, row, data, 1, 2);\n}"}},"evals":["options.rowCallback"]}</script></p>
+</div>
+<div class="col-lg-4 col-md-4">
+<!-- GeoChart generated in R 3.1.3 by googleVis 0.5.9 package -->
+<!-- Wed Sep 09 08:35:06 2015 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID14604392255 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Arizona",
+8 
+],
+[
+ "Arkansas",
+7 
+],
+[
+ "California",
+144 
+],
+[
+ "Connecticut",
+2 
+],
+[
+ "District Of Columbia",
+2 
+],
+[
+ "Florida",
+16 
+],
+[
+ "Georgia",
+11 
+],
+[
+ "Idaho",
+2 
+],
+[
+ "Illinois",
+23 
+],
+[
+ "Indiana",
+4 
+],
+[
+ "Kentucky",
+2 
+],
+[
+ "Louisiana",
+3 
+],
+[
+ "Maryland",
+7 
+],
+[
+ "Massachusetts",
+5 
+],
+[
+ "Michigan",
+4 
+],
+[
+ "Minnesota",
+2 
+],
+[
+ "Mississippi",
+2 
+],
+[
+ "Missouri",
+3 
+],
+[
+ "Nebraska",
+2 
+],
+[
+ "Nevada",
+7 
+],
+[
+ "New Jersey",
+11 
+],
+[
+ "New Mexico",
+2 
+],
+[
+ "New York",
+51 
+],
+[
+ "North Carolina",
+14 
+],
+[
+ "Ohio",
+4 
+],
+[
+ "Oklahoma",
+2 
+],
+[
+ "Oregon",
+24 
+],
+[
+ "Pennsylvania",
+11 
+],
+[
+ "Rhode Island",
+1 
+],
+[
+ "South Carolina",
+5 
+],
+[
+ "Tennessee",
+1 
+],
+[
+ "Texas",
+25 
+],
+[
+ "Virginia",
+13 
+],
+[
+ "Washington",
+4 
+] 
+];
+data.addColumn('string','states');
+data.addColumn('number','mentions');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID14604392255() {
+var data = gvisDataGeoChartID14604392255();
+var options = {};
+options["width"] =    360;
+options["height"] =    300;
+options["region"] = "US";
+options["displayMode"] = "regions";
+options["resolution"] = "provinces";
+options["colors"] = ['#38DD9B', '#1FC482', '#05AA68', '#00914F', 
+                                       '#007735', '#005E1C'];
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID14604392255')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID14604392255);
+})();
+function displayChartGeoChartID14604392255() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID14604392255"></script>
+<!-- divChart -->
+<div id="GeoChartID14604392255" style="width: 360; height: 300;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Motion Chart
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="fa fa-bar-chart fa-lg pull-left" aria-hidden="true" data-toggle="tooltip" title="Motion Chart thanks to Google"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<!-- MotionChart generated in R 3.1.3 by googleVis 0.5.9 package -->
+<!-- Wed Sep 09 08:35:10 2015 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID1460613b6da9 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Bacchus",
+new Date(2015,8,1),
+0,
+0,
+-0.5,
+14.5,
+2,
+0 
+],
+[
+ "Bacchus",
+new Date(2015,8,5),
+0,
+0,
+1,
+15,
+3,
+0 
+],
+[
+ "Bacchus",
+new Date(2015,8,7),
+4,
+3,
+0,
+10.5,
+5,
+7 
+],
+[
+ "Riesling",
+new Date(2015,8,1),
+145,
+119,
+0.5221238938,
+9.924778761,
+226,
+264 
+],
+[
+ "Riesling",
+new Date(2015,8,2),
+403,
+401,
+0.5422535211,
+9.644366197,
+510,
+804 
+],
+[
+ "Riesling",
+new Date(2015,8,3),
+560,
+555,
+0.528,
+9.752,
+760,
+1115 
+],
+[
+ "Riesling",
+new Date(2015,8,4),
+821,
+668,
+0.5789473684,
+10.27192982,
+988,
+1489 
+],
+[
+ "Riesling",
+new Date(2015,8,5),
+975,
+855,
+0.4808743169,
+10.23497268,
+1171,
+1830 
+],
+[
+ "Riesling",
+new Date(2015,8,6),
+1038,
+943,
+0.5928143713,
+9.54491018,
+1338,
+1981 
+],
+[
+ "Riesling",
+new Date(2015,8,7),
+1105,
+1031,
+0.527638191,
+9.969849246,
+1537,
+2136 
+],
+[
+ "Riesling",
+new Date(2015,8,8),
+1107,
+1032,
+0.75,
+8.25,
+1541,
+2139 
+],
+[
+ "Pinotage",
+new Date(2015,8,1),
+0,
+0,
+1,
+11.66666667,
+3,
+0 
+],
+[
+ "Pinotage",
+new Date(2015,8,3),
+0,
+0,
+0,
+5,
+4,
+0 
+],
+[
+ "Pinotage",
+new Date(2015,8,4),
+0,
+4,
+0,
+10.5,
+6,
+4 
+],
+[
+ "Savatiano",
+new Date(2015,8,1),
+4,
+2,
+0,
+9.666666667,
+3,
+6 
+],
+[
+ "Moscato",
+new Date(2015,8,1),
+4,
+1,
+0.3333333333,
+10.33333333,
+3,
+5 
+],
+[
+ "Moscato",
+new Date(2015,8,3),
+4,
+2,
+0.3333333333,
+5.333333333,
+6,
+6 
+],
+[
+ "Moscato",
+new Date(2015,8,4),
+4,
+3,
+-1,
+9.666666667,
+9,
+7 
+],
+[
+ "Moscato",
+new Date(2015,8,5),
+4,
+7,
+-0.5,
+11.5,
+11,
+11 
+],
+[
+ "Moscato",
+new Date(2015,8,6),
+5,
+8,
+0,
+6,
+12,
+13 
+],
+[
+ "Moscato",
+new Date(2015,8,7),
+5,
+10,
+0.75,
+7,
+16,
+15 
+],
+[
+ "Sangiovese",
+new Date(2015,8,1),
+0,
+0,
+0.5,
+11,
+2,
+0 
+],
+[
+ "Sangiovese",
+new Date(2015,8,2),
+21,
+23,
+0.6666666667,
+9.333333333,
+5,
+44 
+],
+[
+ "Sangiovese",
+new Date(2015,8,3),
+23,
+25,
+0.6666666667,
+10.33333333,
+8,
+48 
+],
+[
+ "Sangiovese",
+new Date(2015,8,4),
+45,
+28,
+0.9375,
+13.625,
+24,
+73 
+],
+[
+ "Sangiovese",
+new Date(2015,8,5),
+47,
+29,
+0.25,
+8.75,
+28,
+76 
+],
+[
+ "Sangiovese",
+new Date(2015,8,6),
+47,
+29,
+0,
+6,
+29,
+76 
+],
+[
+ "Sangiovese",
+new Date(2015,8,7),
+49,
+30,
+0,
+8,
+31,
+79 
+],
+[
+ "Sangiovese",
+new Date(2015,8,8),
+49,
+31,
+0,
+10,
+32,
+80 
+],
+[
+ "Shiraz",
+new Date(2015,8,1),
+1,
+2,
+1,
+11,
+8,
+3 
+],
+[
+ "Shiraz",
+new Date(2015,8,2),
+3,
+2,
+0.3333333333,
+10.33333333,
+11,
+5 
+],
+[
+ "Shiraz",
+new Date(2015,8,3),
+8,
+17,
+0.8571428571,
+11.66666667,
+32,
+25 
+],
+[
+ "Shiraz",
+new Date(2015,8,4),
+28,
+47,
+0.85,
+11,
+52,
+75 
+],
+[
+ "Shiraz",
+new Date(2015,8,5),
+57,
+62,
+0.65,
+10.75,
+72,
+119 
+],
+[
+ "Shiraz",
+new Date(2015,8,6),
+69,
+80,
+0.6428571429,
+11.5,
+86,
+149 
+],
+[
+ "Shiraz",
+new Date(2015,8,7),
+74,
+90,
+0.8666666667,
+11.53333333,
+101,
+164 
+],
+[
+ "Shiraz",
+new Date(2015,8,8),
+74,
+90,
+0,
+9,
+103,
+164 
+],
+[
+ "Chardonnay",
+new Date(2015,8,1),
+2859,
+129,
+0.5109170306,
+9.449781659,
+229,
+2988 
+],
+[
+ "Chardonnay",
+new Date(2015,8,2),
+2860,
+142,
+0.3333333333,
+11.05555556,
+247,
+3002 
+],
+[
+ "Chardonnay",
+new Date(2015,8,3),
+2871,
+164,
+0.8,
+11.1,
+267,
+3035 
+],
+[
+ "Chardonnay",
+new Date(2015,8,4),
+3353,
+640,
+0.4980769231,
+9.796153846,
+787,
+3993 
+],
+[
+ "Chardonnay",
+new Date(2015,8,5),
+3595,
+962,
+0.3039513678,
+9.234042553,
+1116,
+4557 
+],
+[
+ "Chardonnay",
+new Date(2015,8,6),
+3853,
+1488,
+0.4679802956,
+9.302955665,
+1522,
+5341 
+],
+[
+ "Chardonnay",
+new Date(2015,8,7),
+4556,
+1839,
+0.4188481675,
+9.384816754,
+1904,
+6395 
+],
+[
+ "Chardonnay",
+new Date(2015,8,8),
+4558,
+1844,
+0.9166666667,
+10.08333333,
+1916,
+6402 
+],
+[
+ "Chenin Blanc",
+new Date(2015,8,1),
+24,
+0,
+1.2,
+12.4,
+5,
+24 
+],
+[
+ "Primitivo",
+new Date(2015,8,1),
+0,
+1,
+1,
+9,
+1,
+1 
+],
+[
+ "Primitivo",
+new Date(2015,8,6),
+0,
+2,
+1,
+12,
+2,
+2 
+],
+[
+ "Primitivo",
+new Date(2015,8,7),
+0,
+2,
+0,
+7,
+3,
+2 
+],
+[
+ "Prosecco",
+new Date(2015,8,1),
+0,
+0,
+-0.5,
+12.5,
+2,
+0 
+],
+[
+ "Prosecco",
+new Date(2015,8,2),
+1,
+0,
+2,
+14,
+3,
+1 
+],
+[
+ "Prosecco",
+new Date(2015,8,3),
+1,
+2,
+0,
+8.5,
+5,
+3 
+],
+[
+ "Prosecco",
+new Date(2015,8,4),
+7,
+3,
+0.4285714286,
+9.571428571,
+12,
+10 
+],
+[
+ "Prosecco",
+new Date(2015,8,5),
+7,
+3,
+1,
+12.66666667,
+15,
+10 
+],
+[
+ "Prosecco",
+new Date(2015,8,6),
+7,
+3,
+1,
+8,
+16,
+10 
+],
+[
+ "Merlot",
+new Date(2015,8,1),
+2009,
+144,
+0.2545454545,
+9.993939394,
+165,
+2153 
+],
+[
+ "Merlot",
+new Date(2015,8,2),
+2184,
+393,
+0.4357798165,
+10.14678899,
+383,
+2577 
+],
+[
+ "Merlot",
+new Date(2015,8,3),
+2395,
+629,
+0.4505208333,
+10.13802083,
+767,
+3024 
+],
+[
+ "Merlot",
+new Date(2015,8,4),
+3151,
+1059,
+0.4291666667,
+10.37916667,
+1247,
+4210 
+],
+[
+ "Merlot",
+new Date(2015,8,5),
+5611,
+1300,
+0.4794520548,
+9.712328767,
+1612,
+6911 
+],
+[
+ "Merlot",
+new Date(2015,8,6),
+5695,
+1490,
+0.5862068966,
+10.35172414,
+1902,
+7185 
+],
+[
+ "Merlot",
+new Date(2015,8,7),
+5956,
+1716,
+0.6205787781,
+10.21864952,
+2213,
+7672 
+],
+[
+ "Merlot",
+new Date(2015,8,8),
+5958,
+1720,
+0,
+10.5,
+2223,
+7678 
+],
+[
+ "Malbec",
+new Date(2015,8,1),
+0,
+2,
+1,
+10,
+2,
+2 
+],
+[
+ "Malbec",
+new Date(2015,8,3),
+0,
+2,
+1,
+16,
+3,
+2 
+],
+[
+ "Malbec",
+new Date(2015,8,4),
+4,
+8,
+0.8947368421,
+13.31578947,
+22,
+12 
+],
+[
+ "Malbec",
+new Date(2015,8,5),
+4,
+8,
+2,
+14,
+26,
+12 
+],
+[
+ "Malbec",
+new Date(2015,8,6),
+18,
+8,
+1,
+12,
+27,
+26 
+],
+[
+ "Malbec",
+new Date(2015,8,7),
+20,
+10,
+1.571428571,
+11.28571429,
+34,
+30 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,1),
+59,
+40,
+0.3461538462,
+10.25,
+52,
+99 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,2),
+722,
+205,
+0.7006802721,
+10.85714286,
+199,
+927 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,3),
+794,
+285,
+0.5368421053,
+10.32631579,
+294,
+1079 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,4),
+893,
+377,
+0.6833333333,
+10.76666667,
+414,
+1270 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,5),
+978,
+456,
+0.5327102804,
+10.61682243,
+521,
+1434 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,6),
+1054,
+574,
+0.2637362637,
+10.82417582,
+612,
+1628 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,7),
+1150,
+658,
+0.5643564356,
+11.2970297,
+713,
+1808 
+],
+[
+ "Sauvignon Blanc",
+new Date(2015,8,8),
+1164,
+659,
+0,
+6.75,
+717,
+1823 
+],
+[
+ "Grechetto",
+new Date(2015,8,1),
+0,
+0,
+0,
+12,
+1,
+0 
+],
+[
+ "Grechetto",
+new Date(2015,8,5),
+0,
+1,
+3,
+12,
+2,
+1 
+],
+[
+ "Beaujolais",
+new Date(2015,8,1),
+0,
+0,
+0,
+12,
+1,
+0 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,1),
+31,
+29,
+0.4680851064,
+11.44680851,
+47,
+60 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,2),
+142,
+139,
+0.5377358491,
+10.5,
+153,
+281 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,3),
+267,
+299,
+0.6928571429,
+10.83571429,
+293,
+566 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,4),
+397,
+409,
+0.685483871,
+10.65322581,
+417,
+806 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,5),
+466,
+462,
+0.4027777778,
+10.51388889,
+489,
+928 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,6),
+512,
+528,
+0.3636363636,
+11.07792208,
+566,
+1040 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,7),
+585,
+597,
+0.4246575342,
+10.42465753,
+639,
+1182 
+],
+[
+ "Cabernet Sauvignon",
+new Date(2015,8,8),
+585,
+601,
+0.6666666667,
+11,
+642,
+1186 
+],
+[
+ "Semillon",
+new Date(2015,8,1),
+2,
+0,
+0,
+11.5,
+2,
+2 
+],
+[
+ "Semillon",
+new Date(2015,8,2),
+6,
+7,
+2,
+13,
+7,
+13 
+],
+[
+ "Semillon",
+new Date(2015,8,3),
+6,
+7,
+0.6666666667,
+11.66666667,
+10,
+13 
+],
+[
+ "Semillon",
+new Date(2015,8,4),
+15,
+7,
+0,
+11.66666667,
+13,
+22 
+],
+[
+ "Semillon",
+new Date(2015,8,5),
+15,
+15,
+1.25,
+13.75,
+17,
+30 
+],
+[
+ "Semillon",
+new Date(2015,8,7),
+15,
+15,
+1,
+13,
+18,
+30 
+],
+[
+ "Savagnin",
+new Date(2015,8,1),
+2,
+0,
+1,
+8.5,
+2,
+2 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,1),
+497,
+161,
+0.3636363636,
+9.560606061,
+66,
+658 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,2),
+497,
+164,
+0,
+9.5,
+68,
+661 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,3),
+514,
+196,
+0.5342465753,
+10.91780822,
+141,
+710 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,4),
+577,
+330,
+0.5401069519,
+10.79144385,
+328,
+907 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,5),
+606,
+364,
+0.253164557,
+10.5443038,
+407,
+970 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,6),
+673,
+451,
+0.5045045045,
+10.78378378,
+518,
+1124 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,7),
+767,
+595,
+0.3265306122,
+10.39455782,
+665,
+1362 
+],
+[
+ "Pinot Grigio",
+new Date(2015,8,8),
+779,
+595,
+2.333333333,
+12.33333333,
+668,
+1374 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,1),
+366,
+96,
+0.4556962025,
+10.53797468,
+158,
+462 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,2),
+366,
+98,
+0.1666666667,
+11.5,
+164,
+464 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,3),
+3887,
+221,
+0.3882352941,
+12.44117647,
+334,
+4108 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,4),
+4104,
+474,
+0.5215686275,
+10.94117647,
+589,
+4578 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,5),
+4179,
+561,
+0.4384615385,
+10.47692308,
+719,
+4740 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,6),
+4278,
+724,
+0.4944444444,
+10.88333333,
+899,
+5002 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,7),
+9003,
+919,
+0.4429530201,
+11.02348993,
+1197,
+9922 
+],
+[
+ "Pinot Noir",
+new Date(2015,8,8),
+9003,
+920,
+0.2,
+9.2,
+1202,
+9923 
+],
+[
+ "Spätburgunder",
+new Date(2015,8,1),
+0,
+0,
+0,
+11,
+1,
+0 
+],
+[
+ "Spätburgunder",
+new Date(2015,8,3),
+0,
+1,
+0,
+11,
+2,
+1 
+],
+[
+ "Gamay",
+new Date(2015,8,1),
+0,
+0,
+1,
+12,
+1,
+0 
+],
+[
+ "Gamay",
+new Date(2015,8,5),
+0,
+0,
+0,
+10,
+2,
+0 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,1),
+21,
+2,
+0.3333333333,
+11.5,
+6,
+23 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,2),
+38,
+27,
+0.875,
+11.375,
+14,
+65 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,3),
+68,
+48,
+0.3684210526,
+11.42105263,
+33,
+116 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,4),
+89,
+64,
+0.8,
+9.28,
+58,
+153 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,5),
+105,
+68,
+0.7368421053,
+11.10526316,
+77,
+173 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,6),
+110,
+73,
+0.4444444444,
+10.55555556,
+86,
+183 
+],
+[
+ "Cabernet Franc",
+new Date(2015,8,7),
+117,
+77,
+0.5,
+9,
+96,
+194 
+],
+[
+ "Zinfandel",
+new Date(2015,8,1),
+2,
+8,
+0.6666666667,
+10,
+3,
+10 
+],
+[
+ "Zinfandel",
+new Date(2015,8,2),
+5,
+8,
+0.1666666667,
+8.666666667,
+9,
+13 
+],
+[
+ "Zinfandel",
+new Date(2015,8,3),
+7,
+10,
+0.5,
+13,
+13,
+17 
+],
+[
+ "Zinfandel",
+new Date(2015,8,4),
+11,
+12,
+0.8571428571,
+11.28571429,
+20,
+23 
+],
+[
+ "Zinfandel",
+new Date(2015,8,5),
+11,
+14,
+1,
+10.5,
+22,
+25 
+],
+[
+ "Zinfandel",
+new Date(2015,8,6),
+20,
+14,
+1,
+10.5,
+24,
+34 
+],
+[
+ "Zinfandel",
+new Date(2015,8,7),
+22,
+15,
+0,
+10.4,
+29,
+37 
+],
+[
+ "Petit Verdot",
+new Date(2015,8,1),
+0,
+1,
+0,
+11,
+2,
+1 
+],
+[
+ "Petit Verdot",
+new Date(2015,8,2),
+0,
+1,
+1,
+14,
+3,
+1 
+],
+[
+ "Petit Verdot",
+new Date(2015,8,3),
+6,
+8,
+0.2,
+14,
+8,
+14 
+],
+[
+ "Petit Verdot",
+new Date(2015,8,4),
+10,
+9,
+0.4,
+13.4,
+13,
+19 
+],
+[
+ "Petit Verdot",
+new Date(2015,8,7),
+16,
+12,
+0.3333333333,
+13.66666667,
+16,
+28 
+],
+[
+ "Roche",
+new Date(2015,8,4),
+2,
+0,
+0,
+11,
+1,
+2 
+],
+[
+ "Roche",
+new Date(2015,8,5),
+7,
+0,
+0,
+10,
+2,
+7 
+],
+[
+ "Sagrantino",
+new Date(2015,8,5),
+2,
+0,
+0,
+10,
+1,
+2 
+],
+[
+ "Viognier",
+new Date(2015,8,1),
+0,
+0,
+0,
+13,
+1,
+0 
+],
+[
+ "Viognier",
+new Date(2015,8,2),
+0,
+1,
+0,
+11,
+3,
+1 
+],
+[
+ "Viognier",
+new Date(2015,8,3),
+0,
+4,
+1,
+13.66666667,
+6,
+4 
+],
+[
+ "Viognier",
+new Date(2015,8,4),
+10,
+8,
+1.142857143,
+11.78571429,
+20,
+18 
+],
+[
+ "Viognier",
+new Date(2015,8,5),
+11,
+9,
+1,
+11,
+25,
+20 
+],
+[
+ "Viognier",
+new Date(2015,8,6),
+11,
+9,
+0,
+10,
+26,
+20 
+],
+[
+ "Viognier",
+new Date(2015,8,7),
+13,
+11,
+1.166666667,
+11.83333333,
+32,
+24 
+],
+[
+ "Sauvignon Gris",
+new Date(2015,8,2),
+2,
+3,
+1,
+8.5,
+2,
+5 
+],
+[
+ "Sauvignon Gris",
+new Date(2015,8,3),
+2,
+6,
+1,
+10,
+3,
+8 
+],
+[
+ "Sauvignon Gris",
+new Date(2015,8,4),
+2,
+6,
+0.3333333333,
+8.333333333,
+6,
+8 
+],
+[
+ "Sauvignon Gris",
+new Date(2015,8,5),
+3,
+6,
+0,
+12,
+8,
+9 
+],
+[
+ "Sauvignon Gris",
+new Date(2015,8,6),
+3,
+6,
+0,
+13,
+9,
+9 
+],
+[
+ "Ruby Cabernet",
+new Date(2015,8,4),
+0,
+1,
+0.5,
+10,
+2,
+1 
+],
+[
+ "Ruby Cabernet",
+new Date(2015,8,6),
+0,
+3,
+1,
+11,
+3,
+3 
+],
+[
+ "Gewürztraminer",
+new Date(2015,8,3),
+1,
+0,
+0,
+13,
+1,
+1 
+],
+[
+ "Gewürztraminer",
+new Date(2015,8,7),
+7,
+6,
+1,
+9.5,
+3,
+13 
+],
+[
+ "Gewurztraminer",
+new Date(2015,8,2),
+1,
+2,
+0,
+14,
+3,
+3 
+],
+[
+ "Gewurztraminer",
+new Date(2015,8,3),
+1,
+2,
+2,
+10,
+4,
+3 
+],
+[
+ "Gewurztraminer",
+new Date(2015,8,4),
+1,
+2,
+0,
+12,
+5,
+3 
+],
+[
+ "Gewurztraminer",
+new Date(2015,8,6),
+1,
+8,
+0.25,
+10.25,
+9,
+9 
+],
+[
+ "Tempranillo",
+new Date(2015,8,2),
+0,
+1,
+1,
+11.5,
+2,
+1 
+],
+[
+ "Tempranillo",
+new Date(2015,8,4),
+2,
+4,
+1,
+11.5,
+4,
+6 
+],
+[
+ "Tempranillo",
+new Date(2015,8,5),
+2,
+6,
+0,
+10,
+5,
+8 
+],
+[
+ "Tempranillo",
+new Date(2015,8,6),
+2,
+6,
+2,
+14,
+6,
+8 
+],
+[
+ "Tempranillo",
+new Date(2015,8,7),
+4,
+7,
+1,
+13.5,
+8,
+11 
+],
+[
+ "Vespaiola",
+new Date(2015,8,5),
+0,
+0,
+2,
+9,
+1,
+0 
+],
+[
+ "Grillo",
+new Date(2015,8,4),
+0,
+0,
+0,
+9,
+1,
+0 
+],
+[
+ "Grillo",
+new Date(2015,8,6),
+0,
+0,
+1,
+12,
+2,
+0 
+],
+[
+ "Muscat",
+new Date(2015,8,4),
+4,
+4,
+0,
+7.5,
+2,
+8 
+],
+[
+ "Muscat",
+new Date(2015,8,7),
+4,
+4,
+0,
+13,
+3,
+8 
+],
+[
+ "Vermentino",
+new Date(2015,8,3),
+0,
+0,
+0,
+12,
+1,
+0 
+],
+[
+ "Vermentino",
+new Date(2015,8,4),
+0,
+0,
+-1,
+9,
+2,
+0 
+],
+[
+ "Vermentino",
+new Date(2015,8,7),
+0,
+2,
+0,
+13,
+3,
+2 
+],
+[
+ "Pinot Nero",
+new Date(2015,8,3),
+0,
+0,
+0,
+12,
+1,
+0 
+],
+[
+ "Pinot Nero",
+new Date(2015,8,5),
+0,
+1,
+1,
+12,
+2,
+1 
+],
+[
+ "Pinot Nero",
+new Date(2015,8,6),
+0,
+1,
+0,
+11,
+3,
+1 
+],
+[
+ "Pinot Nero",
+new Date(2015,8,7),
+0,
+2,
+1,
+13.5,
+5,
+2 
+],
+[
+ "Pinot Bianco",
+new Date(2015,8,4),
+1,
+2,
+0.3333333333,
+12.33333333,
+3,
+3 
+],
+[
+ "Pinot Bianco",
+new Date(2015,8,5),
+2,
+2,
+1,
+13,
+4,
+4 
+],
+[
+ "Roussanne",
+new Date(2015,8,4),
+0,
+2,
+0,
+14,
+1,
+2 
+],
+[
+ "Roussanne",
+new Date(2015,8,7),
+0,
+2,
+0,
+9,
+2,
+2 
+],
+[
+ "Palomino",
+new Date(2015,8,4),
+0,
+3,
+2,
+14,
+1,
+3 
+],
+[
+ "Colombard",
+new Date(2015,8,4),
+0,
+2,
+0,
+13,
+1,
+2 
+],
+[
+ "Pinot Meunier",
+new Date(2015,8,3),
+0,
+0,
+1,
+10,
+1,
+0 
+],
+[
+ "Pinot Meunier",
+new Date(2015,8,4),
+0,
+0,
+1,
+8,
+2,
+0 
+],
+[
+ "Pinot Meunier",
+new Date(2015,8,7),
+4,
+1,
+0.5,
+11.5,
+6,
+5 
+],
+[
+ "Gloria",
+new Date(2015,8,3),
+0,
+0,
+0,
+14,
+1,
+0 
+],
+[
+ "Auxerrois",
+new Date(2015,8,3),
+0,
+0,
+1,
+13,
+1,
+0 
+],
+[
+ "Sylvaner",
+new Date(2015,8,3),
+0,
+0,
+1.5,
+13.5,
+2,
+0 
+],
+[
+ "Carmine",
+new Date(2015,8,4),
+0,
+0,
+0,
+15,
+1,
+0 
+],
+[
+ "Carmine",
+new Date(2015,8,7),
+0,
+0,
+0,
+8.333333333,
+4,
+0 
+],
+[
+ "Garnacha",
+new Date(2015,8,3),
+0,
+0,
+1,
+12,
+1,
+0 
+],
+[
+ "Cabernet Severny",
+new Date(2015,8,3),
+3,
+0,
+0,
+8,
+2,
+3 
+],
+[
+ "Montepulciano",
+new Date(2015,8,5),
+2,
+1,
+1,
+12.5,
+2,
+3 
+],
+[
+ "Montepulciano",
+new Date(2015,8,7),
+4,
+2,
+1,
+9.5,
+4,
+6 
+],
+[
+ "Verdello",
+new Date(2015,8,5),
+0,
+0,
+1,
+13,
+1,
+0 
+],
+[
+ "Falanghina",
+new Date(2015,8,4),
+0,
+0,
+1,
+15,
+1,
+0 
+],
+[
+ "Muscadet",
+new Date(2015,8,3),
+0,
+0,
+0,
+14,
+1,
+0 
+],
+[
+ "Pais",
+new Date(2015,8,2),
+2,
+0,
+0,
+13,
+2,
+2 
+],
+[
+ "Cinsaut",
+new Date(2015,8,7),
+0,
+0,
+1,
+13,
+1,
+0 
+],
+[
+ "Negroamaro",
+new Date(2015,8,7),
+0,
+0,
+1,
+12,
+1,
+0 
+],
+[
+ "Carignan",
+new Date(2015,8,7),
+4,
+0,
+2,
+10,
+1,
+4 
+],
+[
+ "André",
+new Date(2015,8,7),
+0,
+0,
+1,
+7,
+1,
+0 
+],
+[
+ "Orion",
+new Date(2015,8,7),
+0,
+0,
+0,
+15,
+1,
+0 
+],
+[
+ "Mourvèdre",
+new Date(2015,8,5),
+0,
+0,
+0,
+14,
+2,
+0 
+],
+[
+ "Timorasso",
+new Date(2015,8,6),
+6,
+1,
+-1,
+12.5,
+2,
+7 
+],
+[
+ "Grecanico",
+new Date(2015,8,6),
+0,
+0,
+0,
+8,
+1,
+0 
+],
+[
+ "Friulano",
+new Date(2015,8,7),
+0,
+0,
+0,
+8,
+1,
+0 
+],
+[
+ "Lemberger",
+new Date(2015,8,6),
+4,
+1,
+0,
+12.5,
+2,
+5 
+],
+[
+ "Refosco",
+new Date(2015,8,7),
+0,
+0,
+1,
+15,
+1,
+0 
+],
+[
+ "Nebbiolo",
+new Date(2015,8,6),
+2,
+0,
+1,
+14.5,
+2,
+2 
+],
+[
+ "Saperavi",
+new Date(2015,8,6),
+0,
+2,
+1,
+11,
+1,
+2 
+] 
+];
+data.addColumn('string','varieties');
+data.addColumn('date','date');
+data.addColumn('number','retweets');
+data.addColumn('number','favourites');
+data.addColumn('number','sentiment.score');
+data.addColumn('number','num.character');
+data.addColumn('number','volume');
+data.addColumn('number','engagement');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID1460613b6da9() {
+var data = gvisDataMotionChartID1460613b6da9();
+var options = {};
+options["width"] =   1100;
+options["height"] =    500;
+options["state"] = "";
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID1460613b6da9')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID1460613b6da9);
+})();
+function displayChartMotionChartID1460613b6da9() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID1460613b6da9"></script>
+<!-- divChart -->
+<div id="MotionChartID1460613b6da9" style="width: 1100; height: 500;">
+
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="panel panel-info">
+<div class="panel-heading">
+<div class="row">
+<div class="col-lg-11 col-md-11">
+Wine origins
+</div>
+<div class="col-lg-1 col-md-1">
+<span id="varTooltip" class="fa fa-flag fa-lg pull-left" aria-hidden="true" data-toggle="tooltip" title="Origins of wines mentioned in tweets"></span>
+</div>
+</div>
+</div>
+<div class="panel-body">
+<iframe srcdoc=" &lt;!doctype HTML&gt;
+&lt;meta charset = 'utf-8'&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'&gt;
+    
+    &lt;script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://d3js.org/d3.v3.min.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'&gt;&lt;/script&gt;
+    &lt;script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1092px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body &gt;
+    
+    &lt;div id = 'chart14601cda771c' class = 'rChart nvd3'&gt;&lt;/div&gt;    
+    &lt;script type='text/javascript'&gt;
+ $(document).ready(function(){
+      drawchart14601cda771c()
+    });
+    function drawchart14601cda771c(){  
+      var opts = {
+ &quot;dom&quot;: &quot;chart14601cda771c&quot;,
+&quot;width&quot;:   1092,
+&quot;height&quot;:    400,
+&quot;x&quot;: &quot;origin&quot;,
+&quot;y&quot;: &quot;percent&quot;,
+&quot;group&quot;: &quot;sentiment&quot;,
+&quot;type&quot;: &quot;multiBarChart&quot;,
+&quot;id&quot;: &quot;chart14601cda771c&quot; 
+},
+        data = [
+ {
+ &quot;origin&quot;: &quot;Argentina&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              3,
+&quot;volumeTot&quot;:             37,
+&quot;percent&quot;: 0.08108108108108 
+},
+{
+ &quot;origin&quot;: &quot;Argentina&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             13,
+&quot;volumeTot&quot;:             37,
+&quot;percent&quot;: 0.3513513513514 
+},
+{
+ &quot;origin&quot;: &quot;Argentina&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             21,
+&quot;volumeTot&quot;:             37,
+&quot;percent&quot;: 0.5675675675676 
+},
+{
+ &quot;origin&quot;: &quot;Australia&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              6,
+&quot;volumeTot&quot;:             70,
+&quot;percent&quot;: 0.08571428571429 
+},
+{
+ &quot;origin&quot;: &quot;Australia&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             42,
+&quot;volumeTot&quot;:             70,
+&quot;percent&quot;:            0.6 
+},
+{
+ &quot;origin&quot;: &quot;Australia&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             22,
+&quot;volumeTot&quot;:             70,
+&quot;percent&quot;: 0.3142857142857 
+},
+{
+ &quot;origin&quot;: &quot;Austria&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:             18,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Austria&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             14,
+&quot;volumeTot&quot;:             18,
+&quot;percent&quot;: 0.7777777777778 
+},
+{
+ &quot;origin&quot;: &quot;Austria&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             18,
+&quot;percent&quot;: 0.2222222222222 
+},
+{
+ &quot;origin&quot;: &quot;Chile&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             58,
+&quot;percent&quot;: 0.06896551724138 
+},
+{
+ &quot;origin&quot;: &quot;Chile&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             28,
+&quot;volumeTot&quot;:             58,
+&quot;percent&quot;: 0.4827586206897 
+},
+{
+ &quot;origin&quot;: &quot;Chile&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             26,
+&quot;volumeTot&quot;:             58,
+&quot;percent&quot;: 0.448275862069 
+},
+{
+ &quot;origin&quot;: &quot;China&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              3,
+&quot;volumeTot&quot;:             42,
+&quot;percent&quot;: 0.07142857142857 
+},
+{
+ &quot;origin&quot;: &quot;China&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             24,
+&quot;volumeTot&quot;:             42,
+&quot;percent&quot;: 0.5714285714286 
+},
+{
+ &quot;origin&quot;: &quot;China&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             15,
+&quot;volumeTot&quot;:             42,
+&quot;percent&quot;: 0.3571428571429 
+},
+{
+ &quot;origin&quot;: &quot;France&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:            280,
+&quot;volumeTot&quot;:           2638,
+&quot;percent&quot;: 0.1061410159212 
+},
+{
+ &quot;origin&quot;: &quot;France&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:           1529,
+&quot;volumeTot&quot;:           2638,
+&quot;percent&quot;: 0.5796057619409 
+},
+{
+ &quot;origin&quot;: &quot;France&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:            829,
+&quot;volumeTot&quot;:           2638,
+&quot;percent&quot;: 0.314253222138 
+},
+{
+ &quot;origin&quot;: &quot;Germany&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              3,
+&quot;volumeTot&quot;:             85,
+&quot;percent&quot;: 0.03529411764706 
+},
+{
+ &quot;origin&quot;: &quot;Germany&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             52,
+&quot;volumeTot&quot;:             85,
+&quot;percent&quot;: 0.6117647058824 
+},
+{
+ &quot;origin&quot;: &quot;Germany&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             30,
+&quot;volumeTot&quot;:             85,
+&quot;percent&quot;: 0.3529411764706 
+},
+{
+ &quot;origin&quot;: &quot;Italy&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              5,
+&quot;volumeTot&quot;:            115,
+&quot;percent&quot;: 0.04347826086957 
+},
+{
+ &quot;origin&quot;: &quot;Italy&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             50,
+&quot;volumeTot&quot;:            115,
+&quot;percent&quot;: 0.4347826086957 
+},
+{
+ &quot;origin&quot;: &quot;Italy&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             60,
+&quot;volumeTot&quot;:            115,
+&quot;percent&quot;: 0.5217391304348 
+},
+{
+ &quot;origin&quot;: &quot;New Zealand&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.04494382022472 
+},
+{
+ &quot;origin&quot;: &quot;New Zealand&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             37,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.4157303370787 
+},
+{
+ &quot;origin&quot;: &quot;New Zealand&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             48,
+&quot;volumeTot&quot;:             89,
+&quot;percent&quot;: 0.5393258426966 
+},
+{
+ &quot;origin&quot;: &quot;Portugal&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:              5,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Portugal&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              4,
+&quot;volumeTot&quot;:              5,
+&quot;percent&quot;:            0.8 
+},
+{
+ &quot;origin&quot;: &quot;Portugal&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              1,
+&quot;volumeTot&quot;:              5,
+&quot;percent&quot;:            0.2 
+},
+{
+ &quot;origin&quot;: &quot;Romania&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:              2,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Romania&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              2,
+&quot;volumeTot&quot;:              2,
+&quot;percent&quot;:              1 
+},
+{
+ &quot;origin&quot;: &quot;Romania&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:              2,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Russia&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              1,
+&quot;volumeTot&quot;:             26,
+&quot;percent&quot;: 0.03846153846154 
+},
+{
+ &quot;origin&quot;: &quot;Russia&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             15,
+&quot;volumeTot&quot;:             26,
+&quot;percent&quot;: 0.5769230769231 
+},
+{
+ &quot;origin&quot;: &quot;Russia&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             10,
+&quot;volumeTot&quot;:             26,
+&quot;percent&quot;: 0.3846153846154 
+},
+{
+ &quot;origin&quot;: &quot;South Africa&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:             19,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;South Africa&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:              5,
+&quot;volumeTot&quot;:             19,
+&quot;percent&quot;: 0.2631578947368 
+},
+{
+ &quot;origin&quot;: &quot;South Africa&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             14,
+&quot;volumeTot&quot;:             19,
+&quot;percent&quot;: 0.7368421052632 
+},
+{
+ &quot;origin&quot;: &quot;Spain&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:              0,
+&quot;volumeTot&quot;:             49,
+&quot;percent&quot;:              0 
+},
+{
+ &quot;origin&quot;: &quot;Spain&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:             33,
+&quot;volumeTot&quot;:             49,
+&quot;percent&quot;: 0.6734693877551 
+},
+{
+ &quot;origin&quot;: &quot;Spain&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             16,
+&quot;volumeTot&quot;:             49,
+&quot;percent&quot;: 0.3265306122449 
+},
+{
+ &quot;origin&quot;: &quot;USA&quot;,
+&quot;sentiment&quot;: &quot;negative&quot;,
+&quot;volume&quot;:             12,
+&quot;volumeTot&quot;:            225,
+&quot;percent&quot;: 0.05333333333333 
+},
+{
+ &quot;origin&quot;: &quot;USA&quot;,
+&quot;sentiment&quot;: &quot;neutral&quot;,
+&quot;volume&quot;:            126,
+&quot;volumeTot&quot;:            225,
+&quot;percent&quot;:           0.56 
+},
+{
+ &quot;origin&quot;: &quot;USA&quot;,
+&quot;sentiment&quot;: &quot;positive&quot;,
+&quot;volume&quot;:             87,
+&quot;volumeTot&quot;:            225,
+&quot;percent&quot;: 0.3866666666667 
+} 
+]
+  
+      if(!(opts.type===&quot;pieChart&quot; || opts.type===&quot;sparklinePlus&quot; || opts.type===&quot;bulletChart&quot;)) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != &quot;bulletChart&quot;){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .reduceXTicks(false)
+  .color([ &quot;#E76953&quot;, &quot;#3FBBEE&quot;, &quot;#38DD9B&quot; ])
+          
+        chart.xAxis
+  .staggerLabels(true)
+
+        
+        
+        chart.yAxis
+  .axisLabel(&quot;Percent of mentions&quot;)
+  .tickFormat(
+      d3.format('%')
+    )
+      
+       d3.select(&quot;#&quot; + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+&lt;/script&gt;
+    
+    &lt;script&gt;&lt;/script&gt;    
+  &lt;/body&gt;
+&lt;/html&gt; " scrolling="no" frameBorder="0" seamless class="rChart  nvd3  " id="iframe-chart14601cda771c">
+</iframe>
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</div>
+</div>
+</div>
+
+<div class = "container">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'winedashboard'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<div class ="navbar navbar-default navbar-fixed-bottom">
+	<div class ="container">
+		<p class = "navbar-text pull-left">by Jabber Cruncher</p>
+		<a type = "button" href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank" class="navbar-btn btn btn-googleplus pull-right"><i class="fa fa-google-plus"></i></a>
+		<a type = "button" href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="navbar-btn btn btn-twitter pull-right"><i class="fa fa-twitter"></i></a>
+		<a type = "button" href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="navbar-btn btn btn-facebook pull-right"><i class="fa fa-facebook"></i></a>
+		<a type = "button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=" title="Share on LinkedIn" target="_blank" class="navbar-btn btn btn-linkedin pull-right"><i class="fa fa-linkedin"></i></a>
+		<a type = "button" href="http://www.stumbleupon.com/submit?url=" title="Share on StumbleUpon" target="_blank" class="navbar-btn btn btn-stumbleupon pull-right"><i class="fa fa-stumbleupon"></i></a>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
