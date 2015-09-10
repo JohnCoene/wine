@@ -7010,3 +7010,8 @@ body {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+.sunburst {
+  height: 390px!important;
+  width: 300px!important;
+}
