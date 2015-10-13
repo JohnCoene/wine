@@ -1,0 +1,68 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+@import url('http://fonts.googleapis.com/css?family=Abel');
+
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abel'), local('Abel-Regular'), url(http://fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2'), url(http://fonts.gstatic.com/s/abel/v6/EAqh528fFdbUek8UOky4sA.woff) format('woff');
+}
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+	background:url('../img/intro-bg.jpg') #b0b0b0;
+	position:relative;
+}
+
+body{
+	min-height: 600px;
+    padding: 200px 0 0;
+	font-family: "Abel"
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, footer{
+	display: block;
+}
+
+
+/*----------------------------
+	Main Section
+-----------------------------*/
+
+#note{
+	color: #000;
+	font-size: 16px;
+	margin: 0 auto;
+	padding: 4px;
+	text-align: center;
+	width: 400px;
+}
+
+
+/*----------------------------
+	The Footer
+-----------------------------*/
+
